@@ -39,6 +39,7 @@ for (const p of [
 }
 build();
 verify();
+verify("1.0.0");
 const tests = walk(path.join(root, "test", version)).filter((p) =>
   p.endsWith(".test.mjs"),
 );

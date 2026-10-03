@@ -1,6 +1,8 @@
 # Suite development
 
-Current source: 1.0.0/. Tests: test/1.0.0/. Derived release: release/1.0.0/.
+Current development source: 1.1.0/. Tests: test/1.1.0/. Derived release: release/1.1.0/.
+Official released version remains 1.0.0 until reviewed PR/CI, integration and publication.
+Read docs/REQUIREMENTS-1.1.0.md and docs/UPGRADE-1.1.0.md for this update.
 Read docs/REQUIREMENTS.md, docs/DESIGN.md and docs/PROGRESS.md before work.
 Use the installed Matt Pocock write-a-skill methodology: requirements, concise
 SKILL.md, progressive disclosure, deterministic scripts, user review and checklist.

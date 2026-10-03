@@ -1,0 +1,6 @@
+@startuml
+actor User
+participant CLI
+User -> CLI: health
+CLI --> User: success
+@enduml

@@ -31,6 +31,10 @@ export function build() {
   fs.cpSync(source, path.join(target, version), { recursive: true });
   for (const p of ["bin", "LICENSE", "README.md", "README.en.md"])
     fs.cpSync(path.join(root, p), path.join(target, p), { recursive: true });
+  for (const p of pkg.files.filter((p) => p.startsWith("docs/"))) {
+    fs.mkdirSync(path.dirname(path.join(target, p)), { recursive: true });
+    fs.copyFileSync(path.join(root, p), path.join(target, p));
+  }
   const releasePackage = { ...pkg };
   delete releasePackage.scripts;
   delete releasePackage.devDependencies;
@@ -54,10 +58,11 @@ export function build() {
     throw Error("Source/release mismatch");
   return { target, version, sourceFiles: Object.keys(manifest.source).length };
 }
-export function verify() {
-  const version = JSON.parse(
-      fs.readFileSync(path.join(root, "package.json"), "utf8"),
-    ).version,
+export function verify(selectedVersion) {
+  const currentVersion = JSON.parse(
+    fs.readFileSync(path.join(root, "package.json"), "utf8"),
+  ).version;
+  const version = selectedVersion ?? currentVersion,
     target = path.join(root, "release", version),
     m = JSON.parse(
       fs.readFileSync(path.join(target, "release-manifest.json"), "utf8"),
@@ -67,12 +72,15 @@ export function verify() {
       JSON.stringify(m.source) ||
     JSON.stringify(files(path.join(target, version))) !==
       JSON.stringify(m.source) ||
-    JSON.stringify(files(path.join(root, "bin"))) !==
-      JSON.stringify(m.installer) ||
+    (version === currentVersion &&
+      JSON.stringify(files(path.join(root, "bin"))) !==
+        JSON.stringify(m.installer)) ||
     JSON.stringify(files(path.join(target, "bin"))) !==
       JSON.stringify(m.installer)
   )
     throw Error("Release integrity mismatch");
+  if (version !== currentVersion)
+    return { verified: true, version, historical: true };
   for (const p of ["README.md", "README.en.md", "LICENSE"])
     if (
       hash(fs.readFileSync(path.join(root, p))) !==
@@ -82,6 +90,13 @@ export function verify() {
   const expected = JSON.parse(
     fs.readFileSync(path.join(root, "package.json"), "utf8"),
   );
+  for (const p of expected.files.filter((p) => p.startsWith("docs/"))) {
+    if (
+      hash(fs.readFileSync(path.join(root, p))) !==
+      hash(fs.readFileSync(path.join(target, p)))
+    )
+      throw Error("Release guide drift");
+  }
   delete expected.scripts;
   delete expected.devDependencies;
   const actual = JSON.parse(

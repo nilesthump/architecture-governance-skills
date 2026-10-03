@@ -1,0 +1,450 @@
+{
+  "reviewer": "/root/independent_artifact_review",
+  "reviewType": "real fresh-context host artifact inspection of retained deterministic fixture outputs",
+  "host": "Windows; H:/architecture-skills/.tmp/worktrees/discussion-1.1.0",
+  "reviewedAt": "2026-10-03T07:23:08.039847+00:00",
+  "authorityBoundary": "Architecture choices, explicit-user evidence markers and unit-fixture-only reviewers are simulated deterministic fixture inputs. This report proves this agent inspected actual retained bytes and rendered PDFs on this host only; it does not prove real human authorization or host-independent/platform acceptance. Main-agent summaries were advisory.",
+  "status": "PASS",
+  "findings": [
+    {
+      "id": "ART-001",
+      "priority": "P2",
+      "blocking": false,
+      "fixtures": [
+        "english",
+        "chinese"
+      ],
+      "paths": [
+        "spec/architecture/v2.0.0/candidate.json",
+        "spec/architecture/v2.0.0/STATE.json"
+      ],
+      "problem": "Concerns contracts, failure handling, testing and CI/CD are marked applicable=false, with generic Confirmed fixture reasons. ARCH-010 defines status ok and nonzero process failure plus diagnostic; ARCH-020 requires Node tests and the same local/CI validation contract. These claims conflict with excluded concerns.",
+      "fix": "Make fixture concern values applicable with concrete state-backed descriptions, or remove contradictory section obligations. Regenerate the bound candidate, package and artifacts; retain negative semantic conflict evidence.",
+      "scope": "Artifact/fixture semantic conflict; hash and renderer correctness pass. This report does not claim all possible product inputs were checked.",
+      "status": "RESOLVED",
+      "resolution": "Fresh reread confirms contracts, failure handling, testing, CI/CD and versioning applicable=true with concrete reasons, exactly matching STATE node values. Regenerated packages, manifest artifacts, semantic text and diagrams pass independent recheck. Both final PDFs rerendered with Poppler exit 0 and visually re-inspected.",
+      "originalObservedEnglishCandidateDigest": "f320f1a6571c7c3106672980b4c7c1999d30b5ff50b5b4098a782a64962615fc"
+    }
+  ],
+  "toolFailures": [
+    {
+      "command": "bundled Python import fitz",
+      "result": "ModuleNotFoundError: No module named fitz; no package installed; used bundled Poppler instead"
+    },
+    {
+      "command": "bundled Python import yaml",
+      "result": "ModuleNotFoundError: No module named yaml; no package installed; checked manifest text artifact entries directly"
+    },
+    {
+      "command": "Initial Python read_text without explicit encoding on Chinese candidate",
+      "result": "UnicodeDecodeError on default gbk; rerun with UTF-8 reads"
+    },
+    {
+      "command": "Initial broad manifest regex hash check",
+      "result": "Matched discussion digest as artifact filename; restricted check to artifacts block and reran"
+    }
+  ],
+  "commands": [
+    {
+      "command": "bundled Python -X utf8 stdin inspection: pathlib reads; hashlib SHA256/canonical JSON; pypdf PdfReader text, metadata, outline checks",
+      "result": "Per-fixture results below"
+    },
+    {
+      "command": "bundled Poppler pdftoppm.exe -r 110 -png test/1.1.0/evidence/artifacts/english/spec/architecture/v2.0.0/ARCHITECTURE.pdf test/1.1.0/evidence/artifacts/independent-rendered/english",
+      "exitCode": 0,
+      "stderr": "",
+      "pages": 6
+    },
+    {
+      "command": "bundled Poppler pdftoppm.exe -r 110 -png test/1.1.0/evidence/artifacts/chinese/spec/architecture/v2.0.0/ARCHITECTURE.pdf test/1.1.0/evidence/artifacts/independent-rendered/chinese",
+      "exitCode": 0,
+      "stderr": "",
+      "pages": 7
+    },
+    {
+      "command": "view_image English and Chinese all-page contact sheets; full Chinese pages 3 and 4; retained English diagram PNG",
+      "result": "All 13 pages visually inspected; Chinese continuation checked at full render size. No clipped, overlapping or missing glyphs; margins and footers preserved. Sequence diagram labels User, CLI, health, success match PUML and imply only local success flow; image is enlarged and somewhat soft but legible."
+    },
+    {
+      "command": "Repeat Poppler renders for both corrected retained PDFs, Python binding/content checks and view_image of final all-page sheets and Chinese pages 3/4",
+      "result": "Pass; English 6 pages, Chinese 7 pages; both renderer exits 0, empty stderr. Recreated contact sheets with numeric page files only after detecting prior all.png glob inclusion; PDF page renders unchanged."
+    }
+  ],
+  "fixtures": {
+    "english": {
+      "inspectedHashes": {
+        "PROVENANCE.json": "870905872cea0284268523cae1629dc2c287e4a6660af334b020d14b82c7325e",
+        "requirements.md": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+        "review-package/package.json": "bb5fb01ab6b489d13972edb49b7762de2133433e49bf9a578b331275c8977d90",
+        "review-package/sources/package.json": "b61177593c9fa37bdc272c619e3571815412e3ada48c7c2944f3c1f5124bce10",
+        "review-package/sources/requirements.md": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+        "review-package/sources/spec/architecture/discussions/discussion-1/review-input-b8ca567e938fe2c24253bf73bc57380c3bdb5e7c5c9d390b7825fba418bee288.json": "096fb608a02802465d019a71ed801d3338dd5093967cd258b166701f18c5f2c4",
+        "review-package/sources/spec/architecture/discussions/discussion-1/review-input-eee869dbeefb019238dd1e8ab5a445f3b11f6f5dc651cd4315d5429b8a1b181a.json": "f43e632d70b9d99433619d2de2409bd11fe4c716232b1502d8d9369a88d1cadb",
+        "spec/architecture/v2.0.0/ARCHITECTURE.md": "82b70523f9ab7f38c07cf76b86958bfb5dc7abcc93c7d6465ea07c5a0043b522",
+        "spec/architecture/v2.0.0/ARCHITECTURE.pdf": "f91452c265c823d01ced7472ca6738e5728beff54729783f5666561a0c0f2aaa",
+        "spec/architecture/v2.0.0/candidate.json": "eeebc5f6e8201952d983a12a6210f981538a5d67fb3eed59c8aef62efe12b5d4",
+        "spec/architecture/v2.0.0/manifest.yaml": "8312ab4a1d345ff2c055c3158dae8841a455b78168f4e0ef78544e8f4b5179f6",
+        "spec/architecture/v2.0.0/STATE.json": "f43e632d70b9d99433619d2de2409bd11fe4c716232b1502d8d9369a88d1cadb",
+        "spec/architecture/v2.0.0/diagrams/health-sequence.png": "2157cf1a1549e71c8a48d5b9302e3e2469375a7931fea6fe7228881383d9ff3b",
+        "spec/architecture/v2.0.0/diagrams/health-sequence.puml": "f3970f9292def2b842b295d42cfa3fc8c78dc8ee8724e76d27973619c303731c"
+      },
+      "identity": "health-fixture",
+      "suiteVersion": "1.1.0",
+      "architectureVersion": "2.0.0",
+      "architectureRevision": 1,
+      "discussionRevision": 2,
+      "pages": 6,
+      "bookmarks": [
+        {
+          "title": "Contents",
+          "page": 1
+        },
+        {
+          "title": "ARCH-001 CLI scope",
+          "page": 3
+        },
+        {
+          "title": "ARCH-010 Local contract",
+          "page": 4
+        },
+        {
+          "title": "ARCH-020 Validation",
+          "page": 6
+        }
+      ],
+      "candidateDigest": "422b1f87022e5752039992b1f1682bc6d3ab4f30a1ecf980189a63985cdf6c89",
+      "packageDigest": "227cc8e8caa62353f289d1fc5e57b2f0fb7a2f87d5bf33c339fb7b3f3823f06c",
+      "stateDigest": "eee869dbeefb019238dd1e8ab5a445f3b11f6f5dc651cd4315d5429b8a1b181a",
+      "candidateDigestMatch": true,
+      "packageDigestMatch": true,
+      "stateDigestMatch": true,
+      "manifestArtifactHashesMatch": true,
+      "manifestArtifactCount": 6,
+      "sourceHashesMatch": true,
+      "requirementsCopiedExact": true,
+      "packageCandidateExact": true,
+      "stateSnapshotExact": true,
+      "sections": [
+        {
+          "id": "ARCH-001",
+          "contentLength": 118,
+          "preview": "A user invokes the local CLI health command and receives determin",
+          "MDContentExact": true,
+          "PDFContentExactIgnoringWhitespaceAndPageFooters": true
+        },
+        {
+          "id": "ARCH-010",
+          "contentLength": 129,
+          "preview": "The command returns status ok on success. Failures return a nonze",
+          "MDContentExact": true,
+          "PDFContentExactIgnoringWhitespaceAndPageFooters": true
+        },
+        {
+          "id": "ARCH-020",
+          "contentLength": 91,
+          "preview": "Node tests validate the local command. The same validation contra",
+          "MDContentExact": true,
+          "PDFContentExactIgnoringWhitespaceAndPageFooters": true
+        }
+      ],
+      "title": "CLI health architecture",
+      "metadataTitle": "CLI health architecture",
+      "metadataSubject": null,
+      "diagramSourceExact": [
+        true
+      ],
+      "unsupportedComponents": "None introduced in candidate sections, PUML or rendered diagram. Only Node.js local CLI is chosen; inactive branch values are generic simulated fixture data.",
+      "visualReview": "Pass; clean sparse pagination; Chinese ARCH-001 repeats one intended no-server/no-GUI/no-database/no-gateway sentence for overflow stress. PDF preserves all content, including continuation across pages 3 and 4.",
+      "limitations": "No CURRENT pointer retained in this artifact fixture; pointer/history lifecycle outside this inspection. No actual CLI implementation retained; package test entry evidence is not test execution evidence. Pre-render independent approval remains explicitly simulated.",
+      "sectionsExactMDAndPDF": true,
+      "diagramsExactPUML": true,
+      "applicableConcernsRechecked": [
+        {
+          "name": "contracts",
+          "applicable": true,
+          "reason": "The local CLI defines a JSON success contract and failure exit code."
+        },
+        {
+          "name": "failure handling",
+          "applicable": true,
+          "reason": "The local command must return a nonzero code with a diagnostic on failure."
+        },
+        {
+          "name": "versioning",
+          "applicable": true,
+          "reason": "Architecture versions and retained revisions are managed independently of Suite versions."
+        },
+        {
+          "name": "testing",
+          "applicable": true,
+          "reason": "Node tests verify the deterministic local command."
+        },
+        {
+          "name": "CI/CD",
+          "applicable": true,
+          "reason": "The approved validation contract is shared between local execution and CI."
+        }
+      ],
+      "recheckConcernStateParity": true,
+      "sectionNodeTraceability": [
+        {
+          "sectionId": "ARCH-001",
+          "nodeIds": [
+            "other.stack"
+          ],
+          "nodeStates": [
+            {
+              "id": "other.stack",
+              "status": "confirmed",
+              "value": "Node CLI without framework"
+            }
+          ]
+        },
+        {
+          "sectionId": "ARCH-010",
+          "nodeIds": [
+            "contracts"
+          ],
+          "nodeStates": [
+            {
+              "id": "contracts",
+              "status": "confirmed",
+              "value": "Confirmed fixture contracts"
+            }
+          ]
+        },
+        {
+          "sectionId": "ARCH-020",
+          "nodeIds": [
+            "delivery"
+          ],
+          "nodeStates": [
+            {
+              "id": "delivery",
+              "status": "confirmed",
+              "value": "Confirmed fixture delivery"
+            }
+          ]
+        }
+      ],
+      "sectionNodeTraceabilityMatchesRawHelper": true,
+      "sectionNodesAllConfirmed": true,
+      "focusedFinalRender": {
+        "command": [
+          "C:/Users/21441/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/Library/bin/pdftoppm.exe",
+          "-r",
+          "110",
+          "-png",
+          "test\\1.1.0\\evidence\\artifacts\\english\\spec\\architecture\\v2.0.0\\ARCHITECTURE.pdf",
+          "test\\1.1.0\\evidence\\artifacts\\independent-rendered\\english"
+        ],
+        "exitCode": 0,
+        "stderr": "",
+        "pageImagesIdenticalToPriorVisualReview": true,
+        "pageCount": 6
+      }
+    },
+    "chinese": {
+      "inspectedHashes": {
+        "PROVENANCE.json": "aab27c83cddf45247fd1730b0dae0dd00249a92907ee1c220cf7c37301fca315",
+        "requirements.md": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+        "review-package/package.json": "5ee0604833d753e4db59f0d247ae901e681028f60fdf21169809a9099c11f14e",
+        "review-package/sources/package.json": "b61177593c9fa37bdc272c619e3571815412e3ada48c7c2944f3c1f5124bce10",
+        "review-package/sources/requirements.md": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+        "review-package/sources/spec/architecture/discussions/discussion-1/review-input-b8ca567e938fe2c24253bf73bc57380c3bdb5e7c5c9d390b7825fba418bee288.json": "096fb608a02802465d019a71ed801d3338dd5093967cd258b166701f18c5f2c4",
+        "review-package/sources/spec/architecture/discussions/discussion-1/review-input-eee869dbeefb019238dd1e8ab5a445f3b11f6f5dc651cd4315d5429b8a1b181a.json": "f43e632d70b9d99433619d2de2409bd11fe4c716232b1502d8d9369a88d1cadb",
+        "spec/architecture/v2.0.0/ARCHITECTURE.md": "620cd482f288043c7f5311df9803cec7de6fce98c002b0195ae1dba0294f2dcc",
+        "spec/architecture/v2.0.0/ARCHITECTURE.pdf": "321b681993bfceb709d28a3677060cefbd20b2475dc9864354a9807e2559ee29",
+        "spec/architecture/v2.0.0/candidate.json": "8e5019552942aa58bf23222e59ae04c57e4a167ace58e74e2bc9d97871e77562",
+        "spec/architecture/v2.0.0/manifest.yaml": "51d6b848c0d1a18e961859cd266629139648c1c0225e32fbe72dec4cc6cde0bc",
+        "spec/architecture/v2.0.0/STATE.json": "f43e632d70b9d99433619d2de2409bd11fe4c716232b1502d8d9369a88d1cadb",
+        "spec/architecture/v2.0.0/diagrams/health-sequence.png": "2157cf1a1549e71c8a48d5b9302e3e2469375a7931fea6fe7228881383d9ff3b",
+        "spec/architecture/v2.0.0/diagrams/health-sequence.puml": "f3970f9292def2b842b295d42cfa3fc8c78dc8ee8724e76d27973619c303731c"
+      },
+      "identity": "health-fixture",
+      "suiteVersion": "1.1.0",
+      "architectureVersion": "2.0.0",
+      "architectureRevision": 1,
+      "discussionRevision": 2,
+      "pages": 7,
+      "bookmarks": [
+        {
+          "title": "Contents",
+          "page": 1
+        },
+        {
+          "title": "ARCH-001 CLI scope",
+          "page": 3
+        },
+        {
+          "title": "ARCH-010 Local contract",
+          "page": 5
+        },
+        {
+          "title": "ARCH-020 Validation",
+          "page": 7
+        }
+      ],
+      "candidateDigest": "5f4f8e6489ef92dcbbff0199401000dd65b426f912b6c09500f7b73e2e7c194d",
+      "packageDigest": "bc0bd821dd8a21313e00fe6855baf4a219a802b31bb5ec139d15226d46bc7135",
+      "stateDigest": "eee869dbeefb019238dd1e8ab5a445f3b11f6f5dc651cd4315d5429b8a1b181a",
+      "candidateDigestMatch": true,
+      "packageDigestMatch": true,
+      "stateDigestMatch": true,
+      "manifestArtifactHashesMatch": true,
+      "manifestArtifactCount": 6,
+      "sourceHashesMatch": true,
+      "requirementsCopiedExact": true,
+      "packageCandidateExact": true,
+      "stateSnapshotExact": true,
+      "sections": [
+        {
+          "id": "ARCH-001",
+          "contentLength": 3600,
+          "preview": "用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回",
+          "MDContentExact": true,
+          "PDFContentExactIgnoringWhitespaceAndPageFooters": true
+        },
+        {
+          "id": "ARCH-010",
+          "contentLength": 129,
+          "preview": "The command returns status ok on success. Failures return a nonze",
+          "MDContentExact": true,
+          "PDFContentExactIgnoringWhitespaceAndPageFooters": true
+        },
+        {
+          "id": "ARCH-020",
+          "contentLength": 91,
+          "preview": "Node tests validate the local command. The same validation contra",
+          "MDContentExact": true,
+          "PDFContentExactIgnoringWhitespaceAndPageFooters": true
+        }
+      ],
+      "title": "本地健康检查架构",
+      "metadataTitle": "本地健康检查架构",
+      "metadataSubject": null,
+      "diagramSourceExact": [
+        true
+      ],
+      "unsupportedComponents": "None introduced in candidate sections, PUML or rendered diagram. Only Node.js local CLI is chosen; inactive branch values are generic simulated fixture data.",
+      "visualReview": "Pass; clean sparse pagination; Chinese ARCH-001 repeats one intended no-server/no-GUI/no-database/no-gateway sentence for overflow stress. PDF preserves all content, including continuation across pages 3 and 4.",
+      "limitations": "No CURRENT pointer retained in this artifact fixture; pointer/history lifecycle outside this inspection. No actual CLI implementation retained; package test entry evidence is not test execution evidence. Pre-render independent approval remains explicitly simulated.",
+      "sectionsExactMDAndPDF": true,
+      "diagramsExactPUML": true,
+      "applicableConcernsRechecked": [
+        {
+          "name": "contracts",
+          "applicable": true,
+          "reason": "The local CLI defines a JSON success contract and failure exit code."
+        },
+        {
+          "name": "failure handling",
+          "applicable": true,
+          "reason": "The local command must return a nonzero code with a diagnostic on failure."
+        },
+        {
+          "name": "versioning",
+          "applicable": true,
+          "reason": "Architecture versions and retained revisions are managed independently of Suite versions."
+        },
+        {
+          "name": "testing",
+          "applicable": true,
+          "reason": "Node tests verify the deterministic local command."
+        },
+        {
+          "name": "CI/CD",
+          "applicable": true,
+          "reason": "The approved validation contract is shared between local execution and CI."
+        }
+      ],
+      "recheckConcernStateParity": true,
+      "sectionNodeTraceability": [
+        {
+          "sectionId": "ARCH-001",
+          "nodeIds": [
+            "other.stack"
+          ],
+          "nodeStates": [
+            {
+              "id": "other.stack",
+              "status": "confirmed",
+              "value": "Node CLI without framework"
+            }
+          ]
+        },
+        {
+          "sectionId": "ARCH-010",
+          "nodeIds": [
+            "contracts"
+          ],
+          "nodeStates": [
+            {
+              "id": "contracts",
+              "status": "confirmed",
+              "value": "Confirmed fixture contracts"
+            }
+          ]
+        },
+        {
+          "sectionId": "ARCH-020",
+          "nodeIds": [
+            "delivery"
+          ],
+          "nodeStates": [
+            {
+              "id": "delivery",
+              "status": "confirmed",
+              "value": "Confirmed fixture delivery"
+            }
+          ]
+        }
+      ],
+      "sectionNodeTraceabilityMatchesRawHelper": true,
+      "sectionNodesAllConfirmed": true,
+      "focusedFinalRender": {
+        "command": [
+          "C:/Users/21441/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/Library/bin/pdftoppm.exe",
+          "-r",
+          "110",
+          "-png",
+          "test\\1.1.0\\evidence\\artifacts\\chinese\\spec\\architecture\\v2.0.0\\ARCHITECTURE.pdf",
+          "test\\1.1.0\\evidence\\artifacts\\independent-rendered\\chinese"
+        ],
+        "exitCode": 0,
+        "stderr": "",
+        "pageImagesIdenticalToPriorVisualReview": true,
+        "pageCount": 7
+      }
+    }
+  },
+  "renderedHashes": {
+    "independent-rendered/chinese-1.png": "cf6e15195325655ddfd11a900e27968a8de78dd4aa2de1f4a865e536f9a20466",
+    "independent-rendered/chinese-2.png": "d2b969f5d7b64d552ccf25e810f4a469a066201a06455563d96b7df5c1140f34",
+    "independent-rendered/chinese-3.png": "aec1651ebc81da03e2a8b27aa49e03f3cc7bc540a3610162ed73d5bab13ad3e1",
+    "independent-rendered/chinese-4.png": "25a04b6c1f12244d186c8abc377e3bd785c4abd5e6f18a4a1bfaeaa2c1ccf2dc",
+    "independent-rendered/chinese-5.png": "548edf7b3921628cbf344ccc75eb753d122663ade193f27a634183a02e8a3300",
+    "independent-rendered/chinese-6.png": "35414c3e9e96412e814424c274d485fc81f26ea0edc42996863150fe99c74a0b",
+    "independent-rendered/chinese-7.png": "0216281e1004073f98d5834721c8e82bad38f30e7ff5e546d4d48a1fe685f0e2",
+    "independent-rendered/chinese-all.png": "5e3abbc5445a4c6787426ddfdc501c886e01f314353d51829eeb6517a764b98f",
+    "independent-rendered/english-1.png": "38067ca5ec02bde6e5d7cdc46cc907c781e0c1c23dfec0295386080983302b22",
+    "independent-rendered/english-2.png": "8df49df0abcd75ec3efc78e587644774fd75b8276d10bf988a4d13a1236e6ce3",
+    "independent-rendered/english-3.png": "2e744eb41c941565b7dfe24a12f42346347f394e76516d12d88f31b2fcfb254e",
+    "independent-rendered/english-4.png": "05d967e8e6459b29545233cfd9f481e41dfef1089482b2fdecb4e842cf002626",
+    "independent-rendered/english-5.png": "2b96dc94acbe859a92d3a3dd30f1bfda99eba569c3c7c04fa08f45feab6f659a",
+    "independent-rendered/english-6.png": "3313698b364a1f7a63cc9924de5afcee49ec08f0538148f413fc2bf28b2205e0",
+    "independent-rendered/english-all.png": "fefa51eaa7d9b26cb2f105b4153a0f67aa8e617a8dc7d6abcffad89ba52d75b2"
+  },
+  "recheckedAt": "2026-10-03T07:24:29.298138+00:00",
+  "focusedFinalRecheckAt": "2026-10-03T07:28:16.515652+00:00",
+  "focusedFinalRecheck": {
+    "status": "PASS",
+    "scope": "Raw helpers.mjs and DISCUSSION.md read directly; final retained requirements, PROVENANCE, candidate/STATE/snapshot/package/manifests/MD/PDF/diagrams rechecked; source-defined section mappings retained correctly. Existing ART-001 resolution retained.",
+    "rawSourceHashes": {
+      "test/1.1.0/helpers.mjs": "24c10d88e1a4a3f4bd1994b64be0cbdd02e72260ee8ff9d1e89c67e2ade3e889",
+      "1.1.0/shared/DISCUSSION.md": "e9e479e185bdfba6d5558beb8174f47703e2ee2455e060a19573dbd637e87250"
+    },
+    "visualEvidence": "Both PDF hashes changed; rerendered final bytes with same Poppler command. All numeric page PNG hashes exactly match prior independently viewed pages; no additional visual sampling needed.",
+    "limitations": "contracts and delivery node conclusions remain explicitly generic simulated fixture values; traceability is correctly preserved structurally, not proof of actual human acceptance."
+  }
+}

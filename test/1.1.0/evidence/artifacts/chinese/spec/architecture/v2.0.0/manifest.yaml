@@ -1,0 +1,39 @@
+suiteVersion: 1.1.0
+discussion:
+  id: discussion-1
+  revision: 2
+  digest: eee869dbeefb019238dd1e8ab5a445f3b11f6f5dc651cd4315d5429b8a1b181a
+  snapshot: spec/architecture/discussions/discussion-1/review-input-eee869dbeefb019238dd1e8ab5a445f3b11f6f5dc651cd4315d5429b8a1b181a.json
+identity: health-fixture
+version: 2.0.0
+revision: 1
+frozenAt: 2026-10-03T07:26:28.354Z
+repositoryRevision: c90df23a0de273cc8d75e0a506ab0b1564231799
+candidateDigest: 5f4f8e6489ef92dcbbff0199401000dd65b426f912b6c09500f7b73e2e7c194d
+artifacts:
+  candidate.json: 8e5019552942aa58bf23222e59ae04c57e4a167ace58e74e2bc9d97871e77562
+  STATE.json: f43e632d70b9d99433619d2de2409bd11fe4c716232b1502d8d9369a88d1cadb
+  ARCHITECTURE.md: 620cd482f288043c7f5311df9803cec7de6fce98c002b0195ae1dba0294f2dcc
+  ARCHITECTURE.pdf: 321b681993bfceb709d28a3677060cefbd20b2475dc9864354a9807e2559ee29
+  diagrams/health-sequence.puml: f3970f9292def2b842b295d42cfa3fc8c78dc8ee8724e76d27973619c303731c
+  diagrams/health-sequence.png: 2157cf1a1549e71c8a48d5b9302e3e2469375a7931fea6fe7228881383d9ff3b
+diagrams:
+  - id: health-sequence
+    puml: diagrams/health-sequence.puml
+    image: diagrams/health-sequence.png
+    sectionIds:
+      - ARCH-010
+review:
+  candidateDigest: 5f4f8e6489ef92dcbbff0199401000dd65b426f912b6c09500f7b73e2e7c194d
+  reviewers:
+    - unit-fixture-only
+  claim: Reports bound to raw package; host trace independence must be verified by
+    orchestration
+verification:
+  semanticParity: true
+  visualReview: pending
+  independentArtifactReview: pending
+generation:
+  pdf: PDFKit
+  plantumlJarSha256: 5e1ecfa8ecd32c90b03bbf3b1eb6f020943f98ab0fcf4032be31a0002ee2c462
+semanticChange: null

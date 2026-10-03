@@ -1,0 +1,126 @@
+{
+  "kind": "python",
+  "commands": [
+    {
+      "name": "build",
+      "executable": "C:/Users/21441/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "args": [
+        "tools/devops.py",
+        "build"
+      ],
+      "env": {
+        "DEPLOY_TARGET": "fixture"
+      }
+    },
+    {
+      "name": "test",
+      "executable": "C:/Users/21441/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "args": [
+        "tools/devops.py",
+        "test"
+      ],
+      "env": {
+        "DEPLOY_TARGET": "fixture"
+      }
+    },
+    {
+      "name": "lint",
+      "executable": "C:/Users/21441/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "args": [
+        "tools/devops.py",
+        "lint"
+      ],
+      "env": {
+        "DEPLOY_TARGET": "fixture"
+      }
+    },
+    {
+      "name": "format",
+      "executable": "C:/Users/21441/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "args": [
+        "tools/devops.py",
+        "format"
+      ],
+      "env": {
+        "DEPLOY_TARGET": "fixture"
+      }
+    },
+    {
+      "name": "release",
+      "executable": "C:/Users/21441/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "args": [
+        "tools/devops.py",
+        "release"
+      ],
+      "env": {
+        "DEPLOY_TARGET": "fixture"
+      }
+    },
+    {
+      "name": "deploy",
+      "executable": "C:/Users/21441/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "args": [
+        "tools/devops.py",
+        "deploy"
+      ],
+      "env": {
+        "DEPLOY_TARGET": "fixture"
+      }
+    }
+  ],
+  "entryOutputsBefore": [
+    {
+      "name": "build",
+      "stdout": "{\"stage\": \"build\", \"status\": \"ok\", \"target\": null}"
+    },
+    {
+      "name": "test",
+      "stdout": "{\"stage\": \"test\", \"status\": \"ok\", \"target\": null}"
+    },
+    {
+      "name": "lint",
+      "stdout": "{\"stage\": \"lint\", \"status\": \"ok\", \"target\": null}"
+    },
+    {
+      "name": "format",
+      "stdout": "{\"stage\": \"format\", \"status\": \"ok\", \"target\": null}"
+    },
+    {
+      "name": "release",
+      "stdout": "{\"stage\": \"release\", \"status\": \"ok\", \"target\": null}"
+    },
+    {
+      "name": "deploy",
+      "stdout": "{\"stage\": \"deploy\", \"status\": \"ok\", \"target\": \"fixture\"}"
+    }
+  ],
+  "entryOutputsAfter": [
+    {
+      "name": "build",
+      "stdout": "{\"stage\": \"build\", \"status\": \"ok\", \"target\": null}"
+    },
+    {
+      "name": "test",
+      "stdout": "{\"stage\": \"test\", \"status\": \"ok\", \"target\": null}"
+    },
+    {
+      "name": "lint",
+      "stdout": "{\"stage\": \"lint\", \"status\": \"ok\", \"target\": null}"
+    },
+    {
+      "name": "format",
+      "stdout": "{\"stage\": \"format\", \"status\": \"ok\", \"target\": null}"
+    },
+    {
+      "name": "release",
+      "stdout": "{\"stage\": \"release\", \"status\": \"ok\", \"target\": null}"
+    },
+    {
+      "name": "deploy",
+      "stdout": "{\"stage\": \"deploy\", \"status\": \"ok\", \"target\": \"fixture\"}"
+    }
+  ],
+  "ciHashPreserved": true,
+  "behavior": "actual deterministic execution",
+  "independentAgentReview": "separate gate"
+}

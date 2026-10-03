@@ -1,0 +1,38 @@
+
+> architecture-governance-skills@1.1.0 validate
+> node tools/validate.mjs
+
+✔ Queries are read-only, return stable queue and separate proposals from confirmation (189.5414ms)
+✔ Early answers and parallel branches are retained; API is not a component branch (65.5772ms)
+✔ Provenance, budgets, core exclusions and unauthorized writes fail without replacing state (78.411ms)
+✔ Dependency edits preserve stale values, unrelated confirmation, and invalidate candidate/review (217.3963ms)
+✔ Rejection remains unresolved; conflicts block readiness until sourced resolution (155.391ms)
+✔ Expected revision and lock cover competing writes; crash locks and corrupt JSON are explicit (58.8088ms)
+✔ Legacy reads do not migrate; explicit migration preserves original arrays and recovery bytes (47.952ms)
+✔ Unsafe paths, symlinks, non-authoritative worktree copies and modified dependencies fail (64.0356ms)
+✔ Candidate cannot bypass readiness or bind excluded/stale nodes; immutable input survives phase changes (354.0693ms)
+✔ Active stack changes invalidate dataflow/contracts/GUI/feasibility while inactive branches do not (208.3502ms)
+✔ Batch preserves explicitly repeated unchanged downstream answers after upstream changes (125.3584ms)
+✔ Concern applicability is explicit and generated from confirmed nodes; altered candidate concern fails (192.0021ms)
+✔ Two independent CLI processes cannot both commit the same expected revision (286.0381ms)
+✔ Missing funds never become zero and numeric strings never become resource counts (59.044ms)
+✔ Existing Node/Python source behavior and build/test/lint/release/deploy entries preserved after approved governance (2379.8274ms)
+✔ Project/global version-bound install, replacement and no bootstrap (7644.4629ms)
+✔ Release expanded and source/installer integrity verified (79.5338ms)
+﹣ POSIX npm bin symlink executes the installer rather than exiting silently (0.092ms) # SKIP
+✔ State-bound real PDF/PUML freeze; historical verification survives later working-state changes (4421.3035ms)
+✔ Archive is immutable/idempotent, conflicts fail, entry survives archive/write failure (207.8303ms)
+✔ Freeze render/publication failure never advances phase or CURRENT; manual candidate fails (586.2048ms)
+✔ Existing freeze requires each formal output and pointer path; no paths are written on refusal (2049.4715ms)
+✔ Actual npm and pnpm transport: project/global installs and independently usable runtime (34270.0036ms)
+✔ Discussion-only files preserve Greenfield classification; existing code still classified as existing (297.1078ms)
+✔ Frozen 1.0.0 sources, tests, package remain identical; original tests replay in historical package context (66315.6139ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 121543.4145
+Skill checks, runtime syntax, tests and source/release parity passed.

@@ -1,0 +1,126 @@
+{
+  "kind": "node",
+  "commands": [
+    {
+      "name": "build",
+      "executable": "H:\\node.js\\node.exe",
+      "args": [
+        "tools/devops.mjs",
+        "build"
+      ],
+      "env": {
+        "DEPLOY_TARGET": "fixture"
+      }
+    },
+    {
+      "name": "test",
+      "executable": "H:\\node.js\\node.exe",
+      "args": [
+        "tools/devops.mjs",
+        "test"
+      ],
+      "env": {
+        "DEPLOY_TARGET": "fixture"
+      }
+    },
+    {
+      "name": "lint",
+      "executable": "H:\\node.js\\node.exe",
+      "args": [
+        "tools/devops.mjs",
+        "lint"
+      ],
+      "env": {
+        "DEPLOY_TARGET": "fixture"
+      }
+    },
+    {
+      "name": "format",
+      "executable": "H:\\node.js\\node.exe",
+      "args": [
+        "tools/devops.mjs",
+        "format"
+      ],
+      "env": {
+        "DEPLOY_TARGET": "fixture"
+      }
+    },
+    {
+      "name": "release",
+      "executable": "H:\\node.js\\node.exe",
+      "args": [
+        "tools/devops.mjs",
+        "release"
+      ],
+      "env": {
+        "DEPLOY_TARGET": "fixture"
+      }
+    },
+    {
+      "name": "deploy",
+      "executable": "H:\\node.js\\node.exe",
+      "args": [
+        "tools/devops.mjs",
+        "deploy"
+      ],
+      "env": {
+        "DEPLOY_TARGET": "fixture"
+      }
+    }
+  ],
+  "entryOutputsBefore": [
+    {
+      "name": "build",
+      "stdout": "{\"stage\":\"build\",\"status\":\"ok\",\"target\":null}"
+    },
+    {
+      "name": "test",
+      "stdout": "{\"stage\":\"test\",\"status\":\"ok\",\"target\":null}"
+    },
+    {
+      "name": "lint",
+      "stdout": "{\"stage\":\"lint\",\"status\":\"ok\",\"target\":null}"
+    },
+    {
+      "name": "format",
+      "stdout": "{\"stage\":\"format\",\"status\":\"ok\",\"target\":null}"
+    },
+    {
+      "name": "release",
+      "stdout": "{\"stage\":\"release\",\"status\":\"ok\",\"target\":null}"
+    },
+    {
+      "name": "deploy",
+      "stdout": "{\"stage\":\"deploy\",\"status\":\"ok\",\"target\":\"fixture\"}"
+    }
+  ],
+  "entryOutputsAfter": [
+    {
+      "name": "build",
+      "stdout": "{\"stage\":\"build\",\"status\":\"ok\",\"target\":null}"
+    },
+    {
+      "name": "test",
+      "stdout": "{\"stage\":\"test\",\"status\":\"ok\",\"target\":null}"
+    },
+    {
+      "name": "lint",
+      "stdout": "{\"stage\":\"lint\",\"status\":\"ok\",\"target\":null}"
+    },
+    {
+      "name": "format",
+      "stdout": "{\"stage\":\"format\",\"status\":\"ok\",\"target\":null}"
+    },
+    {
+      "name": "release",
+      "stdout": "{\"stage\":\"release\",\"status\":\"ok\",\"target\":null}"
+    },
+    {
+      "name": "deploy",
+      "stdout": "{\"stage\":\"deploy\",\"status\":\"ok\",\"target\":\"fixture\"}"
+    }
+  ],
+  "ciHashPreserved": true,
+  "behavior": "actual deterministic execution",
+  "independentAgentReview": "separate gate"
+}

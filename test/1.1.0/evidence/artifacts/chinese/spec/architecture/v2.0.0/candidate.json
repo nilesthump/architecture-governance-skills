@@ -1,0 +1,235 @@
+{
+  "identity": "health-fixture",
+  "title": "本地健康检查架构",
+  "requirements": [
+    "Provide deterministic local health JSON."
+  ],
+  "constraints": [
+    "A CLI tool, no server or GUI."
+  ],
+  "nonGoals": [
+    "No database, middleware or gateway."
+  ],
+  "assumptions": [],
+  "risks": [],
+  "externalDependencies": [
+    "Node.js"
+  ],
+  "rejectedAlternatives": [
+    "HTTP service excluded from this fixture."
+  ],
+  "decisions": [
+    {
+      "id": "DEC-001",
+      "status": "accepted",
+      "text": "Node CLI without framework",
+      "nodeIds": [
+        "other.stack"
+      ]
+    }
+  ],
+  "openQuestions": [],
+  "concerns": [
+    {
+      "name": "transport",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "API",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "contracts",
+      "applicable": true,
+      "reason": "The local CLI defines a JSON success contract and failure exit code."
+    },
+    {
+      "name": "authentication",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "authorization",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "persistence",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "transactions",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "schema migration",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "cache",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "asynchronous messaging",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "ordering",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "consistency",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "idempotency",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "configuration",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "secret management",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "logging",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "metrics",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "tracing",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "observability",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "timeout",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "retry",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "failure handling",
+      "applicable": true,
+      "reason": "The local command must return a nonzero code with a diagnostic on failure."
+    },
+    {
+      "name": "circuit breaking",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "deployment",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "rollback",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "compatibility",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "versioning",
+      "applicable": true,
+      "reason": "Architecture versions and retained revisions are managed independently of Suite versions."
+    },
+    {
+      "name": "security",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "testing",
+      "applicable": true,
+      "reason": "Node tests verify the deterministic local command."
+    },
+    {
+      "name": "CI/CD",
+      "applicable": true,
+      "reason": "The approved validation contract is shared between local execution and CI."
+    },
+    {
+      "name": "release",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    },
+    {
+      "name": "operations",
+      "applicable": false,
+      "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+    }
+  ],
+  "sections": [
+    {
+      "id": "ARCH-001",
+      "title": "CLI scope",
+      "content": "用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。用户执行本地命令获取健康状态，返回确定的 JSON 结果。项目不引入服务器、界面、数据库或网关。",
+      "nodeIds": [
+        "other.stack"
+      ]
+    },
+    {
+      "id": "ARCH-010",
+      "title": "Local contract",
+      "content": "The command returns status ok on success. Failures return a nonzero process code with a diagnostic. No network API is introduced.",
+      "nodeIds": [
+        "contracts"
+      ]
+    },
+    {
+      "id": "ARCH-020",
+      "title": "Validation",
+      "content": "Node tests validate the local command. The same validation contract runs locally and in CI.",
+      "nodeIds": [
+        "delivery"
+      ]
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "health-sequence",
+      "sectionIds": [
+        "ARCH-010"
+      ],
+      "source": "@startuml\nactor User\nparticipant CLI\nUser -> CLI: health\nCLI --> User: success\n@enduml"
+    }
+  ],
+  "discussion": {
+    "id": "discussion-1",
+    "revision": 2,
+    "digest": "eee869dbeefb019238dd1e8ab5a445f3b11f6f5dc651cd4315d5429b8a1b181a",
+    "snapshot": "spec/architecture/discussions/discussion-1/review-input-eee869dbeefb019238dd1e8ab5a445f3b11f6f5dc651cd4315d5429b8a1b181a.json"
+  }
+}

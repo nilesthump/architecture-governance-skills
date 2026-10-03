@@ -10,7 +10,13 @@ function walk(p) {
     else if (file.endsWith(".test.mjs")) files.push(file);
   }
 }
-walk(path.join(root, "test/1.0.0"));
+walk(
+  path.join(
+    root,
+    "test",
+    JSON.parse(fs.readFileSync(path.join(root, "package.json"))).version,
+  ),
+);
 if (!files.length) throw Error("No tests discovered");
 const r = spawnSync(
   process.execPath,

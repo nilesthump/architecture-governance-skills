@@ -1,0 +1,1344 @@
+{
+  "suiteVersion": "1.1.0",
+  "formatVersion": 2,
+  "definitionVersion": "1.1.0",
+  "projectIdentity": "health-fixture",
+  "discussionId": "discussion-1",
+  "contentRevision": 2,
+  "baseline": null,
+  "nodes": [
+    {
+      "id": "goals",
+      "priority": 0,
+      "dependencies": [],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Confirmed fixture goals",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "scope",
+      "priority": 0,
+      "dependencies": [
+        "goals"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Confirmed fixture scope",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "acceptance",
+      "priority": 0,
+      "dependencies": [
+        "scope"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Confirmed fixture acceptance",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "constraints",
+      "priority": 0,
+      "dependencies": [
+        "goals"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Confirmed fixture constraints",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "budget",
+      "priority": 0,
+      "dependencies": [
+        "scope"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "deadline": "one week",
+        "resources": [
+          {
+            "type": "people",
+            "count": 1,
+            "availability": "full week"
+          }
+        ]
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "delivery",
+      "priority": 1,
+      "dependencies": [
+        "scope",
+        "constraints"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Confirmed fixture delivery",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "components",
+      "priority": 2,
+      "dependencies": [
+        "scope",
+        "constraints"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "types": [
+          "other"
+        ],
+        "gui": false
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "server.topology",
+      "priority": 2,
+      "dependencies": [
+        "components"
+      ],
+      "branch": "server",
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Confirmed fixture server.topology",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "server.stack",
+      "priority": 2,
+      "dependencies": [
+        "components",
+        "constraints",
+        "server.topology"
+      ],
+      "branch": "server",
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Confirmed fixture server.stack",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "server.persistence",
+      "priority": 2,
+      "dependencies": [
+        "components"
+      ],
+      "branch": "server",
+      "blocking": true,
+      "status": "confirmed",
+      "value": "none",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "server.middleware",
+      "priority": 2,
+      "dependencies": [
+        "server.topology",
+        "server.stack",
+        "server.persistence"
+      ],
+      "branch": "server",
+      "blocking": true,
+      "status": "confirmed",
+      "value": "none",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "client.platform",
+      "priority": 2,
+      "dependencies": [
+        "components"
+      ],
+      "branch": "client",
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Confirmed fixture client.platform",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "client.stack",
+      "priority": 2,
+      "dependencies": [
+        "client.platform"
+      ],
+      "branch": "client",
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Confirmed fixture client.stack",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "game.platform",
+      "priority": 2,
+      "dependencies": [
+        "components"
+      ],
+      "branch": "game",
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Confirmed fixture game.platform",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "game.stack",
+      "priority": 2,
+      "dependencies": [
+        "game.platform"
+      ],
+      "branch": "game",
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Confirmed fixture game.stack",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "web.stack",
+      "priority": 2,
+      "dependencies": [
+        "components"
+      ],
+      "branch": "web",
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Confirmed fixture web.stack",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "other.stack",
+      "priority": 2,
+      "dependencies": [
+        "components"
+      ],
+      "branch": "other",
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Node CLI without framework",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "dataflow",
+      "priority": 3,
+      "dependencies": [
+        "components",
+        "server.topology",
+        "server.stack",
+        "server.persistence",
+        "server.middleware",
+        "client.platform",
+        "client.stack",
+        "game.platform",
+        "game.stack",
+        "web.stack",
+        "other.stack"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Confirmed fixture dataflow",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "contracts",
+      "priority": 3,
+      "dependencies": [
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Confirmed fixture contracts",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "gui",
+      "priority": 3,
+      "dependencies": [
+        "components",
+        "dataflow",
+        "contracts"
+      ],
+      "branch": "gui",
+      "blocking": true,
+      "status": "confirmed",
+      "value": "Confirmed fixture gui",
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "feasibility",
+      "priority": 4,
+      "dependencies": [
+        "budget",
+        "acceptance",
+        "components",
+        "server.topology",
+        "server.stack",
+        "server.persistence",
+        "server.middleware",
+        "client.platform",
+        "client.stack",
+        "game.platform",
+        "game.stack",
+        "web.stack",
+        "other.stack",
+        "dataflow",
+        "contracts",
+        "gui",
+        "concern.transport",
+        "concern.API",
+        "concern.contracts",
+        "concern.authentication",
+        "concern.authorization",
+        "concern.persistence",
+        "concern.transactions",
+        "concern.schema-migration",
+        "concern.cache",
+        "concern.asynchronous-messaging",
+        "concern.ordering",
+        "concern.consistency",
+        "concern.idempotency",
+        "concern.configuration",
+        "concern.secret-management",
+        "concern.logging",
+        "concern.metrics",
+        "concern.tracing",
+        "concern.observability",
+        "concern.timeout",
+        "concern.retry",
+        "concern.failure-handling",
+        "concern.circuit-breaking",
+        "concern.deployment",
+        "concern.rollback",
+        "concern.compatibility",
+        "concern.versioning",
+        "concern.security",
+        "concern.testing",
+        "concern.CI-CD",
+        "concern.release",
+        "concern.operations"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "feasible": true,
+        "basis": "one developer, bounded CLI scope"
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.transport",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.API",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.contracts",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": true,
+        "reason": "The local CLI defines a JSON success contract and failure exit code."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.authentication",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.authorization",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.persistence",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.transactions",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.schema-migration",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.cache",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.asynchronous-messaging",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.ordering",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.consistency",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.idempotency",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.configuration",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.secret-management",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.logging",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.metrics",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.tracing",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.observability",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.timeout",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.retry",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.failure-handling",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": true,
+        "reason": "The local command must return a nonzero code with a diagnostic on failure."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.circuit-breaking",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.deployment",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.rollback",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.compatibility",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.versioning",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": true,
+        "reason": "Architecture versions and retained revisions are managed independently of Suite versions."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.security",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.testing",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": true,
+        "reason": "Node tests verify the deterministic local command."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.CI-CD",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": true,
+        "reason": "The approved validation contract is shared between local execution and CI."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.release",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    },
+    {
+      "id": "concern.operations",
+      "priority": 4,
+      "dependencies": [
+        "components",
+        "dataflow"
+      ],
+      "branch": null,
+      "blocking": true,
+      "status": "confirmed",
+      "value": {
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      "evidence": {
+        "kind": "explicit-user",
+        "source": {
+          "path": "requirements.md",
+          "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9",
+          "locator": "paragraph 1",
+          "quote": "Human fixture authorization"
+        }
+      },
+      "reason": ""
+    }
+  ],
+  "conflicts": [],
+  "userRequirements": [],
+  "acceptedRequirements": [],
+  "acceptedDecisions": [],
+  "candidateDecisions": [],
+  "rejectedAlternatives": [],
+  "constraints": [],
+  "nonGoals": [],
+  "openQuestions": [],
+  "risks": [],
+  "externalDependencies": [],
+  "assumptions": []
+}

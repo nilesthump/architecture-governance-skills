@@ -1,0 +1,84 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packageDigest",
+    "candidateDigest",
+    "reviewer",
+    "freshContext",
+    "hostTrace",
+    "findings",
+    "coverage"
+  ],
+  "properties": {
+    "packageDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "candidateDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "reviewer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "freshContext": {
+      "const": true
+    },
+    "hostTrace": {
+      "type": "string",
+      "minLength": 1
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "severity", "message", "citations"],
+        "properties": {
+          "kind": {
+            "enum": [
+              "OBSERVATION",
+              "RISK",
+              "CONFLICT",
+              "MISSING_DECISION",
+              "RECOMMENDATION",
+              "DECISION_REQUIRED"
+            ]
+          },
+          "severity": {
+            "enum": ["info", "warning", "blocking"]
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1
+          },
+          "citations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          },
+          "assumptions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tradeoffs": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "coverage": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
