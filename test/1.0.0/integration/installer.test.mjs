@@ -86,3 +86,29 @@ test("Release expanded and source/installer integrity verified", () => {
     ),
   );
 });
+
+test(
+  "POSIX npm bin symlink executes the installer rather than exiting silently",
+  { skip: process.platform === "win32" },
+  () => {
+    const root = temp();
+    try {
+      const link = path.join(root, "architecture-skills"),
+        target = path.join(root, "installed");
+      fs.symlinkSync(path.join(project, "bin/install.mjs"), link);
+      const r = JSON.parse(
+        run(process.execPath, [
+          link,
+          "--scope",
+          "project",
+          "--directory",
+          target,
+        ]),
+      );
+      assert.equal(r.status, "success");
+      assert.ok(fs.existsSync(path.join(target, "architecture/SKILL.md")));
+    } finally {
+      cleanup(root);
+    }
+  },
+);

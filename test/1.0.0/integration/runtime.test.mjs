@@ -344,3 +344,29 @@ test("GitHub protection separates integrity from PR-only approval bypass", () =>
   assert.equal(r[1].bypass_actors[0].bypass_mode, "pull_request");
   assert.equal(r[1].rules[0].parameters.required_approving_review_count, 1);
 });
+
+test("Review output supports new nested parents and rejects repository containment", async () =>
+  fixture(async (root, base) => {
+    const input = {
+      root,
+      candidate: candidate(),
+      sources: [
+        { path: "requirements.md", category: "AUTHORITATIVE" },
+        { path: "package.json", category: "EVIDENCE" },
+      ],
+    };
+    const result = await execute("review.package", {
+      ...input,
+      output: path.join(base, "new", "nested", "review"),
+    });
+    assert.equal(result.status, "success");
+    assert.equal(
+      (
+        await execute("review.package", {
+          ...input,
+          output: path.join(root, "new", "nested", "review"),
+        })
+      ).status,
+      "validation_failed",
+    );
+  }));

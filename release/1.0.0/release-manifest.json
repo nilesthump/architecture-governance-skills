@@ -8,11 +8,11 @@
     "schemas/validation.schema.json": "b3177c79fb4ec8953086718d581a7144d2421fa45e62df1f4451095b1b78ba8b",
     "scripts/core/artifacts.mjs": "59b089b5cb183befccfb7ef38ca62c9c7d93ff148f5670c95785427219a952a4",
     "scripts/core/cli.mjs": "16744e7c478874eb915645ad66b1bb5b4a814a4b20245c3eeda2f0b8e099ca5d",
-    "scripts/core/github.mjs": "cd00e9fa580879c49657ca867d29e487e69a412d8d6913511bd9ce6d6899d168",
+    "scripts/core/github.mjs": "c4f53fcf5b47067a29a3e66aae331b44b39e931999633723dc5ce485807dbaa6",
     "scripts/core/governance.mjs": "56b803df083aa3c0168c13b530df68868dbe38ff5bfd2cbc1907caa32e0d683f",
     "scripts/core/repository.mjs": "005ae56f5a89d9be364aaf18bab96ae4891f2889ca153c60f3ee507237a1806b",
-    "scripts/core/review.mjs": "c5452357ac1c32b4cb2f7a560b080b4e01e7f1f864b63cb32ca82051cc78f809",
-    "scripts/core/util.mjs": "864ced233cf9dbd558c773ad21170b7b1c45a1852ada7c5ccd49b8c3c76bc307",
+    "scripts/core/review.mjs": "430116505ca77cefff3e740fcfab18a12a00e1b60f0051fd2bb6ea0d6340af29",
+    "scripts/core/util.mjs": "fe29537a6f3562819a6a00ab97e8e071e6dc0b2f1c538b22146a1d245ef2ea4f",
     "scripts/core/working.mjs": "01af9e140ce83833719628f2ece5c36e018714764a1931670027df3099de92ef",
     "scripts/linux/run.sh": "cbfec902f1add88d6bb029dc8628d6e19d0920789cbb1397e4011ed516304028",
     "scripts/macos/run.sh": "cbfec902f1add88d6bb029dc8628d6e19d0920789cbb1397e4011ed516304028",
@@ -48,6 +48,6 @@
     "templates/WORKFLOW.md": "a04f0c4ad83cf6051e5e8a395d56fd9af7635350ec582e9f7785282ce0aa49da"
   },
   "installer": {
-    "install.mjs": "3980d8b7e76b2ac49eb613f3c4ef11ac816fb84cfe5a6c20f1e5c51334c29044"
+    "install.mjs": "72cf57d65d642afd2de9bf2aa83e07df360e1e867413e695b482c10d97dfc027"
   }
 }

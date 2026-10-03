@@ -16,7 +16,13 @@ export function packageReview(input) {
   validate("candidate", input.candidate);
   if (!input.output || !path.isAbsolute(input.output))
     fail("validation_failed", "Absolute review output required");
-  const output = path.resolve(input.output);
+  const requested = path.resolve(input.output);
+  let ancestor = path.dirname(requested);
+  while (!fs.existsSync(ancestor)) ancestor = path.dirname(ancestor);
+  const output = path.resolve(
+    fs.realpathSync(ancestor),
+    path.relative(ancestor, requested),
+  );
   if (
     output === root ||
     output.startsWith(root + path.sep) ||

@@ -52,15 +52,21 @@ export function atomic(p, data) {
 export function rootOf(input) {
   if (!input.root || !path.isAbsolute(input.root))
     fail("validation_failed", "root must be absolute");
-  const root = path.resolve(input.root);
-  if (!fs.existsSync(root) || !fs.statSync(root).isDirectory())
+  const selected = path.resolve(input.root);
+  if (!fs.existsSync(selected) || !fs.statSync(selected).isDirectory())
     fail("validation_failed", "root must be an existing directory");
-  if (fs.realpathSync(root) !== root && process.platform !== "win32")
-    fail("validation_failed", "root cannot alias a symlink");
-  return root;
+  if (fs.lstatSync(selected).isSymbolicLink())
+    fail("validation_failed", "Explicit symlink root forbidden");
+  return fs.realpathSync(selected);
 }
+
 export function safe(root, rel) {
   root = path.resolve(root);
+  if (fs.existsSync(root)) {
+    if (fs.lstatSync(root).isSymbolicLink())
+      fail("validation_failed", "Explicit symlink root forbidden");
+    root = fs.realpathSync(root);
+  }
   let ancestor = root;
   while (true) {
     if (fs.existsSync(ancestor) && fs.lstatSync(ancestor).isSymbolicLink())

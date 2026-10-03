@@ -155,8 +155,10 @@ export function verifyRules(input) {
     if (
       !r ||
       r.enforcement !== "active" ||
-      JSON.stringify(r.conditions?.ref_name) !==
-        JSON.stringify(e.conditions.ref_name)
+      JSON.stringify([...(r.conditions?.ref_name?.include ?? [])].sort()) !==
+        JSON.stringify([...e.conditions.ref_name.include].sort()) ||
+      JSON.stringify([...(r.conditions?.ref_name?.exclude ?? [])].sort()) !==
+        JSON.stringify([...e.conditions.ref_name.exclude].sort())
     )
       fail("validation_failed", "Required GitHub ruleset missing/inactive");
     for (const rule of e.rules) {

@@ -14,7 +14,15 @@ const json = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
 function guardDirectory(p) {
   let current = path.resolve(p);
   while (true) {
-    if (fs.existsSync(current) && fs.lstatSync(current).isSymbolicLink())
+    if (
+      fs.existsSync(current) &&
+      fs.lstatSync(current).isSymbolicLink() &&
+      !(
+        process.platform === "darwin" &&
+        ["/var", "/tmp"].includes(current) &&
+        fs.realpathSync(current) === "/private" + current
+      )
+    )
       throw Error("Symlink installation path forbidden: " + current);
     const parent = path.dirname(current);
     if (parent === current) break;
@@ -228,7 +236,7 @@ export async function install(argv = process.argv.slice(2)) {
 }
 if (
   process.argv[1] &&
-  path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)
+  fs.realpathSync(process.argv[1]) === fileURLToPath(import.meta.url)
 ) {
   try {
     process.stdout.write(

@@ -17,3 +17,5 @@ Raw initial reviews are retained separately from author resolution claims.
 Behavioral host traces, independent artifact semantics and remote CI are acceptance
 evidence gates; deterministic passing tests alone cannot satisfy them.
 
+
+Remote CI discovered POSIX bin symlink dispatch and macOS /var temporary-root aliases. Bin entry compares real paths; chosen repository roots are canonicalized, while explicit symlink roots and nested symlink paths remain rejected. Installer permits only recognized macOS /var and /tmp system aliases. Ruleset conditions compare values, independent of JSON property order.
