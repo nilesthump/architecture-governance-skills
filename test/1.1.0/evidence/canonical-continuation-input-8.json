@@ -1,0 +1,24 @@
+{
+  "root": "H:\\architecture-skills\\.tmp\\worktrees\\discussion-1.1.0\\.tmp\\behavior-review\\concern-recheck\\project",
+  "workingPath": "spec/architecture/WORKING.json",
+  "mode": "greenfield",
+  "writerId": "concern-review-coordinator",
+  "expectedRevision": 3,
+  "operations": [
+    {
+      "type": "set",
+      "id": "goals",
+      "status": "proposed",
+      "value": "SIMULATED agent proposal to reconsider fixture goals",
+      "evidence": {
+        "kind": "agent-proposal",
+        "source": {
+          "path": "simulation.txt",
+          "sha256": "4de7802271be762eac2e2daf54888cf9f5db436a0dfd39704f943eb7c940af83",
+          "quote": "SIMULATED TEST INPUT.",
+          "locator": "simulated fixture paragraph"
+        }
+      }
+    }
+  ]
+}

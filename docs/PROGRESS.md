@@ -67,3 +67,38 @@ Windows/macOS/Linux all successful. Full local shared validation 25 tests (24 pa
 1 POSIX-only skip), historical suite 33 (32 pass, 1 skip). No main integration or
 publication claimed at this checkpoint. Final guide reference correction and
 post-publication registry verifier review next, then final-head CI/merge.
+
+Canonical integration: PR #4 merged at b1ae7595fc9d42a2fe499c276200fb156e3cd622
+using existing supported PR-only admin approval bypass, after all six required
+PR/push final-head checks succeeded. No GitHub independent approval is claimed;
+actual fresh-context source/behavior/artifact review evidence retained separately.
+Canonical H:/architecture-skills main fast-forwarded to this commit; validation
+in progress. Sole continuation fixture authority remains the preserved root named
+in independent-behavior.json focusedConcernRecheck; do not copy WORKING.json into
+canonical or other worktrees. New fresh-context canonical continuation in progress.
+
+Accepted canonical b1ae759: npm run validate passed 25 tests, 24 passed +1 Windows
+POSIX-only skip; original 1.0.0 suite replayed 33 tests, 32 passed +1 skip. Main CI
+37108413616 Windows/macOS/Linux all passed. Historical source/test/release git diff
+empty. Canonical validation and historical logs retained as separate evidence.
+Fresh-context canonical_continuation independently verified HEAD and existing sole
+fixture authority: 12 actual CLI calls /15 checks passed; one simulated agent
+proposal advanced revision3 to4 and invalidated candidate. No human approval or
+project acceptance fabricated. Raw inputs/stdout/hash evidence retained.
+Canonical built package SHA256 a7892b187733a02f75f7e62d672305731001283d035181fb9b671d2eeec9b903;
+accepted commit/tag plan and npm pack SHA1/SHA512 in release-provenance.json.
+
+Publication checkpoint: auto-review rejected the combined GitHub Release/npm stable
+publication command because public publication is irreversible and latest-switch
+authorization was not explicit. Command did not execute; neither release nor npm
+1.1.0 publication is claimed. Concrete approval requested for public release and
+latest=1.1.0, or publication retaining latest=1.0.0. All unaffected acceptance work
+continues; only publication/post-registry verification depend on this approval.
+
+Final acceptance-record review passed: continuation transcript count corrected to
+12 actual CLI calls /15 checks, final-head push CI record retained, and canonical
+package independently checked against all55 release files with zero byte mismatch.
+Only publish H:/architecture-skills/.tmp/publish-1.1.0/architecture-governance-skills-1.1.0.tgz
+with SHA256a7892b187733a02f75f7e62d672305731001283d035181fb9b671d2eeec9b903;
+task-worktree scratch packages are not accepted publication inputs.
+No source or package bytes changed in the acceptance-record follow-up.

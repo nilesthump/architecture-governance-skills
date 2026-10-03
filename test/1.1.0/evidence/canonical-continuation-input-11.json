@@ -1,0 +1,223 @@
+{
+  "root": "H:\\architecture-skills\\.tmp\\worktrees\\discussion-1.1.0\\.tmp\\behavior-review\\concern-recheck\\project",
+  "workingPath": "spec/architecture/WORKING.json",
+  "mode": "greenfield",
+  "writerId": "concern-review-coordinator",
+  "expectedRevision": 4,
+  "candidate": {
+    "identity": "simulated-cli",
+    "title": "Simulated CLI architecture",
+    "requirements": [
+      "Simulation only: local text to output."
+    ],
+    "constraints": [
+      "No network or GUI."
+    ],
+    "nonGoals": [
+      "No gateway, server or database."
+    ],
+    "assumptions": [],
+    "risks": [],
+    "externalDependencies": [],
+    "rejectedAlternatives": [],
+    "decisions": [
+      {
+        "id": "D1",
+        "status": "accepted",
+        "text": "CLI without framework",
+        "nodeIds": [
+          "other.stack"
+        ]
+      }
+    ],
+    "openQuestions": [],
+    "concerns": [
+      {
+        "name": "transport",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "API",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "contracts",
+        "applicable": true,
+        "reason": "SIMULATED local input/output contract applies"
+      },
+      {
+        "name": "authentication",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "authorization",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "persistence",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "transactions",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "schema migration",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "cache",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "asynchronous messaging",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "ordering",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "consistency",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "idempotency",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "configuration",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "secret management",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "logging",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "metrics",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "tracing",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "observability",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "timeout",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "retry",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "failure handling",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "circuit breaking",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "deployment",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "rollback",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "compatibility",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "versioning",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "security",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "testing",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "CI/CD",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "release",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      },
+      {
+        "name": "operations",
+        "applicable": false,
+        "reason": "SIMULATED concern not applicable to isolated CLI fixture"
+      }
+    ],
+    "sections": [
+      {
+        "id": "ARCH-001",
+        "title": "Local CLI",
+        "content": "CLI accepts local text and emits deterministic text output.",
+        "nodeIds": [
+          "other.stack"
+        ]
+      }
+    ],
+    "diagrams": [
+      {
+        "id": "seq",
+        "sectionIds": [
+          "ARCH-001"
+        ],
+        "source": "@startuml\nactor User\nparticipant CLI\nUser -> CLI: local text\nCLI --> User: output\n@enduml"
+      }
+    ],
+    "discussion": {
+      "id": "independent-concerns",
+      "revision": 2,
+      "digest": "2e738f3cba321ba61bc0c3caf87618ef115a67a2cc872d406e5e66baae869b5a",
+      "snapshot": "spec/architecture/discussions/independent-concerns/review-input-2e738f3cba321ba61bc0c3caf87618ef115a67a2cc872d406e5e66baae869b5a.json"
+    }
+  },
+  "version": "1.0.0"
+}

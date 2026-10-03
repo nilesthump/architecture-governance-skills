@@ -1,0 +1,291 @@
+[
+  {
+    "id": "architecture-governance-skills@1.1.0",
+    "name": "architecture-governance-skills",
+    "version": "1.1.0",
+    "size": 49136,
+    "unpackedSize": 181711,
+    "shasum": "bb5bf15d71de2bc0c7186f51d832c858b5559087",
+    "integrity": "sha512-E8nRTiXFcCwH0ffLY4CDwR91TX8om4WvAg4YpRrqSfYbMdfQqJIq1gKZIaQa6x5RXW2Vem6Rp5LHcVjcTt9Ebw==",
+    "filename": "architecture-governance-skills-1.1.0.tgz",
+    "files": [
+      {
+        "path": "1.1.0/contracts/actions.md",
+        "size": 3405,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/schemas/candidate.schema.json",
+        "size": 4170,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/schemas/manifest.schema.json",
+        "size": 637,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/schemas/review.schema.json",
+        "size": 1722,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/schemas/validation.schema.json",
+        "size": 863,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/schemas/working.schema.json",
+        "size": 3406,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/scripts/core/artifacts.mjs",
+        "size": 22104,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/scripts/core/cli.mjs",
+        "size": 4356,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/scripts/core/github.mjs",
+        "size": 7437,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/scripts/core/governance.mjs",
+        "size": 5406,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/scripts/core/repository.mjs",
+        "size": 7938,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/scripts/core/review.mjs",
+        "size": 6693,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/scripts/core/util.mjs",
+        "size": 6961,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/scripts/core/working.mjs",
+        "size": 31327,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/scripts/linux/run.sh",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/scripts/macos/run.sh",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/scripts/windows/run.ps1",
+        "size": 155,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/shared/concerns.json",
+        "size": 525,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/shared/discussion.json",
+        "size": 10375,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/shared/DISCUSSION.md",
+        "size": 6827,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/shared/version.json",
+        "size": 50,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/shared/WORKFLOW.md",
+        "size": 1608,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/architecture-artifacts/scripts/run.mjs",
+        "size": 88,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/architecture-artifacts/SKILL.md",
+        "size": 1898,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/architecture-freeze/scripts/run.mjs",
+        "size": 88,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/architecture-freeze/SKILL.md",
+        "size": 1895,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/architecture-review/scripts/run.mjs",
+        "size": 88,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/architecture-review/SKILL.md",
+        "size": 1897,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/architecture/scripts/run.mjs",
+        "size": 88,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/architecture/SKILL.md",
+        "size": 1870,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/devops-baseline/scripts/run.mjs",
+        "size": 88,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/devops-baseline/SKILL.md",
+        "size": 1608,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/existing-repo-architecture/scripts/run.mjs",
+        "size": 88,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/existing-repo-architecture/SKILL.md",
+        "size": 1992,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/governance-design/scripts/run.mjs",
+        "size": 88,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/governance-design/SKILL.md",
+        "size": 1711,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/governance-verify/scripts/run.mjs",
+        "size": 88,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/governance-verify/SKILL.md",
+        "size": 1930,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/greenfield-architecture/scripts/run.mjs",
+        "size": 88,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/greenfield-architecture/SKILL.md",
+        "size": 1886,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/progress-versioning/scripts/run.mjs",
+        "size": 88,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/progress-versioning/SKILL.md",
+        "size": 1785,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/repository-bootstrap/scripts/run.mjs",
+        "size": 88,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/skills/repository-bootstrap/SKILL.md",
+        "size": 1885,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/templates/AGENTS.md",
+        "size": 1429,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/templates/CLAUDE.md",
+        "size": 29,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/templates/PROGRESS.md",
+        "size": 760,
+        "mode": 420
+      },
+      {
+        "path": "1.1.0/templates/WORKFLOW.md",
+        "size": 803,
+        "mode": 420
+      },
+      {
+        "path": "LICENSE",
+        "size": 1105,
+        "mode": 420
+      },
+      {
+        "path": "README.en.md",
+        "size": 8041,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 7491,
+        "mode": 420
+      },
+      {
+        "path": "bin/install.mjs",
+        "size": 8487,
+        "mode": 420
+      },
+      {
+        "path": "docs/RELEASE-1.1.0.md",
+        "size": 1019,
+        "mode": 420
+      },
+      {
+        "path": "docs/UPGRADE-1.1.0.md",
+        "size": 4478,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 661,
+        "mode": 420
+      }
+    ],
+    "entryCount": 55,
+    "bundled": []
+  }
+]
