@@ -1,0 +1,26 @@
+---
+name: greenfield-architecture
+description: Designs architecture for new projects. Use when designing an empty project, establishing system boundaries or整理项目架构.
+---
+
+# greenfield-architecture
+
+## Quick start
+
+Use /architecture greenfield-architecture or the corresponding natural-language intent.
+Example: "检查这个仓库的架构冲突，并保留现有 DevOps。"
+
+## Workflow
+
+1. Gather accepted requirements, non-goals, constraints, external dependencies and acceptance criteria; ask only missing information.
+2. Maintain accepted requirements/decisions separately from candidate/rejected decisions and open questions.
+3. Cover applicable concerns with explicit applicability and reasons; define interfaces, responsibilities and failure/deployment behavior.
+4. Default to Git/main, GitHub PRs and shared local/CI validation; do not invent a stack.
+5. Present draft for user review; route explicit formal-generation/freeze intent to architecture-freeze.
+
+## Runtime
+
+Run node <this-skill>/scripts/run.mjs <action> --input <absolute-input.json>.
+Resolve this-skill from this file; prefer its own version, never global runtime.
+See [workflow](../../shared/WORKFLOW.md), [actions](../../contracts/actions.md),
+[candidate schema](../../schemas/candidate.schema.json) and [review schema](../../schemas/review.schema.json).

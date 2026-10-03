@@ -1,0 +1,33 @@
+{
+  "name": "architecture-governance-skills",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Composable architecture governance skills and deterministic runtime",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "architecture-skills": "bin/install.mjs"
+  },
+  "scripts": {
+    "test": "node --test --test-concurrency=1 test/1.0.0/**/*.test.mjs",
+    "validate": "node tools/validate.mjs",
+    "build": "node tools/build.mjs"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "yaml": "^2.8.1",
+    "pdfkit": "^0.17.2"
+  },
+  "files": [
+    "bin",
+    "1.0.0",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nilesthump/architecture-governance-skills.git"
+  }
+}
