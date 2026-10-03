@@ -5,7 +5,7 @@
     "sourceOfIdentity": "Canonical live agent name returned by collaboration.list_agents; no additional opaque ID is exposed"
   },
   "kind": "independent-source-review",
-  "reviewedAt": "2026-10-03T07:28:28.619Z",
+  "reviewedAt": "2026-10-03T07:39:48.093Z",
   "root": "H:\\architecture-skills\\.tmp\\worktrees\\discussion-1.1.0",
   "scope": "Local source, requirement and deterministic fixture review. Does not establish actual production host behavior, real reviewer approval, canonical integration, remote CI or registry publication.",
   "methodology": "Read raw files and reproduce defects independently. Main-agent descriptions were treated as advisory. Source fixes were reread and separately verified.",
@@ -52,9 +52,9 @@
     "docs/REQUIREMENTS-1.1.0.md": "cbbce7cb05f18d76b83251fdc2b08c5a9d31baa1dbe75a3e68f9c724df970846",
     "docs/REQUIREMENTS.md": "e044361f45057a72985d0035b0c14a60b7ac31cb3368bbc645fc621ad6950aa6",
     "docs/DESIGN.md": "77dca0b8ea36721ce0f2ee1a5aef26cd7d5542cd5a42d98d8781cc766fa1a285",
-    "docs/PROGRESS.md": "9fbc9456841ed1ef45163bbcd5eb38ded458e42e4a6bbf0ab64a0217f1fa4203",
+    "docs/PROGRESS.md": "042b9ace639f038805e19365aba6953a91cf8cbd461c2365d915b0dcf96c6706",
     "docs/UPGRADE-1.1.0.md": "5303e008f874665cb28521dea39de7f9b09b0bccec37c190678cd083fda069cc",
-    "1.1.0/scripts/core/working.mjs": "1a9f24dd28304a0f8db18f642bdc7931f0b49bd01f3aac3ee19af6a8cd475332",
+    "1.1.0/scripts/core/working.mjs": "40369b6852e2d26574c74c6a373148090796e2af9dc98e2f4df01a916230bb53",
     "1.1.0/scripts/core/artifacts.mjs": "9970a338c909b300ac2cc9d5385fdeb928bc7232f14f1d0edf47d9859240a4f6",
     "1.1.0/scripts/core/review.mjs": "13ff264f7003d5018267d9302be43769a4c1e4820d9e30616f86bcc638701dc4",
     "1.1.0/scripts/core/util.mjs": "fe29537a6f3562819a6a00ab97e8e071e6dc0b2f1c538b22146a1d245ef2ea4f",
@@ -71,7 +71,7 @@
     "1.1.0/skills/existing-repo-architecture/SKILL.md": "1e20043a0ad865a3115bb27b955a9d76ec61b4bff3a8751ef2437a2688646945",
     "test/1.1.0/helpers.mjs": "24c10d88e1a4a3f4bd1994b64be0cbdd02e72260ee8ff9d1e89c67e2ade3e889",
     "test/1.1.0/integration/discussion.test.mjs": "cf098305d0e2986310b946452c94f2d333961bf408061e6974f6dc7871dcf6d2",
-    "test/1.1.0/integration/lifecycle.test.mjs": "945f48fcdd6e8856bc38f625ff7a1a57032fee9f37ae77a97ccbd64563718a84",
+    "test/1.1.0/integration/lifecycle.test.mjs": "e519f69a8d44e7f7253b218c57a86701acebd9bd47e078f2d61b22f8e4e7d9ef",
     "test/1.1.0/integration/existing-devops.test.mjs": "9709254fd0c94209cf196d0f3cc5bfe86059c521217c978063da848ac98ecba8",
     "test/1.1.0/integration/package-install.test.mjs": "f9072c9d0ce5783caad5b37575280e4489b6092904d23e8c9fc51392e815534b",
     "test/1.1.0/regression/historical.test.mjs": "c10a344cd74090a914c5a982be221521442f40f7133f3e917be38a916f6344a7",
@@ -195,6 +195,18 @@
     {
       "command": "Inline verifyBehaviorTrace negative probes: missing trace, simulated trace, identical primary/continuation agent, empty events",
       "result": "All four failed as intended: missing trace user_decision_required; the remaining cases validation_failed."
+    },
+    {
+      "command": "git diff 984475 -- 1.1.0/scripts/core/working.mjs test/1.1.0/integration/lifecycle.test.mjs; read .tmp/macos-ci-failure.txt and .tmp/windows-ci.txt",
+      "result": "Independently inspected two narrow changes and actual failed CI logs."
+    },
+    {
+      "command": "node --test --test-concurrency=1 test/1.1.0/integration/lifecycle.test.mjs",
+      "result": "Final CI follow-up source: four focused lifecycle tests passed; zero failed/skipped."
+    },
+    {
+      "command": "node path.win32.relative drive-case, separator and distinct-directory comparisons",
+      "result": "Equivalent paths returned empty; distinct directory returned ../Other."
     }
   ],
   "remainingAcceptanceGates": [
@@ -206,7 +218,7 @@
     "Independent semantic/visual artifact review and retained real host traces",
     "Authenticated registry publication and post-publication verification"
   ],
-  "verdict": "No unresolved source-review blocker or recorded fixture follow-up in inspected paths after final Existing compatibility recheck. Acceptance and publication remain conditional on separately recorded external/full-validation gates.",
+  "verdict": "No unresolved source-review blocker in inspected paths, including the narrow pending cross-platform path fix against 984475. Corrected actual three-platform CI must pass; local focused tests do not replace that gate.",
   "finalConcernBindingReview": {
     "citations": [
       {
@@ -290,5 +302,34 @@
     "status": "resolved",
     "file": "test/1.1.0/helpers.mjs",
     "conclusion": "Direct reread confirms the blanket section nodeIds override is removed; Local contract retains contracts and Validation retains delivery."
+  },
+  "finalCrossPlatformCiFollowupReview": {
+    "baseline": "984475",
+    "rawInspectedDiffPaths": [
+      "1.1.0/scripts/core/working.mjs",
+      "test/1.1.0/integration/lifecycle.test.mjs"
+    ],
+    "rawInspectedLogPaths": [
+      ".tmp/macos-ci-failure.txt",
+      ".tmp/windows-ci.txt"
+    ],
+    "logHashes": {
+      ".tmp/macos-ci-failure.txt": "a2227443ab74d2afcb4d26395a984b07791f7a7439d818d0b7b084a1da1281d1",
+      ".tmp/windows-ci.txt": "7b193d21db787868d6dbefe67660824a0360135b90ef858383bb3d14fa0fba76"
+    },
+    "citations": [
+      {
+        "file": "1.1.0/scripts/core/working.mjs",
+        "line": 831
+      },
+      {
+        "file": "test/1.1.0/integration/lifecycle.test.mjs",
+        "line": 388
+      }
+    ],
+    "observedCiFailures": "Raw macOS log: archive injected-write test expected execution_failed but got success. Raw Windows log: lifecycle substitution test expected validation_failed but received user_decision_required before that gate. Both supplied logs are failed run 37106611439; neither proves corrected CI success.",
+    "sourceAssessment": "rootOf already resolves authority root through fs.realpathSync. canonicalRepository now resolves Git show-toplevel to filesystem identity and compares via native path.relative; this handles Windows drive-letter/separator spelling while still rejecting a different repository root. Archive failure injection compares real parent directories plus the same basename, allowing macOS /var vs /private/var aliases to hit the intended WORKING.json write. Fault remains injected only for the target state publication; production rollback/gate logic is otherwise unchanged.",
+    "focusedVerification": "node --test --test-concurrency=1 test/1.1.0/integration/lifecycle.test.mjs with real renderer/bundled Python: 4/4 passed. Independent path.win32.relative comparisons: drive-case equivalent -> empty, separator equivalent -> empty, distinct directory -> ../Other. These are local Windows/deterministic checks, not macOS execution.",
+    "conclusion": "No blocking finding in the pending narrow source/test diff. Rerun actual Windows/macOS/Linux CI before acceptance."
   }
 }

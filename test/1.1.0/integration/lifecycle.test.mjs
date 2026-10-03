@@ -383,7 +383,13 @@ test("Archive is immutable/idempotent, conflicts fail, entry survives archive/wr
     const before = fs.readFileSync(file),
       rename = fs.renameSync;
     fs.renameSync = (from, to) => {
-      if (path.resolve(to) === path.resolve(file))
+      if (
+        path.relative(
+          fs.realpathSync(path.dirname(file)),
+          fs.realpathSync(path.dirname(to)),
+        ) === "" &&
+        path.basename(to) === path.basename(file)
+      )
         throw Error("injected working entry failure");
       return rename(from, to);
     };

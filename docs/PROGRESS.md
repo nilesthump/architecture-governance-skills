@@ -47,3 +47,11 @@ Final pre-PR checkpoint: shared npm run validate completed on final source, 25 t
 skip. Final source/Existing-layout review and final artifact node mappings accepted.
 Actual separate-process revision race, same-version two-discussion retained history,
 custom Existing CLAUDE/contract and source/release parity passed. PR/remote CI next.
+
+PR #4 first actual matrix at source 984475: Linux passed; macOS failed because
+archive failure injection compared an unresolved temporary-directory alias; Windows
+failed because Git and Node returned different drive-letter casing for the same
+canonical repository. Windows source gate now compares resolved repository identity
+with platform-aware path.relative. Archive test targets resolved parent identity.
+Raw original failure logs retained in test/1.1.0/evidence/ci-first-{macos,windows}.txt.
+Local focused lifecycle recheck: 4/4 passed. Full validation/review/repeated CI pending.

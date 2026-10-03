@@ -828,6 +828,14 @@ import { verifyReports } from "./review.mjs";
 import { validation } from "./repository.mjs";
 import { integrity } from "./artifacts.mjs";
 import { governanceTest, verifyBehaviorTrace } from "./governance.mjs";
+function canonicalRepository(root) {
+  const selected = git(root, ["rev-parse", "--show-toplevel"], true);
+  return Boolean(
+    selected &&
+      fs.existsSync(selected) &&
+      path.relative(root, fs.realpathSync(selected)) === "",
+  );
+}
 export async function advance(input) {
   return withWorkingLock(input, async (s, { root, file }) => {
     if (!s || s.formatVersion !== 2)
@@ -881,8 +889,7 @@ export async function advance(input) {
     else if (next === "bootstrapped") {
       if (input.mode === "greenfield") {
         if (
-          git(root, ["rev-parse", "--show-toplevel"], true) !==
-            root.replaceAll("\\", "/") ||
+          !canonicalRepository(root) ||
           [
             "AGENTS.md",
             "CLAUDE.md",
