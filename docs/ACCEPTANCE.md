@@ -37,3 +37,13 @@ Existing fixture 的 release/deploy 入口验证为受控命令执行与文件�
 冻结 fixture 的 AS-IS 是冻结时快照；health 实现完成状态由 canonical progress 与 Git 记录说明。续接 Agent 识别了其中“source/tests pending”字样，并按只读 scope 保留正式文档。
 
 真实 PlantUML 图以 PNG 嵌入 PDF，放大时存在栅格软化；独立视觉审查判定可读。长中文候选仅用于渲染测试，不被标为真实项目架构批准。
+
+## 正式发布与最终续接
+
+[GitHub Release v1.0.0](https://github.com/nilesthump/architecture-governance-skills/releases/tag/v1.0.0) 已公开发布；tag 指向 f1cc52ef9010848bd28ffac17345d74d175decaa。双语/验收 [PR #2](https://github.com/nilesthump/architecture-governance-skills/pull/2) 的三系统 CI 37097609420 全部通过。
+
+公开 GitHub Release 下载地址已实际完成 npm/pnpm × project/global 四种安装，每次 11 个 Skill、私有运行时 1.0.0、无项目初始化副作用。原始安装结果见 evidence/github/github-package-install.json。
+
+续接进度 commit dbeb72d 已按宿主 PR/CI 集成到真实 canonical；原始合约 2/2 通过，writeback.verify 成功，最终进度 commit 89875ec。对应原始结果和最终 progress 快照分别保存。
+
+npm registry 发布当前受平台二次验证要求阻塞。用户完成账户验证与发布后，单独记录 registry 元数据、包 integrity 与真实 registry 安装结果；GitHub 包已可安装。

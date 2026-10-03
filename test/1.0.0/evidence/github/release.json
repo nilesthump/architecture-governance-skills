@@ -1,0 +1,65 @@
+{
+  "assets": [
+    {
+      "apiUrl": "https://api.github.com/repos/nilesthump/architecture-governance-skills/releases/assets/607164016",
+      "contentType": "application/x-gtar",
+      "createdAt": "2026-10-03T04:51:50Z",
+      "digest": "sha256:bcc5055c7546319999d566bffd3b9535f01dd8c0a3e70d7ff0ffb6b10035616e",
+      "downloadCount": 0,
+      "id": "RA_kwDOU5qo4M4kMJZw",
+      "label": "",
+      "name": "architecture-governance-skills-1.0.0.tgz",
+      "size": 33314,
+      "state": "uploaded",
+      "updatedAt": "2026-10-03T04:51:50Z",
+      "url": "https://github.com/nilesthump/architecture-governance-skills/releases/download/v1.0.0/architecture-governance-skills-1.0.0.tgz"
+    },
+    {
+      "apiUrl": "https://api.github.com/repos/nilesthump/architecture-governance-skills/releases/assets/607164014",
+      "contentType": "application/json",
+      "createdAt": "2026-10-03T04:51:50Z",
+      "digest": "sha256:7f7589c781b8a8be96e5e40674e753b1cfc111892dd0901941a22b609950ca48",
+      "downloadCount": 0,
+      "id": "RA_kwDOU5qo4M4kMJZu",
+      "label": "",
+      "name": "canonical-continuation-final.json",
+      "size": 1564,
+      "state": "uploaded",
+      "updatedAt": "2026-10-03T04:51:50Z",
+      "url": "https://github.com/nilesthump/architecture-governance-skills/releases/download/v1.0.0/canonical-continuation-final.json"
+    },
+    {
+      "apiUrl": "https://api.github.com/repos/nilesthump/architecture-governance-skills/releases/assets/607164012",
+      "contentType": "application/json",
+      "createdAt": "2026-10-03T04:51:50Z",
+      "digest": "sha256:e028f62b127ee731a1e13ac4d01961286fa66d03edab3cb319bf0cf6650c41e8",
+      "downloadCount": 0,
+      "id": "RA_kwDOU5qo4M4kMJZs",
+      "label": "",
+      "name": "package-manifest.json",
+      "size": 6350,
+      "state": "uploaded",
+      "updatedAt": "2026-10-03T04:51:50Z",
+      "url": "https://github.com/nilesthump/architecture-governance-skills/releases/download/v1.0.0/package-manifest.json"
+    },
+    {
+      "apiUrl": "https://api.github.com/repos/nilesthump/architecture-governance-skills/releases/assets/607164019",
+      "contentType": "application/octet-stream",
+      "createdAt": "2026-10-03T04:51:50Z",
+      "digest": "sha256:45959519da2aaaba2ff278c3806b7c0e42d458c30ead2e78ea1a5250b938c9c5",
+      "downloadCount": 0,
+      "id": "RA_kwDOU5qo4M4kMJZz",
+      "label": "",
+      "name": "SHA256SUMS",
+      "size": 107,
+      "state": "uploaded",
+      "updatedAt": "2026-10-03T04:51:50Z",
+      "url": "https://github.com/nilesthump/architecture-governance-skills/releases/download/v1.0.0/SHA256SUMS"
+    }
+  ],
+  "isDraft": false,
+  "isPrerelease": false,
+  "publishedAt": "2026-10-03T04:51:51Z",
+  "tagName": "v1.0.0",
+  "url": "https://github.com/nilesthump/architecture-governance-skills/releases/tag/v1.0.0"
+}

@@ -1,0 +1,39 @@
+{
+  "url": "https://github.com/nilesthump/architecture-governance-skills/releases/download/v1.0.0/architecture-governance-skills-1.0.0.tgz",
+  "source": "actual public GitHub Release transport",
+  "base": "H:/architecture-skills/.tmp/github-install-GG8hZl",
+  "results": [
+    {
+      "manager": "npm",
+      "scope": "project",
+      "skills": 11,
+      "status": "success",
+      "suiteVersion": "1.0.0",
+      "bootstrapWritten": false
+    },
+    {
+      "manager": "npm",
+      "scope": "global",
+      "skills": 11,
+      "status": "success",
+      "suiteVersion": "1.0.0",
+      "bootstrapWritten": false
+    },
+    {
+      "manager": "pnpm",
+      "scope": "project",
+      "skills": 11,
+      "status": "success",
+      "suiteVersion": "1.0.0",
+      "bootstrapWritten": false
+    },
+    {
+      "manager": "pnpm",
+      "scope": "global",
+      "skills": 11,
+      "status": "success",
+      "suiteVersion": "1.0.0",
+      "bootstrapWritten": false
+    }
+  ]
+}
