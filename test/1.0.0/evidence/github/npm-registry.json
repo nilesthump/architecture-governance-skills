@@ -1,0 +1,20 @@
+{
+  "name": "architecture-governance-skills",
+  "version": "1.0.0",
+  "dist": {
+    "integrity": "sha512-4kU23+hCFlJl1b33IaL6i48jNrP7Y4cY5ZuJAHz3LCwamiHzxpD/3cZersLgHgj4ICnWlREb/flbXPAGhHW/UA==",
+    "shasum": "ce7e80c953e151b403f66d81cb5694aac9ce7463",
+    "tarball": "https://registry.npmjs.org/architecture-governance-skills/-/architecture-governance-skills-1.0.0.tgz",
+    "fileCount": 50,
+    "unpackedSize": 112451,
+    "signatures": [
+      {
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+        "sig": "MEQCIGskLZ3A/traZtWGO1h/hRnKw9F1tyjEgUhHZS2a/9oqAiB1Xt7Ju+xw9AjdIW/PuSLJgJ83aI+eZHV8wFNvliJW5Q=="
+      }
+    ]
+  },
+  "dist-tags": {
+    "latest": "1.0.0"
+  }
+}
