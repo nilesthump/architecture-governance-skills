@@ -1,7 +1,8 @@
 # Suite development
 
 Current development source: 1.1.0/. Tests: test/1.1.0/. Derived release: release/1.1.0/.
-Official released version remains 1.0.0 until reviewed PR/CI, integration and publication.
+Official published version: 1.1.0 (GitHub and npm; verified latest=1.1.0).
+Frozen 1.0.0 source, tests and package remain unchanged.
 Read docs/REQUIREMENTS-1.1.0.md and docs/UPGRADE-1.1.0.md for this update.
 Read docs/REQUIREMENTS.md, docs/DESIGN.md and docs/PROGRESS.md before work.
 Use the installed Matt Pocock write-a-skill methodology: requirements, concise

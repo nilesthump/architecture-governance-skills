@@ -1,0 +1,91 @@
+{
+  "agentId": "/root/independent_review",
+  "reviewKind": "Independent publication evidence and narrow nonpackaged verifier correction review",
+  "reviewedAt": "2026-10-03T08:46:33.376Z",
+  "reviewedHashes": [
+    {
+      "path": "tools/verify-registry-1.1.0.mjs",
+      "sha256": "80851c232be5807bb1ba52a349228c7662306e970fb64590db45e204f7e62862"
+    },
+    {
+      "path": "release/1.1.0/bin/install.mjs",
+      "sha256": "72cf57d65d642afd2de9bf2aa83e07df360e1e867413e695b482c10d97dfc027"
+    },
+    {
+      "path": "release/1.1.0/package.json",
+      "sha256": "5c51aa3f0eaa7e3a6fe016081d2de82c1204368a306a074881d86c9405063310"
+    },
+    {
+      "path": "package.json",
+      "sha256": "7ed7f04eac6edaa070cbfb975e222d2573c29aff151d73e8d31e3404c4d4541d"
+    },
+    {
+      "path": "test/1.1.0/evidence/github-release.json",
+      "sha256": "f1ee042ac5769d554587d6bd971a030bf75d6791aca853691929e4a9889ba1d1"
+    },
+    {
+      "path": "test/1.1.0/evidence/github-publication-verification.json",
+      "sha256": "721d92d0552aaaff22ef54bf0959d1e7dc60c52b3ec55199c197595889dd3cf1"
+    },
+    {
+      "path": "test/1.1.0/evidence/registry-verifier-reference-failure.txt",
+      "sha256": "fa2ec0d02a623ac3b61f8d576d7c0f2a78f607140f64e76dcb4aad1d18a847a2"
+    },
+    {
+      "path": "test/1.1.0/evidence/registry-install.json",
+      "sha256": "85bc0e12ae691b246176f21f1f3f45931cb95301d4907e1c2855b5fab13d7826"
+    },
+    {
+      "path": "H:/architecture-skills/.tmp/verify-registry-1.1.0.mjs",
+      "sha256": "80851c232be5807bb1ba52a349228c7662306e970fb64590db45e204f7e62862"
+    },
+    {
+      "path": "H:/architecture-skills/.tmp/github-release-1.1.0/architecture-governance-skills-1.1.0.tgz",
+      "sha256": "a7892b187733a02f75f7e62d672305731001283d035181fb9b671d2eeec9b903"
+    },
+    {
+      "path": "H:/architecture-skills/.tmp/registry-verification-1.1.0/architecture-governance-skills-1.1.0.tgz",
+      "sha256": "a7892b187733a02f75f7e62d672305731001283d035181fb9b671d2eeec9b903"
+    }
+  ],
+  "findings": [
+    {
+      "id": "P1",
+      "severity": "P2",
+      "status": "resolved",
+      "path": "tools/verify-registry-1.1.0.mjs",
+      "line": 4,
+      "problem": "Original reference imported developer-root installer. Installer derives packageRoot from import.meta.url (bin/install.mjs:9-12) and copies root package.json (166-168), comparing actual accepted661byte package.json to developer1030byte package.json. Retained initial failure confirms wrong reference.",
+      "resolution": "Import now uses ../release/1.1.0/bin/install.mjs, the correct accepted expanded release reference. All4 actual registry installs subsequently match."
+    }
+  ],
+  "checks": [
+    {
+      "command": "git diff -- tools/verify-registry-1.1.0.mjs; node --check tools/verify-registry-1.1.0.mjs; hash temporary canonical runner",
+      "result": "Only import-line correction; syntax success; task and actually run copied script both SHA25680851c232be5807bb1ba52a349228c7662306e970fb64590db45e204f7e62862."
+    },
+    {
+      "command": "git diff --exit-code -- 1.1.0 release/1.1.0 bin package.json package-lock.json",
+      "result": "Exit0: no product/package-byte changes."
+    },
+    {
+      "command": "git -C H:/architecture-skills rev-parse v1.1.0^{}; hash downloaded GitHub asset; read retained GitHub release record",
+      "result": "Fetched tag resolves accepted b1ae7595fc9d42a2fe499c276200fb156e3cd622; published record targets same commit. Downloaded tar SHA256a7892b187733a02f75f7e62d672305731001283d035181fb9b671d2eeec9b903 matches accepted and asset digest."
+    },
+    {
+      "command": "Read actual registry-install.json and independently hash fetched registry tar",
+      "result": "Completed2026-10-03T08:44:35.305Z; latest1.1.0; fetched/registry SHA1bb5bf15d71de2bc0c7186f51d832c858b5559087 and SHA512 integrity match accepted pack; fetched tar SHA256a7892b187733a02f75f7e62d672305731001283d035181fb9b671d2eeec9b903. Record moved from canonical to task evidence after this review read; actual installation targets remain at canonical."
+    },
+    {
+      "command": "Read-only recursive list/byte comparisons npm-project/npm-global/pnpm-project/pnpm-global against retained reference-manager-scope; inspect installation metadata",
+      "result": "All4 lists match reference and recorded comparedFiles,71files each,0 byte mismatches; actual installation.json confirms1.1.0/respective scope; no AGENTS.md/spec at targets. Runtime probe success recorded for all4."
+    }
+  ],
+  "limitations": [
+    "Install execution performed by parent; this review independently inspected retained actual records, fetched tar and actual installation trees without repeating network installs.",
+    "GitHub checked via retained record, actual downloaded asset and fetched local tag; no independent remote query repeated.",
+    "This review does not grant authorization; parent reports human authorization/web authentication. Subagent performs review only.",
+    "Dependency bytes explicitly excluded; no claim of dependency byte equality."
+  ],
+  "verdict": "PASS. Original verifier reference defect retained and resolved; no blocker in narrow correction or actual publication/installation evidence."
+}

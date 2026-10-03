@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import assert from "node:assert/strict";
-import { install } from "../bin/install.mjs";
+import { install } from "../release/1.1.0/bin/install.mjs";
 import { run, packageManagerCli } from "../1.1.0/scripts/core/util.mjs";
 const root = process.cwd(),
   version = "1.1.0",

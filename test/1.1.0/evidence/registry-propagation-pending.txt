@@ -1,0 +1,31 @@
+file:///H:/architecture-skills/1.1.0/scripts/core/util.mjs:19
+  throw new GateError(status, message, data);
+        ^
+
+GateError: Command failed: H:\node.js\node.exe
+    at fail (file:///H:/architecture-skills/1.1.0/scripts/core/util.mjs:19:9)
+    at run (file:///H:/architecture-skills/1.1.0/scripts/core/util.mjs:187:5)
+    at file:///H:/architecture-skills/tools/verify-registry-1.1.0.mjs:21:3 {
+  status: 'execution_failed',
+  data: {
+    code: 1,
+    reason: undefined,
+    stdout: '{\n' +
+      '  "error": {\n' +
+      '    "code": "E404",\n' +
+      '    "summary": "No match found for version 1.1.0",\n' +
+      `    "detail": "The requested resource 'architecture-governance-skills@1.1.0' could not be found or you do not have permission to access it.\\n\\nNote that you can also install from a\\ntarball, folder, http url, or git url."\n` +
+      '  }\n' +
+      '}\n',
+    stderr: 'npm error code E404\n' +
+      'npm error 404 No match found for version 1.1.0\n' +
+      'npm error 404\n' +
+      "npm error 404  The requested resource 'architecture-governance-skills@1.1.0' could not be found or you do not have permission to access it.\n" +
+      'npm error 404\n' +
+      'npm error 404 Note that you can also install from a\n' +
+      'npm error 404 tarball, folder, http url, or git url.\n' +
+      'npm error A complete log of this run can be found in: C:\\Users\\21441\\AppData\\Local\\npm-cache\\_logs\\2026-10-03T08_38_16_994Z-debug-0.log\n'
+  }
+}
+
+Node.js v24.16.0

@@ -102,3 +102,29 @@ Only publish H:/architecture-skills/.tmp/publish-1.1.0/architecture-governance-s
 with SHA256a7892b187733a02f75f7e62d672305731001283d035181fb9b671d2eeec9b903;
 task-worktree scratch packages are not accepted publication inputs.
 No source or package bytes changed in the acceptance-record follow-up.
+
+Public publication explicitly approved by the user. GitHub Release v1.1.0 created
+at https://github.com/nilesthump/architecture-governance-skills/releases/tag/v1.1.0.
+Fetched tag commit is accepted b1ae7595fc9d42a2fe499c276200fb156e3cd622; downloaded
+GitHub tarball SHA256 matches canonical accepted package a7892b187733a02f75f7e62d672305731001283d035181fb9b671d2eeec9b903.
+Initial npm publish returned EOTP. Interactive npm web authentication is now waiting
+for the account holder; npm publication/latest and registry-install claims remain
+pending until actual success. No published package bytes changed.
+
+npm public version1.1.0 is now available; authorized latest=1.1.0 verified from
+fresh registry metadata. Actual npm-pack registry tarball SHA1/SHA512 matches the
+canonical/GitHub accepted tarball. npm/pnpm project/global registry installations
+all passed:11 skills, runtime1.1.0, full non-dependency installed artifact parity,
+installation metadata version/scope, no implicit project bootstrap. Evidence in
+registry-install.json; initial propagation delay retained separately.
+The nonpackaged verifier reference was corrected from developer-root package.json
+to accepted expanded-release installer metadata; original failed evidence retained.
+GitHub/npm published bytes, source1.1.0 and release1.1.0 remain unchanged.
+Final publication evidence review and protected record PR/canonical write-back next.
+
+Independent publication review passed: tag/asset/registry hashes and all4 actual
+installed file lists/71files per scope match accepted release references. Exact
+scope and dependency-byte exclusion retained in publication-review.json. Public
+GitHub/npm version and latest1.1.0 claims now have actual verification evidence.
+Published source/package bytes remain immutable; this branch adds repository-only
+status/evidence and the nonpackaged verification-reference correction.
