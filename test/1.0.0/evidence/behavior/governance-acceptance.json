@@ -1,0 +1,24 @@
+{
+  "writeback": {
+    "status": "success",
+    "action": "repo.writeback.verify",
+    "suiteVersion": "1.0.0",
+    "data": {
+      "canonical": "H:\\architecture-skills\\.tmp\\behavior\\canonical",
+      "acceptedCommit": "96346f1d74ddbc01f622c5084ef41103234862fb",
+      "revision": "606402c976a580f1582bcf46eba09b4f79f0b586",
+      "integrated": true
+    }
+  },
+  "result": {
+    "status": "success",
+    "action": "governance.test",
+    "suiteVersion": "1.0.0",
+    "data": {
+      "structuralChecks": "success",
+      "behavioralChecks": "trace_validated",
+      "hostTrace": "Codex collaboration host session: original agent excerpts, Git state and raw GitHub API evidence",
+      "limitation": "Host must retain original tool traces; JSON claims alone cannot prove actual behavior"
+    }
+  }
+}

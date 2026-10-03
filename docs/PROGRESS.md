@@ -1,15 +1,16 @@
 # Current progress
 
-Source: 1.0.0 development (not yet final release).
+Source/version: 1.0.0; authoritative version source: 1.0.0/.
 Canonical: H:/architecture-skills. Task worktree: .tmp/worktrees/implementation.
-Branch: feat/suite-runtime. Phase: remote validation and real behavior acceptance.
-Completed: 11 skills, deterministic runtime, installer, schemas/templates, expanded package.
-Local validation: 30 passed, 0 failed. Real npm/pnpm project/global installation passed.
-Artifact text parity: English and long Chinese passed; independent visual review passed (English 6 pages, Chinese 7 pages).
-Runtime independent review: initial findings fixed, independent 7-regression run passed.
-Governance task: actual ordered reads, scope refusal, minimum implementation, separate task
-worktree and 2 health tests passed; independent implementation review passed.
-GitHub: https://github.com/nilesthump/architecture-governance-skills (public, explicitly authorized).
-Next: complete task/artifact reviews, PR/Windows-macOS-Linux CI, rulesets, canonical integration.
-Canonical write-back: pending final PR merge.
-Registry publication: npm auth absent (ENEEDAUTH); install-ready release exists.
+Branch: feat/acceptance-evidence. Phase: release acceptance.
+Completed: 11 skills, runtime, installer, schemas/templates, expanded package, Chinese default/English README.
+Validation: canonical 33 tests; Windows 32 passed +1 POSIX skip; macOS/Linux 33 passed; 0 failed.
+Independent review: source blockers fixed; final source and artifact review accepted.
+Governance: actual health task integrated and verified in canonical; progress updated; distinct fresh continuation verified with independent review.
+GitHub: PR #1 merged, 3-platform CI success; real rulesets verified with supported PR-only admin approval bypass.
+Current checkpoint: implementation merge 74e611980a24af48c88afa5f90eca8031c1303fc plus current acceptance evidence branch.
+Remaining release execution: this evidence/documentation PR CI and merge; integrate continuation progress; registry/GitHub publication and registry install smoke.
+Publication status: https://www.npmjs.com/package/architecture-governance-skills and https://github.com/nilesthump/architecture-governance-skills/releases/tag/v1.0.0.
+Maintenance: preserve released 1.0.0; future fixes create a new source/test/release version.
+Reproducible core entry: npm run validate (renderer/Python/font environment configured), or node tools/ci.mjs after fetching renderer/font.
+Details: docs/ACCEPTANCE.md; test/1.0.0/evidence/.

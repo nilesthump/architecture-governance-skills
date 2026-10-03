@@ -1,0 +1,38 @@
+[
+  {
+    "job": "validate (macos-latest)",
+    "url": "https://github.com/nilesthump/architecture-governance-skills/actions/runs/37096877657/job/111128496329",
+    "conclusion": "success",
+    "lines": [
+      "ℹ tests 33",
+      "ℹ pass 33",
+      "ℹ fail 0",
+      "ℹ skipped 0",
+      "Skill checks, runtime syntax, tests and source/release parity passed."
+    ]
+  },
+  {
+    "job": "validate (ubuntu-latest)",
+    "url": "https://github.com/nilesthump/architecture-governance-skills/actions/runs/37096877657/job/111128496526",
+    "conclusion": "success",
+    "lines": [
+      "ℹ tests 33",
+      "ℹ pass 33",
+      "ℹ fail 0",
+      "ℹ skipped 0",
+      "Skill checks, runtime syntax, tests and source/release parity passed."
+    ]
+  },
+  {
+    "job": "validate (windows-latest)",
+    "url": "https://github.com/nilesthump/architecture-governance-skills/actions/runs/37096877657/job/111128496610",
+    "conclusion": "success",
+    "lines": [
+      "ℹ tests 33\r",
+      "ℹ pass 32\r",
+      "ℹ fail 0\r",
+      "ℹ skipped 1\r",
+      "Skill checks, runtime syntax, tests and source/release parity passed.\r"
+    ]
+  }
+]
