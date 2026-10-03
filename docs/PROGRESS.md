@@ -11,7 +11,8 @@ Canonical fixture checkpoint: dbeb72d78b88cdb5d5e7408337e794c7cde9c326 accepted,
 GitHub: PR #1 and #2 merged; actual active rulesets and supported admin PR-only approval bypass verified.
 Release: https://github.com/nilesthump/architecture-governance-skills/releases/tag/v1.0.0 (public, official, tag source frozen).
 Public GitHub package transport: real npm/pnpm project/global installs passed, 11 skills and independent 1.0.0 runtime in each.
-Registry: architecture-governance-skills@1.0.0 published; latest=1.0.0; SHA512/shasum exactly match the accepted GitHub package. Actual npm/npx and pnpm registry project/global installs passed (latest and explicit 1.0.0, 11 skills, independent runtime, no bootstrap).\nRemaining product blockers: none known in accepted/tested scope. Next: await a new scoped task; keep released source/package frozen.
+Registry: architecture-governance-skills@1.0.0 published; latest=1.0.0; SHA512/shasum exactly match the accepted GitHub package. Actual npm/npx and pnpm registry project/global installs passed (latest and explicit 1.0.0, 11 skills, independent runtime, no bootstrap).
+Remaining product blockers: none known in accepted/tested scope. Next: await a new scoped task; keep released source/package frozen.
 Registry status: https://www.npmjs.com/package/architecture-governance-skills.
 Maintenance: preserve released 1.0.0 source/package; later fixes create new source/test/release versions.
 Reproducible validation: npm run validate with renderer/Python/font variables, or node tools/ci.mjs after fetching assets.
