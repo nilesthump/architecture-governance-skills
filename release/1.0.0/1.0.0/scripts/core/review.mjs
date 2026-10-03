@@ -18,7 +18,12 @@ export function packageReview(input) {
     fail("validation_failed", "Absolute review output required");
   const requested = path.resolve(input.output);
   let ancestor = path.dirname(requested);
-  while (!fs.existsSync(ancestor)) ancestor = path.dirname(ancestor);
+  while (!fs.existsSync(ancestor)) {
+    const parent = path.dirname(ancestor);
+    if (parent === ancestor)
+      fail("validation_failed", "Review output filesystem root is unavailable");
+    ancestor = parent;
+  }
   const output = path.resolve(
     fs.realpathSync(ancestor),
     path.relative(ancestor, requested),

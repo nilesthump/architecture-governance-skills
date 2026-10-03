@@ -370,3 +370,27 @@ test("Review output supports new nested parents and rejects repository containme
       "validation_failed",
     );
   }));
+
+test("Unavailable review output filesystem root fails without looping", async () =>
+  fixture(async (root, base) => {
+    const volume = path.parse(base).root,
+      missing = path.join(volume, "unavailable-review-volume");
+    const original = fs.existsSync;
+    fs.existsSync = (p) =>
+      p === volume || String(p).startsWith(missing) ? false : original(p);
+    try {
+      assert.equal(
+        (
+          await execute("review.package", {
+            root,
+            output: path.join(missing, "nested", "review"),
+            candidate: candidate(),
+            sources: [],
+          })
+        ).status,
+        "validation_failed",
+      );
+    } finally {
+      fs.existsSync = original;
+    }
+  }));

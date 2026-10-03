@@ -175,7 +175,7 @@ test("Preserved-version archive copy and rename failures restore CURRENT and per
     );
     const pointer = path.join(root, "spec/architecture/CURRENT"),
       before = fs.readFileSync(pointer, "utf8"),
-      dir = path.join(root, "spec/architecture/v1.0.0");
+      dir = fs.realpathSync(path.join(root, "spec/architecture/v1.0.0"));
     for (const operation of ["copy", "rename"]) {
       const input = {
         ...freezeInput(root, c, base),

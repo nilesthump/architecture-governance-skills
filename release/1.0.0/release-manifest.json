@@ -11,7 +11,7 @@
     "scripts/core/github.mjs": "c4f53fcf5b47067a29a3e66aae331b44b39e931999633723dc5ce485807dbaa6",
     "scripts/core/governance.mjs": "56b803df083aa3c0168c13b530df68868dbe38ff5bfd2cbc1907caa32e0d683f",
     "scripts/core/repository.mjs": "005ae56f5a89d9be364aaf18bab96ae4891f2889ca153c60f3ee507237a1806b",
-    "scripts/core/review.mjs": "430116505ca77cefff3e740fcfab18a12a00e1b60f0051fd2bb6ea0d6340af29",
+    "scripts/core/review.mjs": "68e69bc696d6f22091628937564a7b36023fd956cf75bd3d9d115389ecec5c17",
     "scripts/core/util.mjs": "fe29537a6f3562819a6a00ab97e8e071e6dc0b2f1c538b22146a1d245ef2ea4f",
     "scripts/core/working.mjs": "01af9e140ce83833719628f2ece5c36e018714764a1931670027df3099de92ef",
     "scripts/linux/run.sh": "cbfec902f1add88d6bb029dc8628d6e19d0920789cbb1397e4011ed516304028",
