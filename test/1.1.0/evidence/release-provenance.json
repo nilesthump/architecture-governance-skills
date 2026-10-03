@@ -1,0 +1,14 @@
+{
+  "suiteVersion": "1.1.0",
+  "acceptedCommit": "b1ae7595fc9d42a2fe499c276200fb156e3cd622",
+  "pullRequest": "https://github.com/nilesthump/architecture-governance-skills/pull/4",
+  "tag": "v1.1.0",
+  "package": "architecture-governance-skills-1.1.0.tgz",
+  "shasum": "bb5bf15d71de2bc0c7186f51d832c858b5559087",
+  "integrity": "sha512-E8nRTiXFcCwH0ffLY4CDwR91TX8om4WvAg4YpRrqSfYbMdfQqJIq1gKZIaQa6x5RXW2Vem6Rp5LHcVjcTt9Ebw==",
+  "sha256": "a7892b187733a02f75f7e62d672305731001283d035181fb9b671d2eeec9b903",
+  "releaseManifestSha256": "b3a14f6fad0952a931b18b5d68800dab9a522920af18d6d3ff159786149e3dd4",
+  "buildEntry": "npm run build",
+  "canonicalValidationEntry": "npm run validate",
+  "historicalVersionsUnchanged": true
+}

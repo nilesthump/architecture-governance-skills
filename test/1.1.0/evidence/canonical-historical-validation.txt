@@ -1,0 +1,42 @@
+✔ health takes no inputs and returns exactly the status-ok object (0.7738ms)
+✔ each call returns an independent object, unaffected by caller mutation (0.1151ms)
+✔ Greenfield PDF/PUML parity, governance, versions and retained revisions (3346.432ms)
+✔ Unsafe diagrams and duplicate IDs rejected (241.2717ms)
+✔ Unicode missing font fails rather than dropping glyphs (609.2664ms)
+✔ Successful Chinese long-document PDF preserves glyphs and semantic text (1170.6813ms)
+✔ Existing Node/Python source behavior and build/test/lint/release/deploy entries preserved after approved governance (2295.9524ms)
+✔ Project/global version-bound install, replacement and no bootstrap (7452.7718ms)
+✔ Release expanded and source/installer integrity verified (88.2506ms)
+﹣ POSIX npm bin symlink executes the installer rather than exiting silently (0.1486ms) # SKIP
+✔ Actual npm and pnpm transport: project/global installs and independently usable runtime (33519.5387ms)
+✔ Path containment rejects traversal, absolute, symlink and controls (14.4034ms)
+✔ Unknown action and malformed input return structured failure (247.6052ms)
+✔ Review raw packages reproducible and tampering detected (337.2395ms)
+✔ Freeze rejects missing human choice, unresolved decisions and stale review before mutation (300.8016ms)
+✔ Blocking report and missing renderer leave CURRENT untouched (333.3114ms)
+✔ Existing proposal exact approval, stale hashes and DevOps preflight (625.1673ms)
+✔ Existing Node/Python fixtures preserve DevOps; partial approval affects only selected paths (1431.7565ms)
+✔ Validation explicit argv and failure status (342.3352ms)
+✔ Real worktree and canonical integration required before write-back verification (858.3977ms)
+✔ GitHub protection separates integrity from PR-only approval bypass (0.9864ms)
+✔ Review output supports new nested parents and rejects repository containment (243.459ms)
+✔ Unavailable review output filesystem root fails without looping (187.4654ms)
+✔ Uncommitted authoritative evidence changes invalidate review (281.3561ms)
+✔ Existing project layout/calendar policy supported without default hierarchy mutation (1342.0694ms)
+✔ Missing artifact hashes and changed manifest identity fail integrity (1044.6559ms)
+✔ CI rejects shell punctuation and does not invent npm preparation (241.0962ms)
+✔ Windows adapter executes real npm and pnpm without shell (1157.8657ms)
+✔ Missing existing baseline and task-worktree canonical claim fail closed (427.3703ms)
+✔ Preserved-version archive copy and rename failures restore CURRENT and permit retry (3350.3122ms)
+✔ CURRENT path cannot lie about architecture version (1061.3449ms)
+✔ Working discussion survives separately and existing writes require approval (193.0244ms)
+✔ Actual tools entrypoint/config drift is not hidden by DevOps filename heuristics (541.9792ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 64431.5614
+Skill checks, runtime syntax, tests and source/release parity passed.
