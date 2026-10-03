@@ -128,7 +128,11 @@ test("State-bound real PDF/PUML freeze; historical verification survives later w
       },
       python: freeze.python,
     });
-    assert.equal(substitution.status, "validation_failed");
+    assert.equal(
+      substitution.status,
+      "validation_failed",
+      JSON.stringify(substitution),
+    );
     s = ok(
       await execute("architecture.working.advance", {
         ...f.input,

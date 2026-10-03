@@ -902,6 +902,18 @@ export async function advance(input) {
           fail(
             "user_decision_required",
             "Canonical repository and all governance/progress entries required",
+            {
+              root,
+              gitRoot: git(root, ["rev-parse", "--show-toplevel"], true),
+              missing: [
+                "AGENTS.md",
+                "CLAUDE.md",
+                "spec/governance/WORKFLOW.md",
+                "spec/governance/WRITE_SCOPE.md",
+                "spec/governance/validation.json",
+                "spec/progress/CURRENT.md",
+              ].filter((p) => !fs.existsSync(safe(root, p))),
+            },
           );
       } else evidence(root, input.completionEvidence);
       checkedArchitecture();

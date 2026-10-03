@@ -1,0 +1,386 @@
+﻿2026-10-03T07:41:01.5700502Z Current runner version: '2.337.0'
+2026-10-03T07:41:01.5741915Z ##[group]Runner Image Provisioner
+2026-10-03T07:41:01.5743109Z Hosted Compute Agent
+2026-10-03T07:41:01.5745614Z Version: 20260901.588
+2026-10-03T07:41:01.5746907Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-03T07:41:01.5748199Z Build Date: 2026-09-01T19:56:44Z
+2026-10-03T07:41:01.5750338Z Worker ID: {6d171d6c-94ec-4f1a-bc23-79c2de84a1b7}
+2026-10-03T07:41:01.5751487Z Azure Region: eastus2
+2026-10-03T07:41:01.5752562Z ##[endgroup]
+2026-10-03T07:41:01.5755831Z ##[group]Operating System
+2026-10-03T07:41:01.5757814Z Microsoft Windows Server 2025
+2026-10-03T07:41:01.5758948Z 10.0.26100
+2026-10-03T07:41:01.5759826Z Datacenter
+2026-10-03T07:41:01.5760684Z ##[endgroup]
+2026-10-03T07:41:01.5761737Z ##[group]Runner Image
+2026-10-03T07:41:01.5762746Z Image: windows-2025-vs2026
+2026-10-03T07:41:01.5763901Z Version: 20260925.250.1
+2026-10-03T07:41:01.5766497Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20260925.250/images/windows/Windows2025-VS2026-Readme.md
+2026-10-03T07:41:01.5769586Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20260925.250
+2026-10-03T07:41:01.5771363Z ##[endgroup]
+2026-10-03T07:41:01.5773731Z ##[group]GITHUB_TOKEN Permissions
+2026-10-03T07:41:01.5776726Z Contents: read
+2026-10-03T07:41:01.5777823Z Metadata: read
+2026-10-03T07:41:01.5778822Z ##[endgroup]
+2026-10-03T07:41:01.5781737Z Secret source: Actions
+2026-10-03T07:41:01.5783321Z Cache mode: write
+2026-10-03T07:41:01.5784476Z Prepare workflow directory
+2026-10-03T07:41:01.6253246Z Prepare all required actions
+2026-10-03T07:41:01.6326527Z Getting action download info
+2026-10-03T07:41:01.8391151Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-03T07:41:02.0724340Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-03T07:41:02.2840952Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-03T07:41:02.4809600Z Download action repository 'actions/setup-java@v4' (SHA:cf277c60eb25467037889841efdb72551f06f6c3)
+2026-10-03T07:41:02.8155422Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-03T07:41:03.1839315Z Complete job name: validate (windows-latest)
+2026-10-03T07:41:03.3574798Z ##[group]Run actions/checkout@v4
+2026-10-03T07:41:03.3576027Z with:
+2026-10-03T07:41:03.3576644Z   repository: nilesthump/architecture-governance-skills
+2026-10-03T07:41:03.3581828Z   token: ***
+2026-10-03T07:41:03.3582322Z   ssh-strict: true
+2026-10-03T07:41:03.3582823Z   ssh-user: git
+2026-10-03T07:41:03.3583837Z   persist-credentials: true
+2026-10-03T07:41:03.3584407Z   clean: true
+2026-10-03T07:41:03.3584846Z   sparse-checkout-cone-mode: true
+2026-10-03T07:41:03.3585331Z   fetch-depth: 1
+2026-10-03T07:41:03.3585738Z   fetch-tags: false
+2026-10-03T07:41:03.3586144Z   show-progress: true
+2026-10-03T07:41:03.3586589Z   lfs: false
+2026-10-03T07:41:03.3586958Z   submodules: false
+2026-10-03T07:41:03.3587364Z   set-safe-directory: true
+2026-10-03T07:41:03.3587829Z   allow-unsafe-pr-checkout: false
+2026-10-03T07:41:03.3588579Z ##[endgroup]
+2026-10-03T07:41:03.5112702Z Syncing repository: nilesthump/architecture-governance-skills
+2026-10-03T07:41:03.5114735Z ##[group]Getting Git version info
+2026-10-03T07:41:03.5115629Z Working directory is 'D:\a\architecture-governance-skills\architecture-governance-skills'
+2026-10-03T07:41:03.6246521Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-03T07:41:03.9705532Z git version 2.55.0.windows.5
+2026-10-03T07:41:03.9758197Z ##[endgroup]
+2026-10-03T07:41:03.9778913Z Temporarily overriding HOME='D:\a\_temp\de22ad5b-bf44-4c4c-9f36-dbb76ce65afd' before making global git config changes
+2026-10-03T07:41:03.9780260Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-03T07:41:03.9790353Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\architecture-governance-skills\architecture-governance-skills
+2026-10-03T07:41:04.0493630Z Deleting the contents of 'D:\a\architecture-governance-skills\architecture-governance-skills'
+2026-10-03T07:41:04.0499776Z ##[group]Initializing the repository
+2026-10-03T07:41:04.0509848Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\architecture-governance-skills\architecture-governance-skills
+2026-10-03T07:41:04.1390418Z Initialized empty Git repository in D:/a/architecture-governance-skills/architecture-governance-skills/.git/
+2026-10-03T07:41:04.1436550Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/nilesthump/architecture-governance-skills
+2026-10-03T07:41:04.2188964Z ##[endgroup]
+2026-10-03T07:41:04.2191072Z ##[group]Disabling automatic garbage collection
+2026-10-03T07:41:04.2200295Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-10-03T07:41:04.2515782Z ##[endgroup]
+2026-10-03T07:41:04.2517073Z ##[group]Setting up auth
+2026-10-03T07:41:04.2528435Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-03T07:41:04.2839131Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-03T07:41:05.7014771Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-03T07:41:05.7365598Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-03T07:41:06.3004127Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-03T07:41:06.3328874Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-03T07:41:06.8583464Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-10-03T07:41:06.8945699Z ##[endgroup]
+2026-10-03T07:41:06.8949276Z ##[group]Fetching the repository
+2026-10-03T07:41:06.8961379Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e1ba46a75c11a8122c9b2e340a08fbf343ad4572:refs/remotes/pull/4/merge
+2026-10-03T07:41:07.8649122Z From https://github.com/nilesthump/architecture-governance-skills
+2026-10-03T07:41:07.8650454Z  * [new ref]         e1ba46a75c11a8122c9b2e340a08fbf343ad4572 -> pull/4/merge
+2026-10-03T07:41:07.8721004Z ##[endgroup]
+2026-10-03T07:41:07.8722685Z ##[group]Determining the checkout info
+2026-10-03T07:41:07.8723532Z ##[endgroup]
+2026-10-03T07:41:07.8725645Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-10-03T07:41:07.9192507Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-10-03T07:41:07.9522915Z ##[group]Checking out the ref
+2026-10-03T07:41:07.9530983Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/4/merge
+2026-10-03T07:41:08.1332185Z Note: switching to 'refs/remotes/pull/4/merge'.
+2026-10-03T07:41:08.1332534Z 
+2026-10-03T07:41:08.1332741Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-03T07:41:08.1335676Z changes and commit them, and you can discard any commits you make in this
+2026-10-03T07:41:08.1336365Z state without impacting any branches by switching back to a branch.
+2026-10-03T07:41:08.1336697Z 
+2026-10-03T07:41:08.1336921Z If you want to create a new branch to retain commits you create, you may
+2026-10-03T07:41:08.1337446Z do so (now or later) by using -c with the switch command. Example:
+2026-10-03T07:41:08.1338764Z 
+2026-10-03T07:41:08.1338890Z   git switch -c <new-branch-name>
+2026-10-03T07:41:08.1339098Z 
+2026-10-03T07:41:08.1339200Z Or undo this operation with:
+2026-10-03T07:41:08.1339409Z 
+2026-10-03T07:41:08.1339519Z   git switch -
+2026-10-03T07:41:08.1339650Z 
+2026-10-03T07:41:08.1339908Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-03T07:41:08.1340259Z 
+2026-10-03T07:41:08.1340668Z HEAD is now at e1ba46a Merge 145efdbd0082fe3c4edc03eb63e432bafbc56cc5 into afa8e0424b9a4f46e01d9c6b3a134fb95f3f9d6d
+2026-10-03T07:41:08.1459248Z ##[endgroup]
+2026-10-03T07:41:08.1995757Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-10-03T07:41:08.2307041Z e1ba46a75c11a8122c9b2e340a08fbf343ad4572
+2026-10-03T07:41:08.2817879Z ##[group]Run actions/setup-node@v4
+2026-10-03T07:41:08.2818215Z with:
+2026-10-03T07:41:08.2818424Z   node-version: 24
+2026-10-03T07:41:08.2818616Z   cache: npm
+2026-10-03T07:41:08.2818822Z   always-auth: false
+2026-10-03T07:41:08.2819023Z   check-latest: false
+2026-10-03T07:41:08.2821821Z   token: ***
+2026-10-03T07:41:08.2821997Z ##[endgroup]
+2026-10-03T07:41:08.4737133Z Found in cache @ C:\hostedtoolcache\windows\node\24.21.0\x64
+2026-10-03T07:41:08.4745439Z (node:7912) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-03T07:41:08.4748613Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-03T07:41:08.4749805Z ##[group]Environment details
+2026-10-03T07:41:20.5324181Z node: v24.21.0
+2026-10-03T07:41:20.5324480Z npm: 11.19.0
+2026-10-03T07:41:20.5324656Z yarn: 1.22.22
+2026-10-03T07:41:20.5325644Z ##[endgroup]
+2026-10-03T07:41:20.6144664Z [command]C:\Windows\system32\cmd.exe /D /S /C "C:\hostedtoolcache\windows\node\24.21.0\x64\npm.cmd config get cache"
+2026-10-03T07:41:21.1846702Z C:\npm\cache
+2026-10-03T07:41:21.5063766Z npm cache is not found
+2026-10-03T07:41:21.5418834Z ##[group]Run actions/setup-python@v5
+2026-10-03T07:41:21.5419264Z with:
+2026-10-03T07:41:21.5419464Z   python-version: 3.12
+2026-10-03T07:41:21.5419678Z   check-latest: false
+2026-10-03T07:41:21.5422426Z   token: ***
+2026-10-03T07:41:21.5422616Z   update-environment: true
+2026-10-03T07:41:21.5422840Z   allow-prereleases: false
+2026-10-03T07:41:21.5423043Z   freethreaded: false
+2026-10-03T07:41:21.5423228Z ##[endgroup]
+2026-10-03T07:41:21.7162922Z ##[group]Installed versions
+2026-10-03T07:41:21.7488365Z (node:8932) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-03T07:41:21.7489202Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-03T07:41:21.7489689Z Successfully set up CPython (3.12.10)
+2026-10-03T07:41:21.7490138Z ##[endgroup]
+2026-10-03T07:41:21.7901672Z ##[group]Run actions/setup-java@v4
+2026-10-03T07:41:21.7901989Z with:
+2026-10-03T07:41:21.7902169Z   distribution: temurin
+2026-10-03T07:41:21.7902392Z   java-version: 21
+2026-10-03T07:41:21.7902580Z   java-package: jdk
+2026-10-03T07:41:21.7902763Z   check-latest: false
+2026-10-03T07:41:21.7902952Z   server-id: github
+2026-10-03T07:41:21.7903150Z   server-username: GITHUB_ACTOR
+2026-10-03T07:41:21.7903381Z   server-password: GITHUB_TOKEN
+2026-10-03T07:41:21.7903606Z   overwrite-settings: true
+2026-10-03T07:41:21.7903816Z   job-status: success
+2026-10-03T07:41:21.7906946Z   token: ***
+2026-10-03T07:41:21.7907119Z env:
+2026-10-03T07:41:21.7907368Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:21.7907833Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-10-03T07:41:21.7908280Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:21.7908713Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:21.7909098Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:21.7909398Z ##[endgroup]
+2026-10-03T07:41:22.0306748Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+2026-10-03T07:41:22.0314113Z ##[group]Installed distributions
+2026-10-03T07:41:22.0778784Z Resolved Java 21.0.12+101.0 from tool-cache
+2026-10-03T07:41:22.0779292Z Setting Java 21.0.12+101.0 as the default
+2026-10-03T07:41:22.0801934Z (node:8816) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-03T07:41:22.0802989Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-03T07:41:22.0806906Z Creating toolchains.xml for JDK version 21 from temurin
+2026-10-03T07:41:22.0904375Z Writing to C:\Users\runneradmin\.m2\toolchains.xml
+2026-10-03T07:41:22.0910321Z 
+2026-10-03T07:41:22.0912115Z Java configuration:
+2026-10-03T07:41:22.0912931Z   Distribution: temurin
+2026-10-03T07:41:22.0914058Z   Version: 21.0.12+101.0
+2026-10-03T07:41:22.0915861Z   Path: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\21.0.12-101.0\x64
+2026-10-03T07:41:22.0916441Z 
+2026-10-03T07:41:22.0917405Z ##[endgroup]
+2026-10-03T07:41:22.0938381Z Creating settings.xml with server-id: github
+2026-10-03T07:41:22.0952272Z Writing to C:\Users\runneradmin\.m2\settings.xml
+2026-10-03T07:41:22.1347570Z ##[group]Run npm ci
+2026-10-03T07:41:22.1348356Z [36;1mnpm ci[0m
+2026-10-03T07:41:22.3057204Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-03T07:41:22.3058124Z env:
+2026-10-03T07:41:22.3058588Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:22.3059073Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-10-03T07:41:22.3059523Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:22.3059927Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:22.3060345Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:22.3060870Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\21.0.12-101.0\x64
+2026-10-03T07:41:22.3061401Z   JAVA_HOME_21_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\21.0.12-101.0\x64
+2026-10-03T07:41:22.3061797Z ##[endgroup]
+2026-10-03T07:41:28.4141276Z npm warn deprecated crypto-js@4.2.0: Active development of CryptoJS has been discontinued. This library is no longer maintained.
+2026-10-03T07:41:29.0998134Z 
+2026-10-03T07:41:29.0998949Z added 27 packages, and audited 28 packages in 6s
+2026-10-03T07:41:29.0999504Z 
+2026-10-03T07:41:29.1003602Z 5 packages are looking for funding
+2026-10-03T07:41:29.1004995Z   run `npm fund` for details
+2026-10-03T07:41:29.1018215Z 
+2026-10-03T07:41:29.1018831Z found 0 vulnerabilities
+2026-10-03T07:41:30.3209894Z ##[group]Run python -m pip install pypdf==6.10.0
+2026-10-03T07:41:30.3210347Z [36;1mpython -m pip install pypdf==6.10.0[0m
+2026-10-03T07:41:30.3284757Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-03T07:41:30.3285112Z env:
+2026-10-03T07:41:30.3285374Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:30.3285839Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-10-03T07:41:30.3286334Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:30.3286753Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:30.3287161Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:30.3287622Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\21.0.12-101.0\x64
+2026-10-03T07:41:30.3288170Z   JAVA_HOME_21_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\21.0.12-101.0\x64
+2026-10-03T07:41:30.3288616Z ##[endgroup]
+2026-10-03T07:41:35.4562180Z Collecting pypdf==6.10.0
+2026-10-03T07:41:35.6745849Z   Downloading pypdf-6.10.0-py3-none-any.whl.metadata (7.1 kB)
+2026-10-03T07:41:35.7136173Z Downloading pypdf-6.10.0-py3-none-any.whl (334 kB)
+2026-10-03T07:41:36.0886571Z Installing collected packages: pypdf
+2026-10-03T07:41:36.5162893Z Successfully installed pypdf-6.10.0
+2026-10-03T07:41:36.6931174Z ##[group]Run npm install --global pnpm@10
+2026-10-03T07:41:36.6931579Z [36;1mnpm install --global pnpm@10[0m
+2026-10-03T07:41:36.7007516Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-03T07:41:36.7007861Z env:
+2026-10-03T07:41:36.7008133Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:36.7008597Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-10-03T07:41:36.7009060Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:36.7009460Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:36.7009858Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:36.7010312Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\21.0.12-101.0\x64
+2026-10-03T07:41:36.7010857Z   JAVA_HOME_21_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\21.0.12-101.0\x64
+2026-10-03T07:41:36.7011302Z ##[endgroup]
+2026-10-03T07:41:46.4292377Z 
+2026-10-03T07:41:46.4292804Z added 1 package in 9s
+2026-10-03T07:41:46.4293378Z 
+2026-10-03T07:41:46.4294820Z 1 package is looking for funding
+2026-10-03T07:41:46.4295692Z   run `npm fund` for details
+2026-10-03T07:41:46.5180140Z ##[group]Run node tools/fetch-renderer.mjs
+2026-10-03T07:41:46.5180558Z [36;1mnode tools/fetch-renderer.mjs[0m
+2026-10-03T07:41:46.5256067Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-03T07:41:46.5256415Z env:
+2026-10-03T07:41:46.5256699Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:46.5257621Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-10-03T07:41:46.5258087Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:46.5258512Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:46.5258949Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:46.5259406Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\21.0.12-101.0\x64
+2026-10-03T07:41:46.5259933Z   JAVA_HOME_21_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\21.0.12-101.0\x64
+2026-10-03T07:41:46.5260378Z ##[endgroup]
+2026-10-03T07:41:47.2357386Z {"version":"1.2026.8","destination":"D:\\a\\architecture-governance-skills\\architecture-governance-skills\\.tmp\\renderers\\plantuml.jar","sha256":"5e1ecfa8ecd32c90b03bbf3b1eb6f020943f98ab0fcf4032be31a0002ee2c462"}
+2026-10-03T07:41:47.3774310Z ##[group]Run node tools/fetch-font.mjs
+2026-10-03T07:41:47.3774680Z [36;1mnode tools/fetch-font.mjs[0m
+2026-10-03T07:41:47.3849033Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-03T07:41:47.3849376Z env:
+2026-10-03T07:41:47.3849643Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:47.3850132Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-10-03T07:41:47.3850631Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:47.3851047Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:47.3851461Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:47.3851922Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\21.0.12-101.0\x64
+2026-10-03T07:41:47.3852470Z   JAVA_HOME_21_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\21.0.12-101.0\x64
+2026-10-03T07:41:47.3852910Z ##[endgroup]
+2026-10-03T07:41:48.0072208Z {"destination":"D:\\a\\architecture-governance-skills\\architecture-governance-skills\\.tmp\\renderers\\NotoSansSC.ttf","sha256":"a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da","license":"SIL Open Font License 1.1; https://github.com/google/fonts/blob/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl/notosanssc/OFL.txt"}
+2026-10-03T07:41:48.1532314Z ##[group]Run npm run validate
+2026-10-03T07:41:48.1532653Z [36;1mnpm run validate[0m
+2026-10-03T07:41:48.1604145Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-03T07:41:48.1604487Z env:
+2026-10-03T07:41:48.1604863Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:48.1605499Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-10-03T07:41:48.1605970Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:48.1606558Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:48.1606963Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:41:48.1607421Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\21.0.12-101.0\x64
+2026-10-03T07:41:48.1607943Z   JAVA_HOME_21_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\21.0.12-101.0\x64
+2026-10-03T07:41:48.1608701Z   ARCHITECTURE_PLANTUML_JAR: D:\a\architecture-governance-skills\architecture-governance-skills/.tmp/renderers/plantuml.jar
+2026-10-03T07:41:48.1609560Z   ARCHITECTURE_FONT: D:\a\architecture-governance-skills\architecture-governance-skills/.tmp/renderers/NotoSansSC.ttf
+2026-10-03T07:41:48.1610103Z   ARCHITECTURE_PYTHON: python
+2026-10-03T07:41:48.1610316Z ##[endgroup]
+2026-10-03T07:41:48.8760747Z 
+2026-10-03T07:41:48.8761420Z > architecture-governance-skills@1.1.0 validate
+2026-10-03T07:41:48.8761984Z > node tools/validate.mjs
+2026-10-03T07:41:48.8762148Z 
+2026-10-03T07:41:52.1642645Z ✔ Queries are read-only, return stable queue and separate proposals from confirmation (216.4705ms)
+2026-10-03T07:41:52.1652908Z ✔ Early answers and parallel branches are retained; API is not a component branch (61.9217ms)
+2026-10-03T07:41:52.1683029Z ✔ Provenance, budgets, core exclusions and unauthorized writes fail without replacing state (68.8781ms)
+2026-10-03T07:41:52.1685580Z ✔ Dependency edits preserve stale values, unrelated confirmation, and invalidate candidate/review (168.7615ms)
+2026-10-03T07:41:52.1687407Z ✔ Rejection remains unresolved; conflicts block readiness until sourced resolution (118.8113ms)
+2026-10-03T07:41:52.1689184Z ✔ Expected revision and lock cover competing writes; crash locks and corrupt JSON are explicit (57.8323ms)
+2026-10-03T07:41:52.1690935Z ✔ Legacy reads do not migrate; explicit migration preserves original arrays and recovery bytes (47.3187ms)
+2026-10-03T07:41:52.1693281Z ✔ Unsafe paths, symlinks, non-authoritative worktree copies and modified dependencies fail (54.9082ms)
+2026-10-03T07:41:52.1695527Z ✔ Candidate cannot bypass readiness or bind excluded/stale nodes; immutable input survives phase changes (300.2577ms)
+2026-10-03T07:41:52.1697458Z ✔ Active stack changes invalidate dataflow/contracts/GUI/feasibility while inactive branches do not (154.3476ms)
+2026-10-03T07:41:52.1699444Z ✔ Batch preserves explicitly repeated unchanged downstream answers after upstream changes (100.9259ms)
+2026-10-03T07:41:52.1701276Z ✔ Concern applicability is explicit and generated from confirmed nodes; altered candidate concern fails (140.6557ms)
+2026-10-03T07:41:52.5465129Z ✔ Two independent CLI processes cannot both commit the same expected revision (391.6847ms)
+2026-10-03T07:41:52.5466687Z ✔ Missing funds never become zero and numeric strings never become resource counts (52.9073ms)
+2026-10-03T07:41:55.4563210Z ✔ Existing Node/Python source behavior and build/test/lint/release/deploy entries preserved after approved governance (2661.9987ms)
+2026-10-03T07:42:09.1477407Z ✔ Project/global version-bound install, replacement and no bootstrap (13463.4364ms)
+2026-10-03T07:42:09.1483016Z ✔ Release expanded and source/installer integrity verified (95.8375ms)
+2026-10-03T07:42:09.1487466Z ﹣ POSIX npm bin symlink executes the installer rather than exiting silently (0.1398ms) # SKIP
+2026-10-03T07:42:17.4893905Z ✖ State-bound real PDF/PUML freeze; historical verification survives later working-state changes (5082.138ms)
+2026-10-03T07:42:17.4901171Z ✔ Archive is immutable/idempotent, conflicts fail, entry survives archive/write failure (150.5778ms)
+2026-10-03T07:42:17.4903326Z ✔ Freeze render/publication failure never advances phase or CURRENT; manual candidate fails (517.6466ms)
+2026-10-03T07:42:17.4910096Z ✔ Existing freeze requires each formal output and pointer path; no paths are written on refusal (2338.3207ms)
+2026-10-03T07:42:55.9620522Z ✔ Actual npm and pnpm transport: project/global installs and independently usable runtime (38341.6349ms)
+2026-10-03T07:42:56.5500402Z ✔ Discussion-only files preserve Greenfield classification; existing code still classified as existing (334.4678ms)
+2026-10-03T07:44:11.6410778Z ✔ Frozen 1.0.0 sources, tests, package remain identical; original tests replay in historical package context (75009.7282ms)
+2026-10-03T07:44:11.6529645Z ℹ tests 25
+2026-10-03T07:44:11.6530711Z ℹ suites 0
+2026-10-03T07:44:11.6531060Z ℹ pass 23
+2026-10-03T07:44:11.6531396Z ℹ fail 1
+2026-10-03T07:44:11.6531798Z ℹ cancelled 0
+2026-10-03T07:44:11.6532622Z ℹ skipped 1
+2026-10-03T07:44:11.6533085Z ℹ todo 0
+2026-10-03T07:44:11.6533591Z ℹ duration_ms 141289.5379
+2026-10-03T07:44:11.6545489Z 
+2026-10-03T07:44:11.6546028Z ✖ failing tests:
+2026-10-03T07:44:11.6546441Z 
+2026-10-03T07:44:11.6547001Z test at test\1.1.0\integration\lifecycle.test.mjs:32:1
+2026-10-03T07:44:11.6548343Z ✖ State-bound real PDF/PUML freeze; historical verification survives later working-state changes (5082.138ms)
+2026-10-03T07:44:11.6549247Z   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+2026-10-03T07:44:11.6549642Z   + actual - expected
+2026-10-03T07:44:11.6549852Z   
+2026-10-03T07:44:11.6550405Z   + 'user_decision_required'
+2026-10-03T07:44:11.6550683Z   - 'validation_failed'
+2026-10-03T07:44:11.6550921Z   
+2026-10-03T07:44:11.6551521Z       at file:///D:/a/architecture-governance-skills/architecture-governance-skills/test/1.1.0/integration/lifecycle.test.mjs:131:12
+2026-10-03T07:44:11.6552351Z       at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-10-03T07:44:11.6553231Z       at async use (file:///D:/a/architecture-governance-skills/architecture-governance-skills/test/1.1.0/integration/lifecycle.test.mjs:27:5)
+2026-10-03T07:44:11.6553988Z       at async Test.run (node:internal/test_runner/test:1409:7)
+2026-10-03T07:44:11.6554510Z       at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+2026-10-03T07:44:11.6554941Z     generatedMessage: true,
+2026-10-03T07:44:11.6555377Z     code: 'ERR_ASSERTION',
+2026-10-03T07:44:11.6555652Z     actual: 'user_decision_required',
+2026-10-03T07:44:11.6555941Z     expected: 'validation_failed',
+2026-10-03T07:44:11.6556202Z     operator: 'strictEqual',
+2026-10-03T07:44:11.6556425Z     diff: 'simple'
+2026-10-03T07:44:11.6556603Z   }
+2026-10-03T07:44:11.7088369Z ##[error]Process completed with exit code 1.
+2026-10-03T07:44:11.7271075Z ##[group]Run actions/upload-artifact@v4
+2026-10-03T07:44:11.7271429Z with:
+2026-10-03T07:44:11.7271780Z   name: evidence-windows-latest
+2026-10-03T07:44:11.7272052Z   path: test/1.1.0/evidence/
+2026-10-03T07:44:11.7272281Z   if-no-files-found: warn
+2026-10-03T07:44:11.7272507Z   compression-level: 6
+2026-10-03T07:44:11.7272708Z   overwrite: false
+2026-10-03T07:44:11.7272910Z   include-hidden-files: false
+2026-10-03T07:44:11.7273125Z env:
+2026-10-03T07:44:11.7273379Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:44:11.7273852Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-10-03T07:44:11.7274315Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:44:11.7274718Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:44:11.7275118Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-03T07:44:11.7275603Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\21.0.12-101.0\x64
+2026-10-03T07:44:11.7276155Z   JAVA_HOME_21_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\21.0.12-101.0\x64
+2026-10-03T07:44:11.7276766Z ##[endgroup]
+2026-10-03T07:44:11.9353668Z (node:5920) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-03T07:44:11.9354514Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-03T07:44:11.9701450Z With the provided path, there will be 55 files uploaded
+2026-10-03T07:44:11.9707836Z Artifact name is valid!
+2026-10-03T07:44:11.9709405Z Root directory input is valid!
+2026-10-03T07:44:12.1932666Z Beginning upload of artifact content to blob storage
+2026-10-03T07:44:12.3795984Z (node:5920) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-03T07:44:12.5598197Z Uploaded bytes 2179274
+2026-10-03T07:44:12.5793174Z Finished uploading artifact content to blob storage!
+2026-10-03T07:44:12.5795255Z SHA256 digest of uploaded artifact zip is 5d2fb7a8beef8f210741a6b6e0e387364ce349084d49e225278e720dff0628e6
+2026-10-03T07:44:12.5797635Z Finalizing artifact upload
+2026-10-03T07:44:12.7774226Z Artifact evidence-windows-latest.zip successfully finalized. Artifact ID 11268910327
+2026-10-03T07:44:12.7775760Z Artifact evidence-windows-latest has been successfully uploaded! Final size is 2179274 bytes. Artifact ID is 11268910327
+2026-10-03T07:44:12.7786322Z Artifact download URL: https://github.com/nilesthump/architecture-governance-skills/actions/runs/37107149177/artifacts/11268910327
+2026-10-03T07:44:12.8143042Z Post job cleanup.
+2026-10-03T07:44:12.9843574Z (node:9416) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-03T07:44:12.9845194Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-03T07:44:13.0181828Z Post job cleanup.
+2026-10-03T07:44:13.2303090Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-03T07:44:13.2567917Z git version 2.55.0.windows.5
+2026-10-03T07:44:13.2633242Z Temporarily overriding HOME='D:\a\_temp\30fa72b0-592d-4461-8a3c-9a6e232ad4eb' before making global git config changes
+2026-10-03T07:44:13.2634337Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-03T07:44:13.2644555Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\architecture-governance-skills\architecture-governance-skills
+2026-10-03T07:44:13.2944277Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-03T07:44:13.3239951Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-03T07:44:13.8687442Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-03T07:44:13.8941988Z http.https://github.com/.extraheader
+2026-10-03T07:44:13.8983012Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-10-03T07:44:13.9286657Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-03T07:44:14.4651367Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-03T07:44:14.4945362Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-03T07:44:15.0267354Z Cleaning up orphan processes
+2026-10-03T07:44:15.0300390Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4, actions/setup-node@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
