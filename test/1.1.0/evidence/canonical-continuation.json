@@ -4628,5 +4628,14 @@
       },
       "reason": "Verifier assumption corrected from actual source/node dependencies: concern.contracts depends on components/dataflow, which depend transitively on goals. Observed needs-review is expected."
     }
+  ],
+  "actualCliCallCount": 12,
+  "reportingCorrections": [
+    {
+      "previousReportedCliCallCount": 13,
+      "actualRetainedCliCallCount": 12,
+      "reason": "Agent summary miscounted the retained transcript. There are exactly 12 actual CLI call records and inputs 1 through 12. No missing thirteenth call is evidenced; no extra call was made to reach the incorrect count.",
+      "correctedAt": "2026-10-03T08:14:20.871Z"
+    }
   ]
 }

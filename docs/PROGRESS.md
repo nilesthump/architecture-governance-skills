@@ -82,7 +82,7 @@ POSIX-only skip; original 1.0.0 suite replayed 33 tests, 32 passed +1 skip. Main
 37108413616 Windows/macOS/Linux all passed. Historical source/test/release git diff
 empty. Canonical validation and historical logs retained as separate evidence.
 Fresh-context canonical_continuation independently verified HEAD and existing sole
-fixture authority: 13 actual CLI calls /15 checks passed; one simulated agent
+fixture authority: 12 actual CLI calls /15 checks passed; one simulated agent
 proposal advanced revision3 to4 and invalidated candidate. No human approval or
 project acceptance fabricated. Raw inputs/stdout/hash evidence retained.
 Canonical built package SHA256 a7892b187733a02f75f7e62d672305731001283d035181fb9b671d2eeec9b903;
@@ -94,3 +94,11 @@ authorization was not explicit. Command did not execute; neither release nor npm
 1.1.0 publication is claimed. Concrete approval requested for public release and
 latest=1.1.0, or publication retaining latest=1.0.0. All unaffected acceptance work
 continues; only publication/post-registry verification depend on this approval.
+
+Final acceptance-record review passed: continuation transcript count corrected to
+12 actual CLI calls /15 checks, final-head push CI record retained, and canonical
+package independently checked against all55 release files with zero byte mismatch.
+Only publish H:/architecture-skills/.tmp/publish-1.1.0/architecture-governance-skills-1.1.0.tgz
+with SHA256a7892b187733a02f75f7e62d672305731001283d035181fb9b671d2eeec9b903;
+task-worktree scratch packages are not accepted publication inputs.
+No source or package bytes changed in the acceptance-record follow-up.
