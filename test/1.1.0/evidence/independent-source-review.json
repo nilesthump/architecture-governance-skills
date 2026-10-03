@@ -5,7 +5,7 @@
     "sourceOfIdentity": "Canonical live agent name returned by collaboration.list_agents; no additional opaque ID is exposed"
   },
   "kind": "independent-source-review",
-  "reviewedAt": "2026-10-03T07:39:48.093Z",
+  "reviewedAt": "2026-10-03T07:52:16.013Z",
   "root": "H:\\architecture-skills\\.tmp\\worktrees\\discussion-1.1.0",
   "scope": "Local source, requirement and deterministic fixture review. Does not establish actual production host behavior, real reviewer approval, canonical integration, remote CI or registry publication.",
   "methodology": "Read raw files and reproduce defects independently. Main-agent descriptions were treated as advisory. Source fixes were reread and separately verified.",
@@ -52,9 +52,9 @@
     "docs/REQUIREMENTS-1.1.0.md": "cbbce7cb05f18d76b83251fdc2b08c5a9d31baa1dbe75a3e68f9c724df970846",
     "docs/REQUIREMENTS.md": "e044361f45057a72985d0035b0c14a60b7ac31cb3368bbc645fc621ad6950aa6",
     "docs/DESIGN.md": "77dca0b8ea36721ce0f2ee1a5aef26cd7d5542cd5a42d98d8781cc766fa1a285",
-    "docs/PROGRESS.md": "042b9ace639f038805e19365aba6953a91cf8cbd461c2365d915b0dcf96c6706",
+    "docs/PROGRESS.md": "5b0a9974ed553a53731083cfcee5b7ab3150700551bf9687ba27dd1092917bd8",
     "docs/UPGRADE-1.1.0.md": "5303e008f874665cb28521dea39de7f9b09b0bccec37c190678cd083fda069cc",
-    "1.1.0/scripts/core/working.mjs": "40369b6852e2d26574c74c6a373148090796e2af9dc98e2f4df01a916230bb53",
+    "1.1.0/scripts/core/working.mjs": "1efa321ed14a4d0f614dd76ab4b5538a1f731db46dd797e52500849f8dad4349",
     "1.1.0/scripts/core/artifacts.mjs": "9970a338c909b300ac2cc9d5385fdeb928bc7232f14f1d0edf47d9859240a4f6",
     "1.1.0/scripts/core/review.mjs": "13ff264f7003d5018267d9302be43769a4c1e4820d9e30616f86bcc638701dc4",
     "1.1.0/scripts/core/util.mjs": "fe29537a6f3562819a6a00ab97e8e071e6dc0b2f1c538b22146a1d245ef2ea4f",
@@ -71,7 +71,7 @@
     "1.1.0/skills/existing-repo-architecture/SKILL.md": "1e20043a0ad865a3115bb27b955a9d76ec61b4bff3a8751ef2437a2688646945",
     "test/1.1.0/helpers.mjs": "24c10d88e1a4a3f4bd1994b64be0cbdd02e72260ee8ff9d1e89c67e2ade3e889",
     "test/1.1.0/integration/discussion.test.mjs": "cf098305d0e2986310b946452c94f2d333961bf408061e6974f6dc7871dcf6d2",
-    "test/1.1.0/integration/lifecycle.test.mjs": "e519f69a8d44e7f7253b218c57a86701acebd9bd47e078f2d61b22f8e4e7d9ef",
+    "test/1.1.0/integration/lifecycle.test.mjs": "03f4d074a65bc0c56d40637c3f6c7f94ce86f4cff500714beee76280f5d8006d",
     "test/1.1.0/integration/existing-devops.test.mjs": "9709254fd0c94209cf196d0f3cc5bfe86059c521217c978063da848ac98ecba8",
     "test/1.1.0/integration/package-install.test.mjs": "f9072c9d0ce5783caad5b37575280e4489b6092904d23e8c9fc51392e815534b",
     "test/1.1.0/regression/historical.test.mjs": "c10a344cd74090a914c5a982be221521442f40f7133f3e917be38a916f6344a7",
@@ -207,6 +207,18 @@
     {
       "command": "node path.win32.relative drive-case, separator and distinct-directory comparisons",
       "result": "Equivalent paths returned empty; distinct directory returned ../Other."
+    },
+    {
+      "command": "git diff acc4752 -- 1.1.0/scripts/core/working.mjs test/1.1.0/integration/lifecycle.test.mjs; read .tmp/windows-ci-diagnostic.txt",
+      "result": "Reviewed raw filesystem identity change and actual short-name mismatch diagnostic."
+    },
+    {
+      "command": "node --test --test-concurrency=1 test/1.1.0/integration/lifecycle.test.mjs",
+      "result": "Filesystem identity revision: 4 passed, 0 failed/skipped."
+    },
+    {
+      "command": "Inline extract reviewed canonicalRepository source with fs/git bindings; fixture root, child directory, and injected BigInt zero inode",
+      "result": "Root true; distinct child false; zero inode false."
     }
   ],
   "remainingAcceptanceGates": [
@@ -218,7 +230,7 @@
     "Independent semantic/visual artifact review and retained real host traces",
     "Authenticated registry publication and post-publication verification"
   ],
-  "verdict": "No unresolved source-review blocker in inspected paths, including the narrow pending cross-platform path fix against 984475. Corrected actual three-platform CI must pass; local focused tests do not replace that gate.",
+  "verdict": "No blocking finding in the BigInt filesystem-identity revision against acc4752 or prior inspected source. Nonzero identity is required and fails closed when unavailable. Corrected actual three-platform CI remains an acceptance gate.",
   "finalConcernBindingReview": {
     "citations": [
       {
@@ -331,5 +343,24 @@
     "sourceAssessment": "rootOf already resolves authority root through fs.realpathSync. canonicalRepository now resolves Git show-toplevel to filesystem identity and compares via native path.relative; this handles Windows drive-letter/separator spelling while still rejecting a different repository root. Archive failure injection compares real parent directories plus the same basename, allowing macOS /var vs /private/var aliases to hit the intended WORKING.json write. Fault remains injected only for the target state publication; production rollback/gate logic is otherwise unchanged.",
     "focusedVerification": "node --test --test-concurrency=1 test/1.1.0/integration/lifecycle.test.mjs with real renderer/bundled Python: 4/4 passed. Independent path.win32.relative comparisons: drive-case equivalent -> empty, separator equivalent -> empty, distinct directory -> ../Other. These are local Windows/deterministic checks, not macOS execution.",
     "conclusion": "No blocking finding in the pending narrow source/test diff. Rerun actual Windows/macOS/Linux CI before acceptance."
+  },
+  "finalFilesystemIdentityReview": {
+    "baseline": "acc4752",
+    "inspectedLog": ".tmp/windows-ci-diagnostic.txt",
+    "logSha256": "7041b2f36431ba5f99b5344b633f5a2f01bfba2b5f8b09a74f192dd8760961c7",
+    "citations": [
+      {
+        "file": "1.1.0/scripts/core/working.mjs",
+        "line": 831
+      },
+      {
+        "file": "1.1.0/scripts/core/working.mjs",
+        "line": 839
+      }
+    ],
+    "rawCiObservation": "Run 37107412494 diagnostic reports authority root C:\\Users\\RUNNER~1\\... versus Git root C:/Users/runneradmin/... with missing=[]; string comparison after realpath was still insufficient for short/long names. This is failed-run evidence, not corrected-run success.",
+    "assessment": "Stat comparisons require both operands to be directories, same BigInt device and same BigInt nonzero inode. BigInt avoids precision loss in identity comparison; zero on either side cannot pass. A lexical alias alone does not relax filesystem identity. A distinct repository/subdirectory cannot pass unless the filesystem reports identical nonzero identity. Writes remain confined to original authoritative root and approved paths. Root/Git-root/missing-file diagnostic values do not alter decisions or expose credentials.",
+    "portabilityLimit": "Filesystems that do not report usable nonzero inode identifiers fail closed rather than accepting a potentially ambiguous match. Actual corrected Windows/macOS/Linux CI is still required; no unsupported filesystem capability is claimed.",
+    "verification": "Local production lifecycle tests 4/4 passed. Additional exact-function-source extraction probe with real fixture Git root accepted the root, rejected its child directory, and rejected injected zero-inode stat results. This supplemental probe is deterministic testing of extracted reviewed function source, not real CI/host acceptance."
   }
 }

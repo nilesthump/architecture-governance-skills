@@ -55,3 +55,9 @@ canonical repository. Windows source gate now compares resolved repository ident
 with platform-aware path.relative. Archive test targets resolved parent identity.
 Raw original failure logs retained in test/1.1.0/evidence/ci-first-{macos,windows}.txt.
 Local focused lifecycle recheck: 4/4 passed. Full validation/review/repeated CI pending.
+
+Actual Windows diagnostic CI acc4752 found no missing governance entries. Node root
+used Windows 8.3 RUNNER~1 while Git reported runneradmin: fs.realpathSync did not
+expand the short-name ancestor. Canonical gate now compares directory filesystem
+identity (BigInt device/inode, nonzero inode), rejecting distinct directories while
+accepting two names for the same directory. Diagnostic report/log retained.

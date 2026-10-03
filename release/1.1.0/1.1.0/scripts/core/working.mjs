@@ -830,10 +830,15 @@ import { integrity } from "./artifacts.mjs";
 import { governanceTest, verifyBehaviorTrace } from "./governance.mjs";
 function canonicalRepository(root) {
   const selected = git(root, ["rev-parse", "--show-toplevel"], true);
-  return Boolean(
-    selected &&
-      fs.existsSync(selected) &&
-      path.relative(root, fs.realpathSync(selected)) === "",
+  if (!selected || !fs.existsSync(selected)) return false;
+  const actual = fs.statSync(root, { bigint: true });
+  const reported = fs.statSync(selected, { bigint: true });
+  return (
+    actual.isDirectory() &&
+    reported.isDirectory() &&
+    actual.ino !== 0n &&
+    actual.dev === reported.dev &&
+    actual.ino === reported.ino
   );
 }
 export async function advance(input) {
