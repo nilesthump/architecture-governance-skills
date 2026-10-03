@@ -1,0 +1,243 @@
+{
+  "suiteVersion": "1.0.0",
+  "repositoryRevision": "d88efe4583401449d499f829c630b0c24a23892e",
+  "candidateDigest": "c0c2ec485bfd39b62653ca576e951ec2310eadbbc3f0187e1ab14b5e75bc5f57",
+  "candidate": {
+    "identity": "sample-api",
+    "title": "Pure health function architecture",
+    "requirements": [
+      "Export health() from src/health.mjs with no inputs and fresh {\"status\":\"ok\"} result.",
+      "Use Node built-in tests and preserve the existing package test command."
+    ],
+    "constraints": [
+      "Pure function; no I/O and no added dependencies."
+    ],
+    "nonGoals": [
+      "HTTP services, gateways, databases and access-control deployment are outside this task."
+    ],
+    "assumptions": [
+      "Node.js executes ES modules."
+    ],
+    "risks": [
+      "Callers must not assume this function checks external dependencies."
+    ],
+    "externalDependencies": [
+      "Node.js runtime"
+    ],
+    "rejectedAlternatives": [
+      "An HTTP service is unnecessary for this accepted function-only task."
+    ],
+    "decisions": [
+      {
+        "id": "DEC-001",
+        "status": "accepted",
+        "text": "Export health() from src/health.mjs returning a fresh status-ok object without inputs.",
+        "source": "requirements.md#health"
+      }
+    ],
+    "openQuestions": [],
+    "concerns": [
+      {
+        "name": "transport",
+        "applicable": false,
+        "reason": "The accepted pure function adds no transport mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "API",
+        "applicable": true,
+        "reason": "The exported function contract, built-in tests and suite PR validation apply to this fixture."
+      },
+      {
+        "name": "contracts",
+        "applicable": true,
+        "reason": "The exported function contract, built-in tests and suite PR validation apply to this fixture."
+      },
+      {
+        "name": "authentication",
+        "applicable": false,
+        "reason": "The accepted pure function adds no authentication mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "authorization",
+        "applicable": false,
+        "reason": "The accepted pure function adds no authorization mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "persistence",
+        "applicable": false,
+        "reason": "The accepted pure function adds no persistence mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "transactions",
+        "applicable": false,
+        "reason": "The accepted pure function adds no transactions mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "schema migration",
+        "applicable": false,
+        "reason": "The accepted pure function adds no schema migration mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "cache",
+        "applicable": false,
+        "reason": "The accepted pure function adds no cache mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "asynchronous messaging",
+        "applicable": false,
+        "reason": "The accepted pure function adds no asynchronous messaging mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "ordering",
+        "applicable": false,
+        "reason": "The accepted pure function adds no ordering mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "consistency",
+        "applicable": false,
+        "reason": "The accepted pure function adds no consistency mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "idempotency",
+        "applicable": false,
+        "reason": "The accepted pure function adds no idempotency mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "configuration",
+        "applicable": false,
+        "reason": "The accepted pure function adds no configuration mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "secret management",
+        "applicable": false,
+        "reason": "The accepted pure function adds no secret management mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "logging",
+        "applicable": false,
+        "reason": "The accepted pure function adds no logging mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "metrics",
+        "applicable": false,
+        "reason": "The accepted pure function adds no metrics mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "tracing",
+        "applicable": false,
+        "reason": "The accepted pure function adds no tracing mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "observability",
+        "applicable": false,
+        "reason": "The accepted pure function adds no observability mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "timeout",
+        "applicable": false,
+        "reason": "The accepted pure function adds no timeout mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "retry",
+        "applicable": false,
+        "reason": "The accepted pure function adds no retry mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "failure handling",
+        "applicable": false,
+        "reason": "The accepted pure function adds no failure handling mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "circuit breaking",
+        "applicable": false,
+        "reason": "The accepted pure function adds no circuit breaking mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "deployment",
+        "applicable": false,
+        "reason": "The accepted pure function adds no deployment mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "rollback",
+        "applicable": false,
+        "reason": "The accepted pure function adds no rollback mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "compatibility",
+        "applicable": false,
+        "reason": "The accepted pure function adds no compatibility mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "versioning",
+        "applicable": false,
+        "reason": "The accepted pure function adds no versioning mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "security",
+        "applicable": false,
+        "reason": "The accepted pure function adds no security mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "testing",
+        "applicable": true,
+        "reason": "The exported function contract, built-in tests and suite PR validation apply to this fixture."
+      },
+      {
+        "name": "CI/CD",
+        "applicable": true,
+        "reason": "The exported function contract, built-in tests and suite PR validation apply to this fixture."
+      },
+      {
+        "name": "release",
+        "applicable": false,
+        "reason": "The accepted pure function adds no release mechanism; inherited repository governance is reviewed separately."
+      },
+      {
+        "name": "operations",
+        "applicable": false,
+        "reason": "The accepted pure function adds no operations mechanism; inherited repository governance is reviewed separately."
+      }
+    ],
+    "sections": [
+      {
+        "id": "ARCH-001",
+        "title": "Context and goals",
+        "content": "A caller invokes health() to receive a pure status-ok result. No service or deployment architecture is introduced.",
+        "rationale": "The accepted function-only scope needs no infrastructure.",
+        "tradeoffs": "No external dependency health checks."
+      },
+      {
+        "id": "ARCH-010",
+        "title": "Boundaries and contracts",
+        "content": "AS-IS: package test entry exists, implementation pending. TARGET: export health() from src/health.mjs, no inputs, a fresh object exactly {\"status\":\"ok\"}. No I/O, dependencies or HTTP behavior. KNOWN DEVIATION: source and tests pending."
+      },
+      {
+        "id": "ARCH-020",
+        "title": "Testing and integration",
+        "content": "Node built-in tests at tests/health.test.mjs verify result shape and fresh objects. Preserve node --test tests/health.test.mjs. Governance controls task worktree, independent review, canonical integration and progress. GitHub CI validates fixture behavior through the suite PR."
+      }
+    ],
+    "diagrams": [
+      {
+        "id": "health-sequence",
+        "sectionIds": [
+          "ARCH-010"
+        ],
+        "source": "@startuml\nactor Caller\nparticipant \"health()\" as Function\nCaller -> Function: invoke with no inputs\nFunction --> Caller: fresh object status ok\n@enduml\n"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "path": "requirements.md",
+      "category": "AUTHORITATIVE",
+      "sha256": "cad6e2e8e977602bfb9c9121147fa177f71a338e71534d14ffb91bb76f0e092c"
+    },
+    {
+      "path": "package.json",
+      "category": "EVIDENCE",
+      "sha256": "a3b0bd430f1fdf9e98b52b55098602c95341a6f998f76faf651103f8348f6c0d"
+    }
+  ],
+  "packageDigest": "f649df89596dcfb3b5fd41c952735d35d2ed5cbb439499e6b792fc9c224ecbec"
+}

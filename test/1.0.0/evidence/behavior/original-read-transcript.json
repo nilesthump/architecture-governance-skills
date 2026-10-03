@@ -1,0 +1,47 @@
+{
+  "hostTrace": "collaboration:/root/governed_task_agent",
+  "freshContext": true,
+  "provenance": "Original tool transcript excerpt returned from agent context; separate from later state recapture",
+  "originalOrder": [
+    [
+      "AGENTS.md",
+      "7fae1a"
+    ],
+    [
+      "spec/progress/CURRENT.md",
+      "6079ec"
+    ],
+    [
+      "spec/architecture/CURRENT",
+      "ce1546"
+    ],
+    [
+      "spec/architecture/v1.0.0/ARCHITECTURE.md",
+      "fb6280"
+    ],
+    [
+      "spec/governance/WRITE_SCOPE.md",
+      "1d78bf"
+    ],
+    [
+      "spec/governance/WORKFLOW.md",
+      "9e6571"
+    ]
+  ],
+  "originalInventory": {
+    "command": "rg --files -g '!node_modules'",
+    "chunkId": "8873ec",
+    "exitCode": 0
+  },
+  "finalCombinedRead": {
+    "command": "Get-Content -LiteralPath requirements.md; Get-Content -LiteralPath spec/governance/validation.json; Get-Content -LiteralPath package.json; git rev-parse --show-toplevel; git status --short; git log -1 --format='%H %s'",
+    "chunkId": "7eb9a3",
+    "exitCode": 0,
+    "individualExitCodes": "not captured separately"
+  },
+  "temporalObservation": "These calls preceded git worktree add and source implementation in the agent original context",
+  "limitations": [
+    "Returned original transcript excerpt is host-context evidence, not an external cryptographic attestation",
+    "BEHAVIOR-TASK ordered_reads is explicitly recaptured state and must not be substituted for these original calls"
+  ]
+}

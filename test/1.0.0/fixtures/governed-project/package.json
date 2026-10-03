@@ -1,0 +1,7 @@
+{
+  "name": "governance-health-fixture",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/health.test.mjs"
+  }
+}

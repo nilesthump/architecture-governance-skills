@@ -1,0 +1,21 @@
+{
+  "suiteVersion": "1.0.0",
+  "platform": "Windows",
+  "tests": 30,
+  "passed": 30,
+  "failed": 0,
+  "actualPackageManagers": [
+    "npm",
+    "pnpm"
+  ],
+  "scopes": [
+    "project",
+    "global"
+  ],
+  "actualPlantUML": true,
+  "independentPdfExtraction": true,
+  "longChineseParity": true,
+  "regressionFaultInjection": true,
+  "status": "passed",
+  "note": "Host actual run before remote CI; real independent agent traces are separate evidence"
+}

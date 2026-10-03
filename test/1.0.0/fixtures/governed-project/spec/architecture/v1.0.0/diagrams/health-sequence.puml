@@ -1,0 +1,6 @@
+@startuml
+actor Caller
+participant "health()" as Function
+Caller -> Function: invoke with no inputs
+Function --> Caller: fresh object status ok
+@enduml
