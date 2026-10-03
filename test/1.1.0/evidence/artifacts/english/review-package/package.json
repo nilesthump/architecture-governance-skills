@@ -1,0 +1,258 @@
+{
+  "suiteVersion": "1.1.0",
+  "repositoryRevision": "3605d8fd8afa31f4fdf87d074dc683d020d925c2",
+  "candidateDigest": "422b1f87022e5752039992b1f1682bc6d3ab4f30a1ecf980189a63985cdf6c89",
+  "candidate": {
+    "identity": "health-fixture",
+    "title": "CLI health architecture",
+    "requirements": [
+      "Provide deterministic local health JSON."
+    ],
+    "constraints": [
+      "A CLI tool, no server or GUI."
+    ],
+    "nonGoals": [
+      "No database, middleware or gateway."
+    ],
+    "assumptions": [],
+    "risks": [],
+    "externalDependencies": [
+      "Node.js"
+    ],
+    "rejectedAlternatives": [
+      "HTTP service excluded from this fixture."
+    ],
+    "decisions": [
+      {
+        "id": "DEC-001",
+        "status": "accepted",
+        "text": "Node CLI without framework",
+        "nodeIds": [
+          "other.stack"
+        ]
+      }
+    ],
+    "openQuestions": [],
+    "concerns": [
+      {
+        "name": "transport",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "API",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "contracts",
+        "applicable": true,
+        "reason": "The local CLI defines a JSON success contract and failure exit code."
+      },
+      {
+        "name": "authentication",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "authorization",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "persistence",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "transactions",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "schema migration",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "cache",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "asynchronous messaging",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "ordering",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "consistency",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "idempotency",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "configuration",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "secret management",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "logging",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "metrics",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "tracing",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "observability",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "timeout",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "retry",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "failure handling",
+        "applicable": true,
+        "reason": "The local command must return a nonzero code with a diagnostic on failure."
+      },
+      {
+        "name": "circuit breaking",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "deployment",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "rollback",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "compatibility",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "versioning",
+        "applicable": true,
+        "reason": "Architecture versions and retained revisions are managed independently of Suite versions."
+      },
+      {
+        "name": "security",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "testing",
+        "applicable": true,
+        "reason": "Node tests verify the deterministic local command."
+      },
+      {
+        "name": "CI/CD",
+        "applicable": true,
+        "reason": "The approved validation contract is shared between local execution and CI."
+      },
+      {
+        "name": "release",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      },
+      {
+        "name": "operations",
+        "applicable": false,
+        "reason": "Out of scope for the simulated minimal local health CLI: no network service, GUI, persistence, shared state or remote operational dependency."
+      }
+    ],
+    "sections": [
+      {
+        "id": "ARCH-001",
+        "title": "CLI scope",
+        "content": "A user invokes the local CLI health command and receives deterministic JSON. No HTTP server, GUI, database or gateway.",
+        "nodeIds": [
+          "other.stack"
+        ]
+      },
+      {
+        "id": "ARCH-010",
+        "title": "Local contract",
+        "content": "The command returns status ok on success. Failures return a nonzero process code with a diagnostic. No network API is introduced.",
+        "nodeIds": [
+          "contracts"
+        ]
+      },
+      {
+        "id": "ARCH-020",
+        "title": "Validation",
+        "content": "Node tests validate the local command. The same validation contract runs locally and in CI.",
+        "nodeIds": [
+          "delivery"
+        ]
+      }
+    ],
+    "diagrams": [
+      {
+        "id": "health-sequence",
+        "sectionIds": [
+          "ARCH-010"
+        ],
+        "source": "@startuml\nactor User\nparticipant CLI\nUser -> CLI: health\nCLI --> User: success\n@enduml"
+      }
+    ],
+    "discussion": {
+      "id": "discussion-1",
+      "revision": 2,
+      "digest": "eee869dbeefb019238dd1e8ab5a445f3b11f6f5dc651cd4315d5429b8a1b181a",
+      "snapshot": "spec/architecture/discussions/discussion-1/review-input-eee869dbeefb019238dd1e8ab5a445f3b11f6f5dc651cd4315d5429b8a1b181a.json"
+    }
+  },
+  "sources": [
+    {
+      "path": "requirements.md",
+      "category": "AUTHORITATIVE",
+      "sha256": "dc7a1760c2a8a3baa6a88634a01bd03f3ed14f9b243f4cf09970c4fbd2e98ec9"
+    },
+    {
+      "path": "package.json",
+      "category": "EVIDENCE",
+      "sha256": "b61177593c9fa37bdc272c619e3571815412e3ada48c7c2944f3c1f5124bce10"
+    },
+    {
+      "path": "spec/architecture/discussions/discussion-1/review-input-eee869dbeefb019238dd1e8ab5a445f3b11f6f5dc651cd4315d5429b8a1b181a.json",
+      "category": "AUTHORITATIVE",
+      "sha256": "f43e632d70b9d99433619d2de2409bd11fe4c716232b1502d8d9369a88d1cadb"
+    }
+  ],
+  "packageDigest": "227cc8e8caa62353f289d1fc5e57b2f0fb7a2f87d5bf33c339fb7b3f3823f06c"
+}

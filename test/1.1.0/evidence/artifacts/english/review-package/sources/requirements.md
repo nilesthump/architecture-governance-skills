@@ -1,0 +1,1 @@
+Human fixture authorization: a minimal CLI health tool; one developer for one week; no GUI/server/database/middleware/gateway. All discussion choices in this deterministic fixture are simulated user decisions, not real host evidence.

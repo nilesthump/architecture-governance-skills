@@ -1,0 +1,294 @@
+{
+  "reviewer": {
+    "agentId": "/root/independent_review",
+    "freshContext": true,
+    "sourceOfIdentity": "Canonical live agent name returned by collaboration.list_agents; no additional opaque ID is exposed"
+  },
+  "kind": "independent-source-review",
+  "reviewedAt": "2026-10-03T07:28:28.619Z",
+  "root": "H:\\architecture-skills\\.tmp\\worktrees\\discussion-1.1.0",
+  "scope": "Local source, requirement and deterministic fixture review. Does not establish actual production host behavior, real reviewer approval, canonical integration, remote CI or registry publication.",
+  "methodology": "Read raw files and reproduce defects independently. Main-agent descriptions were treated as advisory. Source fixes were reread and separately verified.",
+  "rawInspectedPaths": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "docs/REQUIREMENTS-1.1.0.md",
+    "docs/REQUIREMENTS.md",
+    "docs/DESIGN.md",
+    "docs/PROGRESS.md",
+    "docs/UPGRADE-1.1.0.md",
+    "1.1.0/scripts/core/working.mjs",
+    "1.1.0/scripts/core/artifacts.mjs",
+    "1.1.0/scripts/core/review.mjs",
+    "1.1.0/scripts/core/util.mjs",
+    "1.1.0/scripts/core/repository.mjs",
+    "1.1.0/scripts/core/governance.mjs",
+    "1.1.0/scripts/core/cli.mjs",
+    "1.1.0/shared/discussion.json",
+    "1.1.0/shared/DISCUSSION.md",
+    "1.1.0/shared/WORKFLOW.md",
+    "1.1.0/contracts/actions.md",
+    "1.1.0/schemas/working.schema.json",
+    "1.1.0/schemas/candidate.schema.json",
+    "1.1.0/skills/architecture-freeze/SKILL.md",
+    "1.1.0/skills/existing-repo-architecture/SKILL.md",
+    "test/1.1.0/helpers.mjs",
+    "test/1.1.0/integration/discussion.test.mjs",
+    "test/1.1.0/integration/lifecycle.test.mjs",
+    "test/1.1.0/integration/existing-devops.test.mjs",
+    "test/1.1.0/integration/package-install.test.mjs",
+    "test/1.1.0/regression/historical.test.mjs",
+    "package.json",
+    "bin/install.mjs",
+    "tools/build.mjs",
+    "tools/validate.mjs",
+    "tools/test.mjs",
+    "tools/ci.mjs",
+    ".github/workflows/validate.yml"
+  ],
+  "sourceHashes": {
+    "AGENTS.md": "3d737a4f6cdcf48bf52d65cf69db9d54d01d2003d99e0214d38c2f2e42b1c4f8",
+    "CLAUDE.md": "858a88abce95785c36a444664149df036a74549ca7a84b1f03882c6796a0b5bd",
+    "docs/REQUIREMENTS-1.1.0.md": "cbbce7cb05f18d76b83251fdc2b08c5a9d31baa1dbe75a3e68f9c724df970846",
+    "docs/REQUIREMENTS.md": "e044361f45057a72985d0035b0c14a60b7ac31cb3368bbc645fc621ad6950aa6",
+    "docs/DESIGN.md": "77dca0b8ea36721ce0f2ee1a5aef26cd7d5542cd5a42d98d8781cc766fa1a285",
+    "docs/PROGRESS.md": "9fbc9456841ed1ef45163bbcd5eb38ded458e42e4a6bbf0ab64a0217f1fa4203",
+    "docs/UPGRADE-1.1.0.md": "5303e008f874665cb28521dea39de7f9b09b0bccec37c190678cd083fda069cc",
+    "1.1.0/scripts/core/working.mjs": "1a9f24dd28304a0f8db18f642bdc7931f0b49bd01f3aac3ee19af6a8cd475332",
+    "1.1.0/scripts/core/artifacts.mjs": "9970a338c909b300ac2cc9d5385fdeb928bc7232f14f1d0edf47d9859240a4f6",
+    "1.1.0/scripts/core/review.mjs": "13ff264f7003d5018267d9302be43769a4c1e4820d9e30616f86bcc638701dc4",
+    "1.1.0/scripts/core/util.mjs": "fe29537a6f3562819a6a00ab97e8e071e6dc0b2f1c538b22146a1d245ef2ea4f",
+    "1.1.0/scripts/core/repository.mjs": "b4de2bc444024cbc51acf0c42b31b596f98e51f0c6c9480233583644ec557e19",
+    "1.1.0/scripts/core/governance.mjs": "81a4336fe4064af0b686cd624d4f43ebeae131af59f201ea28dcf174f2c9302e",
+    "1.1.0/scripts/core/cli.mjs": "059372361de7dcc013f2f2d748cd79fe6814a4eb11584565528c171300e17a89",
+    "1.1.0/shared/discussion.json": "93e24667d340afd5458e922fee827fb3a9388a3c835a1198018f588e293f3b0b",
+    "1.1.0/shared/DISCUSSION.md": "e9e479e185bdfba6d5558beb8174f47703e2ee2455e060a19573dbd637e87250",
+    "1.1.0/shared/WORKFLOW.md": "c85e3ccc67390f7858104d910b8fa30c2a92fada5c72070c76d9edb4dec2d15c",
+    "1.1.0/contracts/actions.md": "d052409e6c8509a9fc5e9238c077c940ed0752c1247144a54cbdece1e1d3f44f",
+    "1.1.0/schemas/working.schema.json": "b39bf1299d6e37df73eaf1d837a4bd093ee7135ef066875194012274286b32b8",
+    "1.1.0/schemas/candidate.schema.json": "339c0a30b296794504cf2f0000c43a7b6457ca470b6f3f098ab3dc573b1b7ece",
+    "1.1.0/skills/architecture-freeze/SKILL.md": "b276ed08b4d35166b97a98b24a2aa2e812a0e353505670f72a21942210255806",
+    "1.1.0/skills/existing-repo-architecture/SKILL.md": "1e20043a0ad865a3115bb27b955a9d76ec61b4bff3a8751ef2437a2688646945",
+    "test/1.1.0/helpers.mjs": "24c10d88e1a4a3f4bd1994b64be0cbdd02e72260ee8ff9d1e89c67e2ade3e889",
+    "test/1.1.0/integration/discussion.test.mjs": "cf098305d0e2986310b946452c94f2d333961bf408061e6974f6dc7871dcf6d2",
+    "test/1.1.0/integration/lifecycle.test.mjs": "945f48fcdd6e8856bc38f625ff7a1a57032fee9f37ae77a97ccbd64563718a84",
+    "test/1.1.0/integration/existing-devops.test.mjs": "9709254fd0c94209cf196d0f3cc5bfe86059c521217c978063da848ac98ecba8",
+    "test/1.1.0/integration/package-install.test.mjs": "f9072c9d0ce5783caad5b37575280e4489b6092904d23e8c9fc51392e815534b",
+    "test/1.1.0/regression/historical.test.mjs": "c10a344cd74090a914c5a982be221521442f40f7133f3e917be38a916f6344a7",
+    "package.json": "7ed7f04eac6edaa070cbfb975e222d2573c29aff151d73e8d31e3404c4d4541d",
+    "bin/install.mjs": "72cf57d65d642afd2de9bf2aa83e07df360e1e867413e695b482c10d97dfc027",
+    "tools/build.mjs": "adbdf1587cdb4143b79050320352d3b4713bbd5475c55733b873d448096e0450",
+    "tools/validate.mjs": "e86ac7c5f42c35286ac898a4c37ae8ecdf7ce33dcac0d9c779568bc0b71a35c2",
+    "tools/test.mjs": "a3955a810128665d8c220c6c9f04c371868453a37294b0e3249fef5c94a054cd",
+    "tools/ci.mjs": "9bb0c1cd912ee26fecb8c5e224cbe6a7ef2b3b91021f6f74c088aae77f49e432",
+    ".github/workflows/validate.yml": "2da8e7ae6a85ade457bc7384762b35badfae6a0c6da15ee844c21c6240992006"
+  },
+  "openBlockingFindings": [],
+  "resolvedFindings": [
+    {
+      "id": "R1",
+      "priority": 1,
+      "title": "New tests overwrite historical evidence",
+      "citations": [
+        {
+          "file": "test/1.1.0/integration/existing-devops.test.mjs",
+          "line": 124
+        }
+      ],
+      "initialEvidence": "Raw copied test used path.join(\"test/1.0.0/evidence\", ...), causing current validation to write frozen evidence.",
+      "resolution": "Direct reread now targets test/1.1.0/evidence. git diff --exit-code -- 1.0.0 test/1.0.0 release/1.0.0 returned 0. Original test execution is isolated in historical harness."
+    },
+    {
+      "id": "R2",
+      "priority": 1,
+      "title": "Existing freeze ignores artifact path authorization",
+      "citations": [
+        {
+          "file": "1.1.0/scripts/core/artifacts.mjs",
+          "line": 629
+        },
+        {
+          "file": "1.1.0/scripts/core/artifacts.mjs",
+          "line": 662
+        }
+      ],
+      "initialReproduction": "Complete simulated Existing discussion; approve only WORKING.json and content-addressed review input; generate candidate with diagrams []; simulated review; advance reviewed; freeze v2.0.0 with bundled Python. Initial source returned success and created unapproved CURRENT/version artifacts.",
+      "resolution": "Exact formal artifact, pointer and historical output paths checked before staging. Updated negative test and independent probe reject missing approvals."
+    },
+    {
+      "id": "R3",
+      "priority": 1,
+      "title": "Technology choices fail to invalidate dependent conclusions",
+      "citations": [
+        {
+          "file": "1.1.0/shared/discussion.json",
+          "line": 143
+        },
+        {
+          "file": "1.1.0/shared/discussion.json",
+          "line": 176
+        }
+      ],
+      "initialReproduction": "complete(f,[\"server\",\"other\"]); update(f,[answer(f,\"server.stack\",\"Replacement platform with new costs/protocol\")]); initial result ready=true, impact=[server.stack], dataflow/contracts/feasibility still confirmed.",
+      "resolution": "Definition now connects actual technical branch choices to dataflow, contracts, GUI and feasibility. Updated executable test verifies active changes and inactive branch preservation."
+    },
+    {
+      "id": "R4",
+      "priority": 1,
+      "title": "Completion can substitute unrelated artifacts for recorded frozen architecture",
+      "citations": [
+        {
+          "file": "1.1.0/scripts/core/working.mjs",
+          "line": 835
+        }
+      ],
+      "initialReproduction": "Freeze Existing v2.0.0 with exact approvals and real PDF; copy frozen directory to unrelated/v2.0.0; corrupt original ARCHITECTURE.pdf; current integrity fails; advance bootstrapped with directory/layout redirected to unrelated succeeded while state still linked original directory.",
+      "resolution": "Stored layout/directory, architecture version/revision and candidate digest now bind completion integrity. Independent rerun rejected substitution and correctly rejected corrupted stored artifact. validated/accepted also call the bound helper. Stored Validation Contract comparison added."
+    },
+    {
+      "id": "R5",
+      "priority": 2,
+      "title": "Current action contract documents obsolete state replacement and suite version",
+      "citations": [
+        {
+          "file": "1.1.0/contracts/actions.md",
+          "line": 1
+        },
+        {
+          "file": "1.1.0/contracts/actions.md",
+          "line": 28
+        }
+      ],
+      "initialEvidence": "Actions 1.0.0 heading and old state-array/optional-candidate paragraph contradicted current operations API.",
+      "resolution": "Direct reread confirms Actions 1.1.0 and operations/writerId/expectedRevision documentation."
+    }
+  ],
+  "commandsAndResults": [
+    {
+      "command": "node --test --test-concurrency=1 test/1.1.0/integration/discussion.test.mjs test/1.1.0/integration/lifecycle.test.mjs",
+      "environment": {
+        "ARCHITECTURE_PLANTUML_JAR": "H:/architecture-skills/.tmp/renderers/plantuml.jar",
+        "ARCHITECTURE_PYTHON": "C:/Users/21441/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe"
+      },
+      "result": "Final Existing compatibility recheck: 18 tests, 18 passed, 0 failures/skips. Existing fixture froze approved outputs, used custom norms/validation.json, bootstrapped and validated, retained custom CLAUDE, and correctly blocked acceptance for missing real trace. Real Java/PDF rendering and pypdf extraction used; simulated reviews remain separate from host acceptance."
+    },
+    {
+      "command": "Inline isolated fixture probes sent through node --input-type=module",
+      "result": "Initial technology invalidation and Existing freeze authorization defects reproduced. Initial architecture substitution reproduced. Corrected substitution returned validation_failed; corrupted stored PDF returned validation_failed. Persistent state-publication error injection returned execution_failed and left no formal directory/CURRENT, phase reviewed."
+    },
+    {
+      "command": "git diff --exit-code -- 1.0.0 test/1.0.0 release/1.0.0",
+      "result": "Exit 0; historical tracked files unchanged at review time."
+    },
+    {
+      "command": "node --input-type=module -e import tools/build.mjs verify(\"1.0.0\"), verify(\"1.1.0\")",
+      "result": "Historical 1.0.0 verified; development 1.1.0 Release integrity mismatch after source corrections. Expected rebuild/validation gate remains required, not a source defect."
+    },
+    {
+      "command": "node inline execute architecture.working.update with discussionId/projectIdentity set individually to . and ..",
+      "result": "All four probes validation_failed; no accepted state created."
+    },
+    {
+      "command": "node YAML.parse .github/workflows/validate.yml and inspect shared validation step",
+      "result": "Configured matrix windows-latest, macos-latest, ubuntu-latest; run npm run validate; three required environment values present."
+    },
+    {
+      "command": "Inline verifyBehaviorTrace negative probes: missing trace, simulated trace, identical primary/continuation agent, empty events",
+      "result": "All four failed as intended: missing trace user_decision_required; the remaining cases validation_failed."
+    }
+  ],
+  "remainingAcceptanceGates": [
+    "Final npm run validate and build/source-release parity after last fixes",
+    "Historical replay with mandatory original test-count assertion",
+    "Actual npm/pnpm project/global package transport and byte parity",
+    "Actual protected PR and Windows/macOS/Linux CI",
+    "Canonical integration and distinct fresh-context continuation",
+    "Independent semantic/visual artifact review and retained real host traces",
+    "Authenticated registry publication and post-publication verification"
+  ],
+  "verdict": "No unresolved source-review blocker or recorded fixture follow-up in inspected paths after final Existing compatibility recheck. Acceptance and publication remain conditional on separately recorded external/full-validation gates.",
+  "finalConcernBindingReview": {
+    "citations": [
+      {
+        "file": "1.1.0/scripts/core/working.mjs",
+        "line": 170
+      },
+      {
+        "file": "1.1.0/scripts/core/working.mjs",
+        "line": 772
+      }
+    ],
+    "conclusion": "Explicit confirmed applicability/basis required. Generated concerns derive from state; verifyBinding recomputes exact concern content for historical/current checks. Regression test passed."
+  },
+  "nonBlockingCoverageRecommendations": [],
+  "finalNumericBudgetReview": {
+    "citations": [
+      {
+        "file": "1.1.0/scripts/core/working.mjs",
+        "line": 195
+      },
+      {
+        "file": "1.1.0/scripts/core/working.mjs",
+        "line": 210
+      },
+      {
+        "file": "test/1.1.0/integration/discussion.test.mjs",
+        "line": 625
+      }
+    ],
+    "conclusion": "Raw source explicitly requires positive integer counts for both people and agent resources and finite nonnegative numeric amounts for funds. null, empty string and numeric-string counts cannot pass through coercion. New negative regression passed. Existing explicit numeric zero-funds positive case remains covered."
+  },
+  "finalHistoryRegressionReview": {
+    "citations": [
+      {
+        "file": "test/1.1.0/integration/lifecycle.test.mjs",
+        "line": 223
+      },
+      {
+        "file": "test/1.1.0/integration/lifecycle.test.mjs",
+        "line": 275
+      }
+    ],
+    "conclusion": "Reviewed second discussion, independently generated/reviewed new candidate and same-version freeze; revision increments to 2. Test compares retained revision-1 STATE.json bytes with original snapshot and independently verifies history and current artifacts. Previously recorded nonblocking coverage recommendation is satisfied."
+  },
+  "finalNarrowReview": {
+    "identifierSchema": {
+      "file": "1.1.0/schemas/working.schema.json",
+      "line": 41,
+      "conclusion": "Both projectIdentity/discussionId require initial alphanumeric character. Four independent create probes (two fields times dot/dot-dot) returned validation_failed."
+    },
+    "ci": {
+      "file": ".github/workflows/validate.yml",
+      "line": 39,
+      "conclusion": "Parsed workflow directly: Windows/macOS/Linux matrix retained; shared entry npm run validate receives workspace renderer/font and python environment. This is configuration verification, not actual remote CI execution."
+    },
+    "fixtureConcerns": {
+      "file": "test/1.1.0/helpers.mjs",
+      "line": 74,
+      "conclusion": "Applicability for local contracts, failure handling, testing, CI/CD and architecture versioning now has explicit basis; generated candidate reflects a local CLI. All 18 affected tests passed after these edits."
+    }
+  },
+  "finalExistingCompatibilityReview": {
+    "requirements": "docs/REQUIREMENTS-1.1.0.md sections 6 Existing Repository inheritance and 10 compatibility; docs/REQUIREMENTS.md sections 12-14 Existing governance/DevOps preservation",
+    "citations": [
+      {
+        "file": "1.1.0/scripts/core/governance.mjs",
+        "line": 127
+      },
+      {
+        "file": "1.1.0/scripts/core/working.mjs",
+        "line": 921
+      },
+      {
+        "file": "1.1.0/scripts/core/working.mjs",
+        "line": 932
+      }
+    ],
+    "conclusion": "Greenfield retains default governance structural checks. Existing acceptance uses the shared trace gate without requiring replacement of inherited CLAUDE/default governance files, retains state/candidate/stored architecture/approved contract checks, and adds observed evidence for existing-devops-preserved. Caller mode cannot bypass stored mode authority. Missing/simulated/same-agent/incomplete traces independently rejected. Host authenticity remains explicitly outside JSON validation and must be proved by original retained traces."
+  },
+  "fixtureMappingFollowup": {
+    "status": "resolved",
+    "file": "test/1.1.0/helpers.mjs",
+    "conclusion": "Direct reread confirms the blanket section nodeIds override is removed; Local contract retains contracts and Validation retains delivery."
+  }
+}

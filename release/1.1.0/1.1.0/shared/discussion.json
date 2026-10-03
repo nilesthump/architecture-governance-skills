@@ -1,0 +1,456 @@
+{
+  "formatVersion": 2,
+  "definitionVersion": "1.1.0",
+  "phases": [
+    "discussion",
+    "candidate",
+    "reviewed",
+    "frozen",
+    "bootstrapped",
+    "validated",
+    "accepted"
+  ],
+  "statuses": [
+    "undetermined",
+    "proposed",
+    "confirmed",
+    "needs-review",
+    "not-applicable",
+    "excluded"
+  ],
+  "componentTypes": ["server", "client", "game", "web", "other"],
+  "nodes": [
+    {
+      "id": "goals",
+      "priority": 0,
+      "dependencies": [],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "scope",
+      "priority": 0,
+      "dependencies": ["goals"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "acceptance",
+      "priority": 0,
+      "dependencies": ["scope"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "constraints",
+      "priority": 0,
+      "dependencies": ["goals"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "budget",
+      "priority": 0,
+      "dependencies": ["scope"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "delivery",
+      "priority": 1,
+      "dependencies": ["scope", "constraints"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "components",
+      "priority": 2,
+      "dependencies": ["scope", "constraints"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "server.topology",
+      "priority": 2,
+      "dependencies": ["components"],
+      "branch": "server",
+      "blocking": true
+    },
+    {
+      "id": "server.stack",
+      "priority": 2,
+      "dependencies": ["components", "constraints", "server.topology"],
+      "branch": "server",
+      "blocking": true
+    },
+    {
+      "id": "server.persistence",
+      "priority": 2,
+      "dependencies": ["components"],
+      "branch": "server",
+      "blocking": true
+    },
+    {
+      "id": "server.middleware",
+      "priority": 2,
+      "dependencies": ["server.topology", "server.stack", "server.persistence"],
+      "branch": "server",
+      "blocking": true
+    },
+    {
+      "id": "client.platform",
+      "priority": 2,
+      "dependencies": ["components"],
+      "branch": "client",
+      "blocking": true
+    },
+    {
+      "id": "client.stack",
+      "priority": 2,
+      "dependencies": ["client.platform"],
+      "branch": "client",
+      "blocking": true
+    },
+    {
+      "id": "game.platform",
+      "priority": 2,
+      "dependencies": ["components"],
+      "branch": "game",
+      "blocking": true
+    },
+    {
+      "id": "game.stack",
+      "priority": 2,
+      "dependencies": ["game.platform"],
+      "branch": "game",
+      "blocking": true
+    },
+    {
+      "id": "web.stack",
+      "priority": 2,
+      "dependencies": ["components"],
+      "branch": "web",
+      "blocking": true
+    },
+    {
+      "id": "other.stack",
+      "priority": 2,
+      "dependencies": ["components"],
+      "branch": "other",
+      "blocking": true
+    },
+    {
+      "id": "dataflow",
+      "priority": 3,
+      "dependencies": [
+        "components",
+        "server.topology",
+        "server.stack",
+        "server.persistence",
+        "server.middleware",
+        "client.platform",
+        "client.stack",
+        "game.platform",
+        "game.stack",
+        "web.stack",
+        "other.stack"
+      ],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "contracts",
+      "priority": 3,
+      "dependencies": ["dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "gui",
+      "priority": 3,
+      "dependencies": ["components", "dataflow", "contracts"],
+      "branch": "gui",
+      "blocking": true
+    },
+    {
+      "id": "feasibility",
+      "priority": 4,
+      "dependencies": [
+        "budget",
+        "acceptance",
+        "components",
+        "server.topology",
+        "server.stack",
+        "server.persistence",
+        "server.middleware",
+        "client.platform",
+        "client.stack",
+        "game.platform",
+        "game.stack",
+        "web.stack",
+        "other.stack",
+        "dataflow",
+        "contracts",
+        "gui",
+        "concern.transport",
+        "concern.API",
+        "concern.contracts",
+        "concern.authentication",
+        "concern.authorization",
+        "concern.persistence",
+        "concern.transactions",
+        "concern.schema-migration",
+        "concern.cache",
+        "concern.asynchronous-messaging",
+        "concern.ordering",
+        "concern.consistency",
+        "concern.idempotency",
+        "concern.configuration",
+        "concern.secret-management",
+        "concern.logging",
+        "concern.metrics",
+        "concern.tracing",
+        "concern.observability",
+        "concern.timeout",
+        "concern.retry",
+        "concern.failure-handling",
+        "concern.circuit-breaking",
+        "concern.deployment",
+        "concern.rollback",
+        "concern.compatibility",
+        "concern.versioning",
+        "concern.security",
+        "concern.testing",
+        "concern.CI-CD",
+        "concern.release",
+        "concern.operations"
+      ],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.transport",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.API",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.contracts",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.authentication",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.authorization",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.persistence",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.transactions",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.schema-migration",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.cache",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.asynchronous-messaging",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.ordering",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.consistency",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.idempotency",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.configuration",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.secret-management",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.logging",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.metrics",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.tracing",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.observability",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.timeout",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.retry",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.failure-handling",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.circuit-breaking",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.deployment",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.rollback",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.compatibility",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.versioning",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.security",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.testing",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.CI-CD",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.release",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    },
+    {
+      "id": "concern.operations",
+      "priority": 4,
+      "dependencies": ["components", "dataflow"],
+      "branch": null,
+      "blocking": true
+    }
+  ]
+}

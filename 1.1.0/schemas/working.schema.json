@@ -1,0 +1,176 @@
+{
+  "type": "object",
+  "required": [
+    "suiteVersion",
+    "formatVersion",
+    "definitionVersion",
+    "projectIdentity",
+    "discussionId",
+    "revision",
+    "contentRevision",
+    "phase",
+    "coordinator",
+    "authority",
+    "nodes",
+    "conflicts",
+    "links",
+    "continuation",
+    "userRequirements",
+    "acceptedRequirements",
+    "acceptedDecisions",
+    "candidateDecisions",
+    "rejectedAlternatives",
+    "constraints",
+    "nonGoals",
+    "openQuestions",
+    "risks",
+    "externalDependencies",
+    "assumptions",
+    "mode"
+  ],
+  "properties": {
+    "suiteVersion": {
+      "const": "1.1.0"
+    },
+    "formatVersion": {
+      "const": 2
+    },
+    "definitionVersion": {
+      "const": "1.1.0"
+    },
+    "projectIdentity": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "discussionId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "contentRevision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "phase": {
+      "enum": [
+        "discussion",
+        "candidate",
+        "reviewed",
+        "frozen",
+        "bootstrapped",
+        "validated",
+        "accepted"
+      ]
+    },
+    "coordinator": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authority": {
+      "type": "object",
+      "required": ["root", "workingPath", "baselineRevision"],
+      "properties": {
+        "root": {
+          "type": "string"
+        },
+        "workingPath": {
+          "type": "string"
+        },
+        "baselineRevision": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "priority",
+          "dependencies",
+          "status",
+          "value",
+          "evidence",
+          "reason"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "enum": [
+              "undetermined",
+              "proposed",
+              "confirmed",
+              "needs-review",
+              "not-applicable",
+              "excluded"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array"
+    },
+    "links": {
+      "type": "object"
+    },
+    "continuation": {
+      "type": "object"
+    },
+    "userRequirements": {
+      "type": "array"
+    },
+    "acceptedRequirements": {
+      "type": "array"
+    },
+    "acceptedDecisions": {
+      "type": "array"
+    },
+    "candidateDecisions": {
+      "type": "array"
+    },
+    "rejectedAlternatives": {
+      "type": "array"
+    },
+    "constraints": {
+      "type": "array"
+    },
+    "nonGoals": {
+      "type": "array"
+    },
+    "openQuestions": {
+      "type": "array"
+    },
+    "risks": {
+      "type": "array"
+    },
+    "externalDependencies": {
+      "type": "array"
+    },
+    "assumptions": {
+      "type": "array"
+    },
+    "mode": {
+      "enum": ["greenfield", "existing", "verification"]
+    }
+  }
+}
