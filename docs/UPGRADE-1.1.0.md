@@ -46,7 +46,7 @@ readable with the new runtime and uses retained STATE.json for new artifacts.
 | migration, archive, baseline, immutable input | core/working.mjs | discussion + lifecycle tests |
 | candidate/review/freeze binding, historical integrity | core/working.mjs, review.mjs, artifacts.mjs | lifecycle, direct bypass tests |
 | Skill composition and disclosure | 11 SKILL.md + shared/DISCUSSION.md | tools/validate.mjs |
-| old sources and installer, npm/pnpm scopes | build verify historical mode, versioned regression harness | regression/historical.test.mjs, integration/installation.test.mjs |
+| old sources and installer, npm/pnpm scopes | build verify historical mode, versioned regression harness | regression/historical.test.mjs, integration/installer.test.mjs, integration/package-install.test.mjs |
 | actual agent review/continuation and remote matrix | raw independent review/host and CI records | test/1.1.0/evidence; unavailable gates remain pending |
 
 ## Release acceptance

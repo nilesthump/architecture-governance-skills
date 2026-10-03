@@ -5,7 +5,7 @@
     "sourceOfIdentity": "Canonical live agent name returned by collaboration.list_agents; no additional opaque ID is exposed"
   },
   "kind": "independent-source-review",
-  "reviewedAt": "2026-10-03T07:52:16.013Z",
+  "reviewedAt": "2026-10-03T07:58:24.143Z",
   "root": "H:\\architecture-skills\\.tmp\\worktrees\\discussion-1.1.0",
   "scope": "Local source, requirement and deterministic fixture review. Does not establish actual production host behavior, real reviewer approval, canonical integration, remote CI or registry publication.",
   "methodology": "Read raw files and reproduce defects independently. Main-agent descriptions were treated as advisory. Source fixes were reread and separately verified.",
@@ -44,7 +44,8 @@
     "tools/validate.mjs",
     "tools/test.mjs",
     "tools/ci.mjs",
-    ".github/workflows/validate.yml"
+    ".github/workflows/validate.yml",
+    "tools/verify-registry-1.1.0.mjs"
   ],
   "sourceHashes": {
     "AGENTS.md": "3d737a4f6cdcf48bf52d65cf69db9d54d01d2003d99e0214d38c2f2e42b1c4f8",
@@ -52,8 +53,8 @@
     "docs/REQUIREMENTS-1.1.0.md": "cbbce7cb05f18d76b83251fdc2b08c5a9d31baa1dbe75a3e68f9c724df970846",
     "docs/REQUIREMENTS.md": "e044361f45057a72985d0035b0c14a60b7ac31cb3368bbc645fc621ad6950aa6",
     "docs/DESIGN.md": "77dca0b8ea36721ce0f2ee1a5aef26cd7d5542cd5a42d98d8781cc766fa1a285",
-    "docs/PROGRESS.md": "5b0a9974ed553a53731083cfcee5b7ab3150700551bf9687ba27dd1092917bd8",
-    "docs/UPGRADE-1.1.0.md": "5303e008f874665cb28521dea39de7f9b09b0bccec37c190678cd083fda069cc",
+    "docs/PROGRESS.md": "9107ea854086fe418e65c85c956c3c8b223ef4a0949ad0b2c6936ef75dd0f7d6",
+    "docs/UPGRADE-1.1.0.md": "b817a013a959a9d11473c7ee228af40dea18c512563662c116987e9e01f0489e",
     "1.1.0/scripts/core/working.mjs": "1efa321ed14a4d0f614dd76ab4b5538a1f731db46dd797e52500849f8dad4349",
     "1.1.0/scripts/core/artifacts.mjs": "9970a338c909b300ac2cc9d5385fdeb928bc7232f14f1d0edf47d9859240a4f6",
     "1.1.0/scripts/core/review.mjs": "13ff264f7003d5018267d9302be43769a4c1e4820d9e30616f86bcc638701dc4",
@@ -81,7 +82,8 @@
     "tools/validate.mjs": "e86ac7c5f42c35286ac898a4c37ae8ecdf7ce33dcac0d9c779568bc0b71a35c2",
     "tools/test.mjs": "a3955a810128665d8c220c6c9f04c371868453a37294b0e3249fef5c94a054cd",
     "tools/ci.mjs": "9bb0c1cd912ee26fecb8c5e224cbe6a7ef2b3b91021f6f74c088aae77f49e432",
-    ".github/workflows/validate.yml": "2da8e7ae6a85ade457bc7384762b35badfae6a0c6da15ee844c21c6240992006"
+    ".github/workflows/validate.yml": "2da8e7ae6a85ade457bc7384762b35badfae6a0c6da15ee844c21c6240992006",
+    "tools/verify-registry-1.1.0.mjs": "b91c5788330c5247e9812176215f001c6951db7b65cc9db410ed78892e426b5c"
   },
   "openBlockingFindings": [],
   "resolvedFindings": [
@@ -219,6 +221,14 @@
     {
       "command": "Inline extract reviewed canonicalRepository source with fs/git bindings; fixture root, child directory, and injected BigInt zero inode",
       "result": "Root true; distinct child false; zero inode false."
+    },
+    {
+      "command": "node --check tools/verify-registry-1.1.0.mjs",
+      "result": "Exit 0; syntax check only, no registry fetch or installation."
+    },
+    {
+      "command": "Read local npm Exec/libnpmexec implementations and query Arborist inventory at repository root",
+      "result": "Confirmed initial ancestor-root local-package selection issue; final standalone harness package.json removes that matching-root context."
     }
   ],
   "remainingAcceptanceGates": [
@@ -230,7 +240,7 @@
     "Independent semantic/visual artifact review and retained real host traces",
     "Authenticated registry publication and post-publication verification"
   ],
-  "verdict": "No blocking finding in the BigInt filesystem-identity revision against acc4752 or prior inspected source. Nonzero identity is required and fails closed when unavailable. Corrected actual three-platform CI remains an acceptance gate.",
+  "verdict": "No unresolved source-review blocker in inspected paths, including final registry verifier preparation. Actual corrected CI, publication and post-publication registry execution remain separate evidence gates.",
   "finalConcernBindingReview": {
     "citations": [
       {
@@ -362,5 +372,44 @@
     "assessment": "Stat comparisons require both operands to be directories, same BigInt device and same BigInt nonzero inode. BigInt avoids precision loss in identity comparison; zero on either side cannot pass. A lexical alias alone does not relax filesystem identity. A distinct repository/subdirectory cannot pass unless the filesystem reports identical nonzero identity. Writes remain confined to original authoritative root and approved paths. Root/Git-root/missing-file diagnostic values do not alter decisions or expose credentials.",
     "portabilityLimit": "Filesystems that do not report usable nonzero inode identifiers fail closed rather than accepting a potentially ambiguous match. Actual corrected Windows/macOS/Linux CI is still required; no unsupported filesystem capability is claimed.",
     "verification": "Local production lifecycle tests 4/4 passed. Additional exact-function-source extraction probe with real fixture Git root accepted the root, rejected its child directory, and rejected injected zero-inode stat results. This supplemental probe is deterministic testing of extracted reviewed function source, not real CI/host acceptance."
+  },
+  "registryVerifierReview": {
+    "script": "tools/verify-registry-1.1.0.mjs",
+    "scriptSha256": "b91c5788330c5247e9812176215f001c6951db7b65cc9db410ed78892e426b5c",
+    "execution": "Not executed by this reviewer. This records prepared-script correctness only; no registry publication, installation or latest-tag success claimed.",
+    "citations": [
+      {
+        "file": "tools/verify-registry-1.1.0.mjs",
+        "line": 13
+      },
+      {
+        "file": "tools/verify-registry-1.1.0.mjs",
+        "line": 35
+      },
+      {
+        "file": "tools/verify-registry-1.1.0.mjs",
+        "line": 128
+      }
+    ],
+    "originalFindings": [
+      {
+        "id": "RV1",
+        "priority": 2,
+        "finding": "Initial sourceParity:true checked only three installed runtime files, overstating installed artifact coverage.",
+        "status": "resolved",
+        "resolution": "Current script builds a local accepted installer reference per manager/scope, compares complete installed non-dependency file lists and every byte including transformed skills/wrappers; installation version/scope checked separately. comparedFiles/parityBasis expose exact scope and dependency exclusion."
+      },
+      {
+        "id": "RV2",
+        "priority": 1,
+        "finding": "npm exec cwd beneath repository without standalone package.json can resolve the ancestor root architecture-governance-skills@1.1.0 and skip registry package installation.",
+        "status": "resolved",
+        "evidence": "Directly inspected installed npm lib/commands/exec.js localPrefix and libnpmexec/lib/index.js missingFromTree exact-version inventory behavior; read-only Arborist inventory found current repository root as matching architecture-governance-skills@1.1.0 node.",
+        "resolution": "Current script writes an unrelated private harness package.json at the execution base before npm calls; npm install execution cwd remains this isolated harness and its own cache."
+      }
+    ],
+    "assessment": "Explicit 1.1.0 npm metadata and actual npm-pack fetched tar hashes compare against accepted pack.json. npm/pnpm installer commands use explicit version and isolated targets; runtime probe version, eleven skills, installation version/scope, all non-dependency installed byte parity and no-bootstrap checks precede final evidence write. Dist-tags are recorded, without blindly asserting latest. Metadata/dependencies exclusions are explicit. Corrected upgrade test references all exist.",
+    "verification": "node --check tools/verify-registry-1.1.0.mjs exited 0. No registry command executed in this review.",
+    "verdict": "No remaining prepared-script blocker in final inspected version. Actual execution results remain required after authorized publication."
   }
 }

@@ -61,3 +61,9 @@ used Windows 8.3 RUNNER~1 while Git reported runneradmin: fs.realpathSync did no
 expand the short-name ancestor. Canonical gate now compares directory filesystem
 identity (BigInt device/inode, nonzero inode), rejecting distinct directories while
 accepting two names for the same directory. Diagnostic report/log retained.
+
+Runtime ef51d237f7b2647aab4a31f66927d2f85aa8dcaf actual PR CI run 37107873135:
+Windows/macOS/Linux all successful. Full local shared validation 25 tests (24 pass,
+1 POSIX-only skip), historical suite 33 (32 pass, 1 skip). No main integration or
+publication claimed at this checkpoint. Final guide reference correction and
+post-publication registry verifier review next, then final-head CI/merge.
