@@ -29,7 +29,7 @@ export function build() {
   fs.mkdirSync(target, { recursive: true });
   fs.rmSync(path.join(target, version), { recursive: true, force: true });
   fs.cpSync(source, path.join(target, version), { recursive: true });
-  for (const p of ["bin", "LICENSE", "README.md"])
+  for (const p of ["bin", "LICENSE", "README.md", "README.en.md"])
     fs.cpSync(path.join(root, p), path.join(target, p), { recursive: true });
   const releasePackage = { ...pkg };
   delete releasePackage.scripts;
@@ -73,7 +73,7 @@ export function verify() {
       JSON.stringify(m.installer)
   )
     throw Error("Release integrity mismatch");
-  for (const p of ["README.md", "LICENSE"])
+  for (const p of ["README.md", "README.en.md", "LICENSE"])
     if (
       hash(fs.readFileSync(path.join(root, p))) !==
       hash(fs.readFileSync(path.join(target, p)))

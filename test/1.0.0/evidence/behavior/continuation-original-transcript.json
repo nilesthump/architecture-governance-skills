@@ -1,0 +1,71 @@
+{
+  "agent": "collaboration:/root/canonical_continuation",
+  "freshContext": true,
+  "provenance": "Original command/chunk excerpts returned by the fresh agent; host attestation, not cryptographic identity proof",
+  "baseline": "606402c976a580f1582bcf46eba09b4f79f0b586",
+  "commit": "dbeb72d78b88cdb5d5e7408337e794c7cde9c326",
+  "orderedReads": [
+    [
+      "AGENTS.md",
+      "e6f8c5"
+    ],
+    [
+      "spec/progress/CURRENT.md",
+      "4f14e4"
+    ],
+    [
+      "spec/architecture/CURRENT",
+      "d900fe"
+    ],
+    [
+      "spec/architecture/v1.0.0/ARCHITECTURE.md",
+      "2ebb56"
+    ],
+    [
+      "spec/governance/WRITE_SCOPE.md",
+      "1faffc"
+    ],
+    [
+      "spec/governance/WORKFLOW.md",
+      "237a7e"
+    ]
+  ],
+  "contractRead": {
+    "chunk": "603b40",
+    "files": [
+      "requirements.md",
+      "package.json",
+      "spec/governance/validation.json",
+      "spec/progress/BEHAVIOR-TASK.json",
+      "src/health.mjs",
+      "tests/health.test.mjs"
+    ]
+  },
+  "canonicalValidation": {
+    "chunk": "ed1a58",
+    "status": "success",
+    "passed": 2,
+    "failed": 0,
+    "contractDigest": "92de41b355e91fe71fa5354934fb7c2411fab44e3c21112fb5dc287f8ce2e340"
+  },
+  "worktreeCreation": {
+    "chunk": "807c2d",
+    "branch": "task/fresh-continuation",
+    "path": "H:/architecture-skills/.tmp/behavior/continuation-task"
+  },
+  "taskValidation": {
+    "chunk": "061717",
+    "status": "success",
+    "passed": 2,
+    "failed": 0
+  },
+  "scopeChanged": [
+    "spec/progress/CURRENT.md"
+  ],
+  "commitChunk": "4befa6",
+  "remainingGatesAtCapture": [
+    "independent review",
+    "suite acceptance PR/CI",
+    "canonical integration"
+  ]
+}

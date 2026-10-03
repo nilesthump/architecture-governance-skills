@@ -1,0 +1,19 @@
+{
+  "reviewers": [
+    "collaboration:/root/independent_runtime_review",
+    "collaboration:/root/independent_spec_review"
+  ],
+  "freshContexts": true,
+  "sourceRevision": "95d09346c9a50c2fbf691b8c539223db4008e7d1",
+  "outcome": "no remaining deterministic blockers in reviewed scope",
+  "independentChecks": [
+    "unavailable Windows drive output returns validation_failed immediately",
+    "actual tools drift returns validation_failed",
+    "source/release parity passed"
+  ],
+  "remainingAtReview": [
+    "canonical acceptance",
+    "fresh continuation",
+    "remote PR/CI/ruleset evidence"
+  ]
+}

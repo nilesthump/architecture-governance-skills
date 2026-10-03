@@ -19,7 +19,8 @@
     "bin",
     "1.0.0",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "README.en.md"
   ],
   "repository": {
     "type": "git",

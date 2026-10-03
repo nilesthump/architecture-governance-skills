@@ -1,21 +1,11 @@
 {
-  "suiteVersion": "1.0.0",
-  "platform": "Windows",
-  "tests": 30,
-  "passed": 30,
+  "root": "H:/architecture-skills",
+  "revision": "74e611980a24af48c88afa5f90eca8031c1303fc",
+  "command": "node tools/validate.mjs",
+  "tests": 33,
+  "passed": 32,
   "failed": 0,
-  "actualPackageManagers": [
-    "npm",
-    "pnpm"
-  ],
-  "scopes": [
-    "project",
-    "global"
-  ],
-  "actualPlantUML": true,
-  "independentPdfExtraction": true,
-  "longChineseParity": true,
-  "regressionFaultInjection": true,
-  "status": "passed",
-  "note": "Host actual run before remote CI; real independent agent traces are separate evidence"
+  "skipped": 1,
+  "skipReason": "POSIX symlink regression runs on macOS/Linux",
+  "actualExitCode": 0
 }

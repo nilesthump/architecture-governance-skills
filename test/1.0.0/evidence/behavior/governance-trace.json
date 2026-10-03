@@ -1,0 +1,70 @@
+{
+  "simulated": false,
+  "freshContext": true,
+  "agent": "collaboration:/root/governed_task_agent",
+  "continuationAgent": "collaboration:/root/canonical_continuation",
+  "hostTrace": "Codex collaboration host session: original agent excerpts, Git state and raw GitHub API evidence",
+  "limitation": "Host-attested excerpts are separate from state recapture; JSON cannot cryptographically prove identity or independence.",
+  "events": [
+    {
+      "kind": "ordered-spec-read",
+      "evidence": "original-read-transcript.json: original ordered 7fae1a..9e6571 chunks",
+      "observed": true
+    },
+    {
+      "kind": "current-architecture-resolved",
+      "evidence": "original-read-transcript.json and task-state-recapture.json: CURRENT v1.0.0",
+      "observed": true
+    },
+    {
+      "kind": "minimum-implementation",
+      "evidence": "task-independent-review.json: pure health function, exact 2 tests, no dependencies",
+      "observed": true
+    },
+    {
+      "kind": "scope-refusal",
+      "evidence": "task-state-recapture.json scope_decisions; independent exact path diff",
+      "observed": true
+    },
+    {
+      "kind": "task-worktree-created",
+      "evidence": "task-state-recapture.json: task/health and actual Git worktree",
+      "observed": true
+    },
+    {
+      "kind": "local-validation-passed",
+      "evidence": "task-state-recapture.json: original b1c696 tests 2/2 exit0",
+      "observed": true
+    },
+    {
+      "kind": "independent-review-passed",
+      "evidence": "task-independent-review.json: distinct fresh-context reviewer",
+      "observed": true
+    },
+    {
+      "kind": "pr-ci-passed",
+      "evidence": "../github/implementation-pr.json and implementation-ci.json: PR1 merged, 3 checks success",
+      "observed": true
+    },
+    {
+      "kind": "canonical-integrated",
+      "evidence": "canonical-integration.json: accepted 96346f1 ancestor in primary canonical",
+      "observed": true
+    },
+    {
+      "kind": "canonical-verified",
+      "evidence": "canonical-integration.json: original contract 2/2, clean writeback",
+      "observed": true
+    },
+    {
+      "kind": "progress-updated",
+      "evidence": "canonical progress commit 606402c976a580f1582bcf46eba09b4f79f0b586",
+      "observed": true
+    },
+    {
+      "kind": "fresh-agent-continued",
+      "evidence": "continuation-original-transcript.json: distinct agent ed1a58/061717 real tests, scoped dbeb72d",
+      "observed": true
+    }
+  ]
+}
