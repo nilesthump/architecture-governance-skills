@@ -1,0 +1,7 @@
+{
+  "initialInvocation": "npm exec --package architecture-governance-skills@1.0.0 -- architecture-skills within the same-named source-parent directory",
+  "initialResult": "command not recognized before installer execution",
+  "acceptedInvocation": "README direct npx/pnpm calls in isolated OS temporary projects",
+  "packageChecks": "published bin metadata and SHA512/shasum match accepted GitHub package",
+  "acceptedResult": "four actual registry installs passed; no released code change"
+}

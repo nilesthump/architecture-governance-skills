@@ -46,4 +46,4 @@ Existing fixture 的 release/deploy 入口验证为受控命令执行与文件�
 
 续接进度 commit dbeb72d 已按宿主 PR/CI 集成到真实 canonical；原始合约 2/2 通过，writeback.verify 成功，最终进度 commit 89875ec。对应原始结果和最终 progress 快照分别保存。
 
-npm registry 发布当前受平台二次验证要求阻塞。用户完成账户验证与发布后，单独记录 registry 元数据、包 integrity 与真实 registry 安装结果；GitHub 包已可安装。
+npm registry 已正式发布 architecture-governance-skills@1.0.0，latest=1.0.0。SHA512 与 shasum 均与已验收 GitHub 包完全相同；真实 npm/npx 与 pnpm 的 latest 项目安装、显式 1.0.0 全局安装共四项全部通过，每项 11 个 Skill、独立 1.0.0 运行时，无项目初始化副作用。元数据和真实安装结果见 evidence/github/npm-registry*.json。\n\n首次 registry smoke 使用仓库内 npm exec alias 时存在本地同名包解析干扰；最终使用 README 的直接 npx 调用与隔离临时项目重测并通过。该 harness 记录保留，无已发布源码修改。

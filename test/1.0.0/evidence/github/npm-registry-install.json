@@ -1,0 +1,44 @@
+{
+  "source": "actual public npm registry",
+  "integrity": "sha512-4kU23+hCFlJl1b33IaL6i48jNrP7Y4cY5ZuJAHz3LCwamiHzxpD/3cZersLgHgj4ICnWlREb/flbXPAGhHW/UA==",
+  "isolatedTempDirectory": "architecture-suite-registry-0VaOwe",
+  "harnessNote": "Registry smoke uses OS temporary directories outside the same-named source package; npm/npx is the documented direct package invocation.",
+  "results": [
+    {
+      "manager": "npm/npx",
+      "scope": "project",
+      "package": "architecture-governance-skills@latest",
+      "skills": 11,
+      "status": "success",
+      "suiteVersion": "1.0.0",
+      "bootstrapWritten": false
+    },
+    {
+      "manager": "npm/npx",
+      "scope": "global",
+      "package": "architecture-governance-skills@1.0.0",
+      "skills": 11,
+      "status": "success",
+      "suiteVersion": "1.0.0",
+      "bootstrapWritten": false
+    },
+    {
+      "manager": "pnpm",
+      "scope": "project",
+      "package": "architecture-governance-skills@latest",
+      "skills": 11,
+      "status": "success",
+      "suiteVersion": "1.0.0",
+      "bootstrapWritten": false
+    },
+    {
+      "manager": "pnpm",
+      "scope": "global",
+      "package": "architecture-governance-skills@1.0.0",
+      "skills": 11,
+      "status": "success",
+      "suiteVersion": "1.0.0",
+      "bootstrapWritten": false
+    }
+  ]
+}
