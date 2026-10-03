@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "commands": [
+    {
+      "name": "health-test",
+      "executable": "H:\\node.js\\node.exe",
+      "args": [
+        "--test",
+        "tests/health.test.mjs"
+      ]
+    }
+  ]
+}

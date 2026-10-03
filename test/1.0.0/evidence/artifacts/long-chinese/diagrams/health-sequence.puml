@@ -1,0 +1,6 @@
+@startuml
+actor Client
+participant "Health service" as Service
+Client -> Service: GET /health
+Service --> Client: 200 JSON status ok
+@enduml

@@ -1,0 +1,33 @@
+suiteVersion: 1.0.0
+identity: sample-api
+version: 1.0.0
+revision: 1
+frozenAt: 2026-10-03T04:04:23.871Z
+repositoryRevision: d88efe4583401449d499f829c630b0c24a23892e
+candidateDigest: c0c2ec485bfd39b62653ca576e951ec2310eadbbc3f0187e1ab14b5e75bc5f57
+artifacts:
+  candidate.json: 2f886ee9465515ab9b9138e7f381def090f8eede9772ba98b550c625da73753f
+  ARCHITECTURE.md: b94f402b99545e6fa417c9e9bc093af604b2f9f7bdc30b27d7b46c8adb4c8391
+  ARCHITECTURE.pdf: b09b064e8fca5b5facb9fb2a4f019d634cc51e9c5f3f52bfaf5ad20804ecdba2
+  diagrams/health-sequence.puml: ae03b1ec5791557d152ed823dcc5a082a3e5f760f5f0235c332b46a0e9ae77a9
+  diagrams/health-sequence.png: 2149cd9e0027ed7d25a17dce2ade3b558399848c222d7e0a6f3b54844109616c
+diagrams:
+  - id: health-sequence
+    puml: diagrams/health-sequence.puml
+    image: diagrams/health-sequence.png
+    sectionIds:
+      - ARCH-010
+review:
+  candidateDigest: c0c2ec485bfd39b62653ca576e951ec2310eadbbc3f0187e1ab14b5e75bc5f57
+  reviewers:
+    - fixture-architecture-r2
+  claim: Reports bound to raw package; host trace independence must be verified by
+    orchestration
+verification:
+  semanticParity: true
+  visualReview: pending
+  independentArtifactReview: pending
+generation:
+  pdf: PDFKit
+  plantumlJarSha256: 5e1ecfa8ecd32c90b03bbf3b1eb6f020943f98ab0fcf4032be31a0002ee2c462
+semanticChange: null
